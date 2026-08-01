@@ -1,0 +1,229 @@
+{
+  "brand": {
+    "id": "pizzahut",
+    "name": "Pizza Hut",
+    "category": "PIZZA",
+    "desc": "Pan pizzas, wings & breadsticks",
+    "bg": "#fce4ec",
+    "meta_title": "Pizza Hut Calorie Calculator — Pizza, Wings & Sides Nutrition | NutriRoute",
+    "meta_description": "Check calories in every Pizza Hut pizza slice, breadstick, wing and pasta dish. Find nutrition facts for your favourite orders.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍕",
+      "Cheese Pizza (1 slice, Medium Pan)",
+      240,
+      10,
+      28,
+      10,
+      "Pizza",
+      173
+    ],
+    [
+      "🍕",
+      "Pepperoni Pizza (1 slice, Medium Pan)",
+      250,
+      10,
+      27,
+      11,
+      "Pizza",
+      174
+    ],
+    [
+      "🍕",
+      "Supreme Pizza (1 slice, Medium Pan)",
+      260,
+      11,
+      28,
+      12,
+      "Pizza",
+      175
+    ],
+    [
+      "🍕",
+      "Meat Lover's Pizza (1 slice, Medium Pan)",
+      310,
+      14,
+      27,
+      16,
+      "Pizza",
+      176
+    ],
+    [
+      "🍕",
+      "Veggie Lover's Pizza (1 slice, Medium Pan)",
+      220,
+      9,
+      28,
+      8,
+      "Pizza",
+      177
+    ],
+    [
+      "🍕",
+      "Hawaiian Pizza (1 slice, Medium)",
+      220,
+      10,
+      27,
+      8,
+      "Pizza",
+      178
+    ],
+    [
+      "🍕",
+      "BBQ Chicken Pizza (1 slice, Medium)",
+      230,
+      12,
+      29,
+      7,
+      "Pizza",
+      179
+    ],
+    [
+      "🍗",
+      "Bone-Out Wings (6 pc)",
+      490,
+      30,
+      20,
+      32,
+      "Wings & Sides",
+      180
+    ],
+    [
+      "🍗",
+      "Traditional Wings (6 pc)",
+      450,
+      33,
+      1,
+      34,
+      "Wings & Sides",
+      181
+    ],
+    [
+      "🍞",
+      "Breadsticks (2 pc)",
+      280,
+      6,
+      34,
+      14,
+      "Wings & Sides",
+      182
+    ],
+    [
+      "🧀",
+      "Cheese Sticks (2 pc)",
+      310,
+      8,
+      32,
+      16,
+      "Wings & Sides",
+      183
+    ],
+    [
+      "🧅",
+      "Stuffed Garlic Knots (2 pc)",
+      280,
+      8,
+      30,
+      14,
+      "Wings & Sides",
+      184
+    ],
+    [
+      "🍝",
+      "Creamy Chicken Alfredo Pasta",
+      630,
+      27,
+      56,
+      32,
+      "Pasta",
+      185
+    ],
+    [
+      "🍝",
+      "Meaty Marinara Pasta",
+      660,
+      25,
+      56,
+      36,
+      "Pasta",
+      186
+    ],
+    [
+      "🥗",
+      "Caesar Salad",
+      170,
+      7,
+      8,
+      13,
+      "Salads",
+      187
+    ],
+    [
+      "🍪",
+      "HERSHEY'S Triple Chocolate Brownie",
+      580,
+      7,
+      70,
+      30,
+      "Desserts",
+      188
+    ],
+    [
+      "🍪",
+      "Cinnabon Mini Rolls (2 pc)",
+      310,
+      4,
+      38,
+      16,
+      "Desserts",
+      189
+    ],
+    [
+      "🥤",
+      "Pepsi (20oz)",
+      250,
+      0,
+      69,
+      0,
+      "Drinks",
+      190
+    ]
+  ],
+  "sizes": [
+    [
+      "Slice (of 8)",
+      0,
+      28
+    ],
+    [
+      "Whole Pizza (x8)",
+      700,
+      29
+    ]
+  ],
+  "options": [
+    [
+      "Pan Crust",
+      0,
+      38
+    ],
+    [
+      "Hand Tossed",
+      -20,
+      39
+    ],
+    [
+      "Thin & Crispy",
+      -40,
+      40
+    ],
+    [
+      "Stuffed Crust",
+      50,
+      41
+    ]
+  ]
+}

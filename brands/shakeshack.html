@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Find calories and macros for Shake Shack single & double burgers, cheese fries, and shakes. Interactive custom order calculator.">
+  <title>Shake Shack Calorie Calculator — ShackBurger & Fries | NutriRoute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calculator.css?v=1785535307635">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Shake Shack Calorie Calculator",
+  "url": "https://starbucks-calorie-calculator.com/brands/shakeshack.html",
+  "description": "Find calories and macros for Shake Shack single & double burgers, cheese fries, and shakes. Interactive custom order calculator.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5."
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://starbucks-calorie-calculator.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://starbucks-calorie-calculator.com/index.html#brands"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Shake Shack Calorie Calculator",
+      "item": "https://starbucks-calorie-calculator.com/brands/shakeshack.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How accurate is this calorie calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "All values are based on official brand nutritional documentation, providing estimates that are highly reliable for daily tracking."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I customize my meals for keto or vegan diets?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. By picking high-protein/fat choices (no buns) or switching to pure vegan items (vegetables & bean bases), you can tailor your meal to fit any dietary plan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an official calculator?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. NutriRoute is independent and is not affiliated with Shake Shack. This page is for information only."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="calc-page shakeshack-page" data-brand="shakeshack">
+  <header class="nav wrap">
+    <a class="logo" href="../index.html"><i>n</i> nutri<span>route</span></a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#brands">All brands</a>
+      <a class="pill small" href="#calculator">Build an order <b>↓</b></a>
+    </nav>
+  <button class="menu" aria-label="Toggle menu">☰</button></header>
+
+  <main>
+    <section class="calc-hero wrap">
+      
+      <div class="eyebrow">
+        <span></span> Fresh stats in real-time. Make healthy choices.
+      </div>
+      <h1>Shake Shack Calories &<br><em>Nutrition Calculator</em></h1>
+      <p>Premium Angus beef burgers, crinkle-cut fries & classic shakes.</p>
+    </section>
+
+    <section id="calculator" class="calculator-shell">
+      <div class="wrap calc-layout">
+        <div class="builder">
+          <div class="builder-head">
+            <div>
+              <small>STEP 1 OF 2</small>
+              <h2>Build your order</h2>
+            </div>
+            <div class="brand-badge-vertical" data-brand="shakeshack">
+  <div class="badge-logo-circle">
+    <img src="images/shakeshack.svg" alt="Shake Shack logo">
+  </div>
+  <span class="badge-text">Shake Shack</span>
+</div>
+          </div>
+          
+          <label class="label">Choose an item</label>
+          <div class="item-grid" id="items"></div>
+          
+          <div class="customize" id="customize">
+            <div>
+              <label class="label">Portion Size</label>
+              <div class="chips" id="sizes"></div>
+            </div>
+            <div>
+              <label class="label">Customisation</label>
+              <div class="chips" id="milks"></div>
+            </div>
+          </div>
+          <p class="disclaimer">Results are estimates based on common US menu nutrition data. Location recipes and portions may vary.</p>
+        </div>
+
+        <aside class="order-card">
+          <span class="order-label">YOUR ORDER</span>
+          <div class="order-empty" id="orderEmpty">Pick an item to<br>see the details <span>↑</span></div>
+          <div id="orderContent" hidden>
+            <div class="order-title">
+              <span id="orderIcon">🍔</span>
+              <div>
+                <h3 id="orderName">My Order</h3>
+                <p id="orderOptions"></p>
+              </div>
+            </div>
+            <div class="calories">
+              <span>Estimated calories</span>
+              <strong id="calories">0</strong>
+              <small>kcal</small>
+            </div>
+            <div class="macro-bars">
+              <div><span>Protein <b id="protein">0g</b></span><i><em id="proteinBar"></em></i></div>
+              <div><span>Carbs <b id="carbs">0g</b></span><i><em id="carbsBar"></em></i></div>
+              <div><span>Fat <b id="fat">0g</b></span><i><em id="fatBar"></em></i></div>
+            </div>
+            <button class="reset" id="reset">↺ Start again</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-article wrap">
+      <h2>Shake Shack Nutrition & Macro Tracking Guide</h2>
+      <p>Shake Shack serves elevated versions of American fast-food classics. Made with premium Angus beef, tracking their calorie and macronutrient counts helps you fit ShackBurgers into your flexible dieting schedule.</p>
+      
+      <h3>Healthy Customization Tips</h3>
+      <div class="seo-callout-box">
+        <h4>Base Smartly</h4>
+        <p>Swap out refined flour buns or heavy sauces for lighter toppings like extra fresh greens, low-calorie salsas, or vinegar dressings to naturally control macros.</p>
+      </div>
+
+      <h3>Frequently Asked Questions (FAQs)</h3>
+      <div class="seo-faq-accordion">
+        <details>
+          <summary>How accurate is this calorie calculator?</summary>
+          <p>All values are based on official brand nutritional documentation, providing estimates that are highly reliable for daily tracking.</p>
+        </details>
+        <details>
+          <summary>Can I customize my meals for keto or vegan diets?</summary>
+          <p>Yes. By picking high-protein/fat choices (no buns) or switching to pure vegan items (vegetables & bean bases), you can tailor your meal to fit any dietary plan.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="brand-content wrap">
+      <div>
+        <div class="eyebrow"><span></span> Shake Shack calories, simply</div>
+        <h2>Premium Flavors.<br><em>Clear information.</em></h2>
+      </div>
+      <div>
+        <p>This Shake Shack calorie calculator helps you quickly check the nutrition of your custom orders. Choose proteins, sizes, and customizations to see changes in real-time.</p>
+        <p>Actual values can vary depending on local food assembly and menu changes. Check official websites for exact current allergen and nutrition information.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq wrap mini">
+      <div>
+        <div class="eyebrow"><span></span> FAQs</div>
+        <h2>Shake Shack<br><em>questions.</em></h2>
+      </div>
+      <div class="questions">
+        <details open>
+          <summary>Is this an official calculator?<b>+</b></summary>
+          <p>No. NutriRoute is independent and is not affiliated with Shake Shack. This page is for information only.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      <nav class="breadcrumbs" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" aria-label="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../index.html#brands">Calculators</a> › 
+        <span class="active-crumb">Shake Shack Calculator</span>
+      </nav>
+    </div>
+    <footer data-site-footer></footer>
+  <script src="../footer.js?v=1785571469076"></script>
+  <script src="calculator.js?v=1785535923024"></script>
+</body>
+</html>

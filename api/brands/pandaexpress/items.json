@@ -1,0 +1,387 @@
+{
+  "brand": {
+    "id": "pandaexpress",
+    "name": "Panda Express",
+    "category": "CHINESE FAST FOOD",
+    "desc": "Orange chicken, bowls & sides",
+    "bg": "#fdeeee",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🥡",
+      "Teriyaki Sauce",
+      70,
+      0,
+      16,
+      0,
+      "Sauces",
+      48
+    ],
+    [
+      "🌯",
+      "Apple Pie Roll",
+      150,
+      2,
+      30,
+      3,
+      "Appetizers & Extras",
+      49
+    ],
+    [
+      "🥡",
+      "Sweet & Sour Sauce",
+      70,
+      0,
+      21,
+      0,
+      "Sauces",
+      50
+    ],
+    [
+      "🥡",
+      "Chili Sauce",
+      10,
+      0,
+      2,
+      0,
+      "Sauces",
+      51
+    ],
+    [
+      "🥡",
+      "Soy Sauce",
+      5,
+      0,
+      0,
+      0,
+      "Sauces",
+      52
+    ],
+    [
+      "🥡",
+      "Potsticker Sauce",
+      10,
+      0,
+      3,
+      0,
+      "Sauces",
+      53
+    ],
+    [
+      "🥡",
+      "Hot Mustard",
+      10,
+      0,
+      0,
+      1,
+      "Entrees",
+      54
+    ],
+    [
+      "🥠",
+      "Fortune Cookie",
+      20,
+      0,
+      5,
+      0,
+      "Appetizers & Extras",
+      55
+    ],
+    [
+      "🥠",
+      "Tree Top Apple Crisps",
+      40,
+      0,
+      10,
+      0,
+      "Appetizers & Extras",
+      56
+    ],
+    [
+      "🥩",
+      "Beijing Beef",
+      480,
+      14,
+      46,
+      27,
+      "Entrees",
+      57
+    ],
+    [
+      "🥩",
+      "Black Pepper Sirloin Steak",
+      180,
+      19,
+      12,
+      6,
+      "Entrees",
+      58
+    ],
+    [
+      "🥩",
+      "Broccoli Beef",
+      150,
+      15,
+      12,
+      6,
+      "Entrees",
+      59
+    ],
+    [
+      "🍗",
+      "Black Pepper Chicken",
+      280,
+      13,
+      15,
+      19,
+      "Entrees",
+      60
+    ],
+    [
+      "🍗",
+      "Hot Orange Chicken",
+      550,
+      17,
+      59,
+      27,
+      "Entrees",
+      61
+    ],
+    [
+      "🍗",
+      "Kung Pao Chicken",
+      320,
+      17,
+      15,
+      21,
+      "Entrees",
+      62
+    ],
+    [
+      "🍗",
+      "Grilled Teriyaki Chicken",
+      275,
+      33,
+      14,
+      10,
+      "Entrees",
+      63
+    ],
+    [
+      "🍗",
+      "Mushroom Chicken",
+      220,
+      13,
+      10,
+      14,
+      "Entrees",
+      64
+    ],
+    [
+      "🍗",
+      "Orange Chicken",
+      510,
+      16,
+      53,
+      24,
+      "Entrees",
+      65
+    ],
+    [
+      "🍗",
+      "Potato Chicken",
+      190,
+      8,
+      18,
+      10,
+      "Entrees",
+      66
+    ],
+    [
+      "🍗",
+      "Chicken Egg Roll (1 roll)",
+      200,
+      6,
+      20,
+      10,
+      "Entrees",
+      67
+    ],
+    [
+      "🍗",
+      "Chicken Potsticker (3 pcs)",
+      160,
+      6,
+      20,
+      6,
+      "Entrees",
+      68
+    ],
+    [
+      "🥡",
+      "Cream Cheese Rangoon (3 pcs)",
+      190,
+      5,
+      24,
+      8,
+      "Entrees",
+      69
+    ],
+    [
+      "🌯",
+      "Vegetable Spring Roll (2 rolls)",
+      240,
+      4,
+      24,
+      14,
+      "Appetizers & Extras",
+      70
+    ],
+    [
+      "🍤",
+      "Honey Walnut Shrimp",
+      430,
+      13,
+      32,
+      28,
+      "Entrees",
+      71
+    ],
+    [
+      "🍤",
+      "Wok-Fired Shrimp",
+      190,
+      17,
+      19,
+      5,
+      "Entrees",
+      72
+    ],
+    [
+      "🍚",
+      "Chow Mein",
+      600,
+      15,
+      94,
+      23,
+      "Sides",
+      73
+    ],
+    [
+      "🍚",
+      "Fried Rice",
+      620,
+      13,
+      101,
+      19,
+      "Sides",
+      74
+    ],
+    [
+      "🍚",
+      "White Steamed Rice",
+      520,
+      10,
+      118,
+      0,
+      "Sides",
+      75
+    ],
+    [
+      "🥡",
+      "Super Greens",
+      130,
+      6,
+      7,
+      4,
+      "Entrees",
+      76
+    ],
+    [
+      "🥡",
+      "Eggplant Tofu",
+      340,
+      7,
+      3,
+      24,
+      "Entrees",
+      77
+    ],
+    [
+      "🍗",
+      "Honey Sesame Chicken Breast",
+      340,
+      16,
+      35,
+      15,
+      "Entrees",
+      78
+    ],
+    [
+      "🍗",
+      "String Bean Chicken Breast",
+      210,
+      12,
+      13,
+      12,
+      "Entrees",
+      79
+    ],
+    [
+      "🍗",
+      "Sweetfire Chicken Breast",
+      360,
+      15,
+      40,
+      15,
+      "Entrees",
+      80
+    ],
+    [
+      "🥤",
+      "cherry coca-cola - kids",
+      150,
+      0,
+      42,
+      0,
+      "Drinks",
+      81
+    ],
+    [
+      "🥤",
+      "coca-cola - kids",
+      150,
+      0,
+      40,
+      0,
+      "Drinks",
+      82
+    ],
+    [
+      "🥤",
+      "coca-cola zero sugar - kids",
+      0,
+      0,
+      0,
+      0,
+      "Drinks",
+      83
+    ],
+    [
+      "🥤",
+      "glaceau vitaminwater squeezed zero - kids",
+      0,
+      0,
+      1,
+      0,
+      "Drinks",
+      84
+    ]
+  ],
+  "sizes": [],
+  "options": []
+}

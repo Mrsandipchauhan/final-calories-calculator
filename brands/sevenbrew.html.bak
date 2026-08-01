@@ -1,0 +1,241 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Build your 7 Brew Coffee order and estimate calories, protein, carbs and fat. Custom Blondie, Brunette, Smooth 7, and energy drink nutrition.">
+  <title>7 Brew Calorie Calculator — Menu Nutrition & Macros | NutriRoute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calculator.css?v=1785535307635">
+</head>
+<body class="calc-page sevenbrew-page" data-brand="sevenbrew">
+  <header class="nav wrap">
+    <a class="logo" href="../index.html"><i>n</i> nutri<span>route</span></a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#brands">All brands</a>
+      <a class="pill small" href="#calculator">Build an order <b>↓</b></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calc-hero wrap">
+      <nav class="breadcrumbs" aria-label="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../index.html#brands">Calculators</a> › 
+        <span class="active-crumb">7 Brew Calculator</span>
+      </nav>
+      <div class="eyebrow">
+        <span></span> Bold flavor. Precise nutrition tracking.
+      </div>
+      <h1>7 Brew Coffee Calories &<br><em>Nutrition Calculator</em></h1>
+      <p>Use our interactive 7 Brew calorie calculator to customize your favorite drinks. Track calories, sugar, fat and protein for the Blondie, Brunette, Smooth 7, and energy drink custom orders in real-time.</p>
+    </section>
+
+    <section id="calculator" class="calculator-shell">
+      <div class="wrap calc-layout">
+        <div class="builder">
+          <div class="builder-head">
+            <div>
+              <small>STEP 1 OF 2</small>
+              <h2>Build your order</h2>
+            </div>
+            <div class="brand-badge-vertical" data-brand="sevenbrew">
+              <div class="badge-logo-circle"></div>
+              <span class="badge-text">7 Brew</span>
+            </div>
+          </div>
+          
+          <label class="label">Choose a Drink</label>
+          <div class="item-grid" id="items"></div>
+          
+          <div class="customize" id="customize">
+            <div>
+              <label class="label">Cup Size</label>
+              <div class="chips" id="sizes"></div>
+            </div>
+            <div>
+              <label class="label">Milk / Customisation</label>
+              <div class="chips" id="milks"></div>
+            </div>
+          </div>
+          <p class="disclaimer">Results are estimates based on common brand menu nutrition data. Location recipes and portions may vary.</p>
+        </div>
+
+        <aside class="order-card">
+          <span class="order-label">YOUR ORDER</span>
+          <div class="order-empty" id="orderEmpty">Pick a drink to<br>see the details <span>↑</span></div>
+          <div id="orderContent" hidden>
+            <div class="order-title">
+              <span id="orderIcon">☕</span>
+              <div>
+                <h3 id="orderName">My Order</h3>
+                <p id="orderOptions"></p>
+              </div>
+            </div>
+            <div class="calories">
+              <span>Estimated calories</span>
+              <strong id="calories">0</strong>
+              <small>kcal</small>
+            </div>
+            <div class="macro-bars">
+              <div><span>Protein <b id="protein">0g</b></span><i><em id="proteinBar"></em></i></div>
+              <div><span>Carbs <b id="carbs">0g</b></span><i><em id="carbsBar"></em></i></div>
+              <div><span>Fat <b id="fat">0g</b></span><i><em id="fatBar"></em></i></div>
+            </div>
+            <button class="reset" id="reset">↺ Start again</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-article wrap">
+      <h2>7 Brew Coffee Nutrition & Macro Tracking Guide</h2>
+      <p>7 Brew is redefining drive-thru coffee with its fast service, energetic atmosphere, and a massive menu of custom-crafted drinks. Famous for its "Original 7" espresso classics and energy mixes, 7 Brew drinks can contain anywhere from 5 calories to over 600 calories. Because they offer total customizability of milks, syrups, and sizes, tracking your calorie intake is crucial. Our independent 7 Brew calorie calculator updates your nutritional facts instantly. Compare drink macros across cafés with our <a href="starbucks.html">Starbucks Calorie Calculator</a> or our <a href="dunkin.html">Dunkin' Calorie Calculator</a>.</p>
+
+      <h3>How to Use the 7 Brew Calorie Calculator</h3>
+      <p>Build your favorite drive-thru pick-me-up and check the nutrition metrics instantly:</p>
+      <ul>
+        <li><strong>Choose Your Brew:</strong> Start with standard coffee, tea, or one of the Original 7 like the Blondie or Brunette.</li>
+        <li><strong>Pick Your Size:</strong> See the macro difference between Small (16 oz), Medium (24 oz), and Large (32 oz) cups.</li>
+        <li><strong>Select Your Milk & Syrups:</strong> Swap whole milk for skim or plant-based milks, or choose sugar-free syrups to keep your carbohydrates under control.</li>
+      </ul>
+
+      <h3>Original 7 & Popular Drinks Macros Reference</h3>
+      <p>Check out the estimated nutritional values for standard Medium (24 oz) 7 Brew drinks made with whole milk:</p>
+      <div class="seo-table-wrap">
+        <table class="seo-table">
+          <thead>
+            <tr>
+              <th>Drink Name</th>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Carbs</th>
+              <th>Fat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>The Blondie (Caramel Blondie)</td>
+              <td>480</td>
+              <td>12g</td>
+              <td>58g</td>
+              <td>22g</td>
+            </tr>
+            <tr>
+              <td>The Brunette (Hazelnut Mocha)</td>
+              <td>510</td>
+              <td>12g</td>
+              <td>68g</td>
+              <td>21g</td>
+            </tr>
+            <tr>
+              <td>Smooth 7 (Irish Cream Breve)</td>
+              <td>540</td>
+              <td>10g</td>
+              <td>52g</td>
+              <td>32g</td>
+            </tr>
+            <tr>
+              <td>White Mac (White Chocolate & Macadamia)</td>
+              <td>490</td>
+              <td>11g</td>
+              <td>60g</td>
+              <td>23g</td>
+            </tr>
+            <tr>
+              <td>Cinnamon Roll (Brown Sugar & Cinnamon)</td>
+              <td>470</td>
+              <td>12g</td>
+              <td>55g</td>
+              <td>22g</td>
+            </tr>
+            <tr>
+              <td>Seven Energy (Original Energy Blend)</td>
+              <td>160</td>
+              <td>0g</td>
+              <td>40g</td>
+              <td>0g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Healthy Customization Tips at 7 Brew</h3>
+      <p>You can enjoy the drive-thru experience without derailing your diet. Use these smart strategies:</p>
+      <div class="seo-callout-box">
+        <h4>Go Sugar-Free (SF)</h4>
+        <p>7 Brew offers sugar-free options for almost all of their syrups, including caramel, chocolate, Irish cream, and vanilla. Swapping standard syrup for sugar-free versions can save you 100 to 200 calories per drink and cut out up to 40g of sugar.</p>
+      </div>
+      <div class="seo-callout-box">
+        <h4>Breve vs. Standard Milk</h4>
+        <p>Many of the Original 7 drinks are served as "breve" (made with half-and-half cream) which makes them incredibly creamy but triples the fat and calorie content. Swapping half-and-half for almond milk or coconut milk can slash your drink's fat content by 80%.</p>
+      </div>
+      <div class="seo-callout-box">
+        <h4>Watch the Energy Mixes</h4>
+        <p>A Large Seven Energy drink contains a significant amount of sugar (up to 80g). Switch to Sugar-Free Seven Energy with sugar-free flavor syrups to get the same caffeine boost for under 20 calories.</p>
+      </div>
+
+      <h3>Frequently Asked Questions (FAQs)</h3>
+      <div class="seo-faq-accordion">
+        <details>
+          <summary>What is in a "Smooth 7"?</summary>
+          <p>The Smooth 7 is one of 7 Brew's signature drinks. It is a breve (espresso and half-and-half) flavored with white chocolate and Irish cream syrups. A standard medium contains about 540 calories.</p>
+        </details>
+        <details>
+          <summary>How many calories are in a sugar-free 7 Brew drink?</summary>
+          <p>If you order an iced coffee or cold brew with sugar-free syrup and almond milk, it can be as low as 30-50 calories. Even signature drinks ordered "sugar-free" are significantly lighter.</p>
+        </details>
+        <details>
+          <summary>What milk alternatives does 7 Brew offer?</summary>
+          <p>7 Brew offers whole milk, half-and-half (breve), oat milk, almond milk, and coconut milk to suit all lifestyles and dietary preferences.</p>
+        </details>
+        <details>
+          <summary>Does 7 Brew have keto-friendly drinks?</summary>
+          <p>Yes. Ordering an unsweetened Americano, Cold Brew, or Hot Tea with a splash of heavy cream and sugar-free syrup provides a delicious, high-fat, low-carb keto option.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="brand-content wrap">
+      <div>
+        <div class="eyebrow"><span></span> 7 Brew calories, simply</div>
+        <h2>Drive-thru Energy.<br><em>Clear information.</em></h2>
+      </div>
+      <div>
+        <p>This 7 Brew calorie calculator helps you quickly check the nutrition of drive-thru classics. Select an Original 7 favorite, adjust cup sizes, and see how milk swaps and sugar-free options affect your macros.</p>
+        <p>Actual values can vary depending on local beverage preparation and menu changes. Check 7 Brew's official website for exact current allergen and nutrition information.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq wrap mini">
+      <div>
+        <div class="eyebrow"><span></span> FAQs</div>
+        <h2>7 Brew<br><em>questions.</em></h2>
+      </div>
+      <div class="questions">
+        <details open>
+          <summary>What is the lowest calorie drink at 7 Brew?<b>+</b></summary>
+          <p>Unsweetened black coffee, cold brew, and hot teas contain less than 5 calories per cup before milk or sugar are added.</p>
+        </details>
+        <details>
+          <summary>How many calories are in the Seven Energy?<b>+</b></summary>
+          <p>A standard medium Seven Energy contains 160 calories (all from carbs/sugar). The Sugar-Free Seven Energy option contains 0 calories.</p>
+        </details>
+        <details>
+          <summary>Is this an official 7 Brew tool?<b>+</b></summary>
+          <p>No. NutriRoute is independent and is not affiliated with 7 Brew Coffee. This page is for information only.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer data-site-footer></footer>
+  <script src="../footer.js?v=1785571469076"></script>
+  <script src="calculator.js?v=1785535923024"></script>
+</body>
+</html>

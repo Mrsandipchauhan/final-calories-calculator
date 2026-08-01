@@ -1,0 +1,89 @@
+{
+  "brand": {
+    "id": "cheesecakefactory",
+    "name": "The Cheesecake Factory",
+    "category": "RESTAURANT",
+    "desc": "Famous cheesecakes, glazed pastas, club salads & burger classics.",
+    "bg": "#fffaf2",
+    "meta_title": "The Cheesecake Factory Calorie Calculator — Cheesecake & Pasta | NutriRoute",
+    "meta_description": "Calculate custom calories and macros for Cheesecake Factory slices, pastas, and salads. Interactive cheat meal tracker.",
+    "seo_content": "<div class='seo-section'><h2>The Cheesecake Factory Nutrition Guide</h2><p>The Cheesecake Factory is famous for massive portion sizes and high calorie counts. Our calculator simplifies tracking so you can fit your favorite cheesecakes, pasta dishes, and salads into your lifestyle.</p></div>",
+    "logo_path": "brands/images/cheesecakefactory.svg"
+  },
+  "items": [
+    [
+      "🍰",
+      "Original Cheesecake Slice",
+      830,
+      12,
+      62,
+      58,
+      "Cheesecake",
+      442
+    ],
+    [
+      "🍰",
+      "Ultimate Red Velvet Cheesecake",
+      1580,
+      18,
+      142,
+      105,
+      "Cheesecake",
+      443
+    ],
+    [
+      "🍔",
+      "Classic Burger",
+      990,
+      52,
+      64,
+      56,
+      "Entrees",
+      444
+    ],
+    [
+      "🍝",
+      "Louisiana Chicken Pasta",
+      2050,
+      78,
+      172,
+      118,
+      "Entrees",
+      445
+    ],
+    [
+      "🥗",
+      "Sheila's Chicken Avocado Salad",
+      920,
+      42,
+      34,
+      68,
+      "Salads",
+      446
+    ]
+  ],
+  "sizes": [
+    [
+      "Standard Portion",
+      0,
+      96
+    ],
+    [
+      "Lunch / Light Portion",
+      -320,
+      97
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      118
+    ],
+    [
+      "Add Whipped Cream Extra",
+      110,
+      119
+    ]
+  ]
+}

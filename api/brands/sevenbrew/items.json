@@ -1,0 +1,199 @@
+{
+  "brand": {
+    "id": "sevenbrew",
+    "name": "7 Brew Coffee",
+    "category": "DRIVE-THRU COFFEE & ENERGY",
+    "desc": "Drive-thru coffee, energy mixes, teas, and custom shakes.",
+    "bg": "#eef2ff",
+    "meta_title": "7 Brew Calorie Calculator — Espresso, Energy & Tea | NutriRoute",
+    "meta_description": "Calculate exact calories, protein, carbs, and fat for your custom 7 Brew drinks. Choose your Blondie, Brunette, energy mixes, milks, and sugar-free options.",
+    "seo_content": "\n    <div class=\"seo-section\">\n      <h2>7 Brew Coffee Nutrition & Macro Tracking Guide</h2>\n      <p>7 Brew is redefining drive-thru coffee with its fast service, energetic atmosphere, and a massive menu of custom-crafted drinks. Famous for its \"Original 7\" espresso classics and energy mixes, 7 Brew drinks can contain anywhere from 5 calories to over 600 calories. Because they offer total customizability of milks, syrups, and sizes, tracking your calorie intake is crucial. Our independent 7 Brew calorie calculator updates your nutritional facts instantly. Compare drink macros across cafés with our <a href=\"starbucks.html\">Starbucks Calorie Calculator</a> or our <a href=\"dunkin.html\">Dunkin' Calorie Calculator</a>.</p>\n\n      <h3>How to Use the 7 Brew Calorie Calculator</h3>\n      <p>Build your favorite drive-thru pick-me-up and check the nutrition metrics instantly:</p>\n      <ul>\n        <li><strong>Choose Your Brew:</strong> Start with standard coffee, tea, or one of the Original 7 like the Blondie or Brunette.</li>\n        <li><strong>Pick Your Size:</strong> See the macro difference between Small (16 oz), Medium (24 oz), and Large (32 oz) cups.</li>\n        <li><strong>Select Your Milk & Syrups:</strong> Swap whole milk for skim or plant-based milks, or choose sugar-free syrups to keep your carbohydrates under control.</li>\n      </ul>\n\n      <h3>Original 7 & Popular Drinks Macros Reference</h3>\n      <p>Check out the estimated nutritional values for standard Medium (24 oz) 7 Brew drinks made with whole milk:</p>\n      <div class=\"seo-table-wrap\">\n        <table class=\"seo-table\">\n          <thead>\n            <tr>\n              <th>Drink Name</th>\n              <th>Calories</th>\n              <th>Protein</th>\n              <th>Carbs</th>\n              <th>Fat</th>\n            </tr>\n          </thead>\n          <tbody>\n            <tr>\n              <td>The Blondie (Caramel Blondie)</td>\n              <td>480</td>\n              <td>12g</td>\n              <td>58g</td>\n              <td>22g</td>\n            </tr>\n            <tr>\n              <td>The Brunette (Hazelnut Mocha)</td>\n              <td>510</td>\n              <td>12g</td>\n              <td>68g</td>\n              <td>21g</td>\n            </tr>\n            <tr>\n              <td>Smooth 7 (Irish Cream Breve)</td>\n              <td>540</td>\n              <td>10g</td>\n              <td>52g</td>\n              <td>32g</td>\n            </tr>\n            <tr>\n              <td>White Mac (White Chocolate & Macadamia)</td>\n              <td>490</td>\n              <td>11g</td>\n              <td>60g</td>\n              <td>23g</td>\n            </tr>\n            <tr>\n              <td>Cinnamon Roll (Brown Sugar & Cinnamon)</td>\n              <td>470</td>\n              <td>12g</td>\n              <td>55g</td>\n              <td>22g</td>\n            </tr>\n            <tr>\n              <td>Seven Energy (Original Energy Blend)</td>\n              <td>160</td>\n              <td>0g</td>\n              <td>40g</td>\n              <td>0g</td>\n            </tr>\n          </tbody>\n        </table>\n      </div>\n\n      <h3>Healthy Customization Tips at 7 Brew</h3>\n      <p>You can enjoy the drive-thru experience without derailing your diet. Use these smart strategies:</p>\n      <div class=\"seo-callout-box\">\n        <h4>Go Sugar-Free (SF)</h4>\n        <p>7 Brew offers sugar-free options for almost all of their syrups, including caramel, chocolate, Irish cream, and vanilla. Swapping standard syrup for sugar-free versions can save you 100 to 200 calories per drink and cut out up to 40g of sugar.</p>\n      </div>\n      <div class=\"seo-callout-box\">\n        <h4>Breve vs. Standard Milk</h4>\n        <p>Many of the Original 7 drinks are served as \"breve\" (made with half-and-half cream) which makes them incredibly creamy but triples the fat and calorie content. Swapping half-and-half for almond milk or coconut milk can slash your drink's fat content by 80%.</p>\n      </div>\n      <div class=\"seo-callout-box\">\n        <h4>Watch the Energy Mixes</h4>\n        <p>A Large Seven Energy drink contains a significant amount of sugar (up to 80g). Switch to Sugar-Free Seven Energy with sugar-free flavor syrups to get the same caffeine boost for under 20 calories.</p>\n      </div>\n    </div>\n    ",
+    "logo_path": "brands/images/sevenbrew.png"
+  },
+  "items": [
+    [
+      "☕",
+      "The Blondie",
+      480,
+      12,
+      58,
+      22,
+      "Original 7",
+      333
+    ],
+    [
+      "☕",
+      "The Brunette",
+      510,
+      12,
+      68,
+      21,
+      "Original 7",
+      334
+    ],
+    [
+      "☕",
+      "Smooth 7",
+      540,
+      10,
+      52,
+      32,
+      "Original 7",
+      335
+    ],
+    [
+      "☕",
+      "White Mac",
+      490,
+      11,
+      60,
+      23,
+      "Original 7",
+      336
+    ],
+    [
+      "☕",
+      "Cinnamon Roll",
+      470,
+      12,
+      55,
+      22,
+      "Original 7",
+      337
+    ],
+    [
+      "☕",
+      "German Chocolate",
+      510,
+      12,
+      66,
+      22,
+      "Original 7",
+      338
+    ],
+    [
+      "☕",
+      "Midnight Mint",
+      520,
+      12,
+      68,
+      22,
+      "Original 7",
+      339
+    ],
+    [
+      "🥤",
+      "Seven Energy (Original)",
+      160,
+      0,
+      40,
+      0,
+      "Energy Drinks",
+      340
+    ],
+    [
+      "🥤",
+      "Seven Energy Sugar-Free",
+      0,
+      0,
+      0,
+      0,
+      "Energy Drinks",
+      341
+    ],
+    [
+      "☕",
+      "House Blend Coffee",
+      5,
+      0,
+      1,
+      0,
+      "Coffee & Tea",
+      342
+    ],
+    [
+      "🧊",
+      "Cold Brew",
+      5,
+      0,
+      1,
+      0,
+      "Coffee & Tea",
+      343
+    ],
+    [
+      "🍵",
+      "Matcha Latte",
+      240,
+      8,
+      45,
+      4,
+      "Coffee & Tea",
+      344
+    ],
+    [
+      "🥤",
+      "Iced Tea (Sweet)",
+      120,
+      0,
+      30,
+      0,
+      "Coffee & Tea",
+      345
+    ],
+    [
+      "🥤",
+      "Iced Tea (Unsweet)",
+      0,
+      0,
+      0,
+      0,
+      "Coffee & Tea",
+      346
+    ]
+  ],
+  "sizes": [
+    [
+      "Small (16 oz)",
+      -120,
+      47
+    ],
+    [
+      "Medium (24 oz)",
+      0,
+      48
+    ],
+    [
+      "Large (32 oz)",
+      140,
+      49
+    ]
+  ],
+  "options": [
+    [
+      "Whole Milk",
+      0,
+      66
+    ],
+    [
+      "Almond Milk",
+      -90,
+      67
+    ],
+    [
+      "Oat Milk",
+      -50,
+      68
+    ],
+    [
+      "Breve (Half & Half)",
+      120,
+      69
+    ],
+    [
+      "Sugar-Free Syrup Swap",
+      -140,
+      70
+    ]
+  ]
+}

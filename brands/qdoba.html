@@ -1,0 +1,251 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Use our interactive Qdoba Nutrition Calculator to calculate calories, protein, carbs, and fat. Customize your meal and check ingredients in real-time."><title>Qdoba Nutrition Calculator: Calorie & Macro Counter</title><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet"><link rel="stylesheet" href="../styles.css"><link rel="stylesheet" href="calculator.css?v=1785535307634">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Qdoba Calorie Calculator",
+  "url": "https://starbucks-calorie-calculator.com/brands/qdoba.html",
+  "description": "Use our interactive Qdoba Nutrition Calculator to calculate calories, protein, carbs, and fat. Customize your meal and check ingredients in real-time.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5."
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://starbucks-calorie-calculator.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://starbucks-calorie-calculator.com/index.html#brands"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Qdoba Calorie Calculator",
+      "item": "https://starbucks-calorie-calculator.com/brands/qdoba.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How many calories are in a Qdoba-style bowl?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard Grilled Chicken Bowl with rice, black beans, pico, and cheese runs around 650 calories with 47g of protein."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many calories are in a Qdoba-style burrito?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A loaded Chicken Burrito with rice, beans, pico, and cheese runs about 950 calories."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's the healthiest order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Grilled Chicken Salad with black beans, pico de gallo, and guacamole, no dressing, no cheese, comes in around 435 calories with 39g of protein and 19g of fiber."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I build a keto or low-carb order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, a Steak Keto Bowl runs around 385 calories with roughly 14g of total carbs."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does portion size change calories?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually, yes. Double protein or extra rice can meaningfully change calories and macros. This calculator applies a typical adjustment for the selected portion options."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are salsas and sides included?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The displayed base is an estimate for the listed item. You can add sides like chips and guac manually to your order."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an official Qdoba tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. NutriRoute is independent and is not affiliated with Qdoba. This page is for information only."
+      }
+    }
+  ]
+}
+  </script>
+</head><body class="calc-page" data-brand="qdoba"><header class="nav wrap"><a class="logo" href="../index.html"><i>n</i> nutri<span>route</span></a>
+  <nav><a href="../index.html">Home</a><a href="../blog.html">Blog</a><a href="../index.html#brands">All brands</a><a class="pill small" href="#calculator">Build an order <b>↓</b></a></nav><button class="menu" aria-label="Toggle menu">☰</button></header><main><section class="calc-hero wrap"><div class="eyebrow"><span></span> Make your Qdoba order work for you.</div><h1>Qdoba Calories &<br><em>Nutrition Calculator</em></h1><p>Use our interactive Qdoba calorie calculator to customize your bowls, burritos, tacos, and salads. Select bases, proteins, portions, and track calories, protein, carbs, and fat in real-time to plan your healthy meals.</p><div class="stat-row"><span><b>14</b> popular items</span><span><b>∞</b> better choices</span><span><b>0</b> judgement</span></div></section><section id="calculator" class="calculator-shell"><div class="wrap calc-layout"><div class="builder"><div class="builder-head"><div><small>STEP 1 OF 2</small><h2>Build your order</h2></div><div class="brand-badge-vertical" style="display: flex !important; flex-direction: column !important; align-items: center !important; justify-content: center !important; gap: 4px !important; text-align: center !important;" data-brand="qdoba">
+  <div class="badge-logo-circle">
+    <img src="images/qdoba.png" alt="Qdoba logo">
+  </div>
+  <span class="badge-text">Qdoba</span>
+</div></div><label class="label">Choose an item</label><div class="item-grid" id="items"></div><div class="customize" id="customize"><div><label class="label">Portion</label><div class="chips" id="sizes"></div></div><div><label class="label">Amount</label><div class="chips" id="milks"></div></div></div><p class="disclaimer">Results are estimates based on common US menu nutrition data. Location recipes and portions may vary.</p></div><aside class="order-card"><span class="order-label">YOUR ORDER</span><div class="order-empty" id="orderEmpty">Pick an item to<br>see the details <span>↑</span></div><div id="orderContent" hidden><div class="order-title"><span id="orderIcon">☕</span><div><h3 id="orderName"></h3><p id="orderOptions"></p></div></div><div class="calories"><span>Estimated calories</span><strong id="calories">0</strong><small>kcal</small></div><div class="macro-bars"><div><span>Protein <b id="protein">0g</b></span><i><em id="proteinBar"></em></i></div><div><span>Carbs <b id="carbs">0g</b></span><i><em id="carbsBar"></em></i></div><div><span>Fat <b id="fat">0g</b></span><i><em id="fatBar"></em></i></div></div><button class="reset" id="reset">↺ Start again</button></div></aside></div></section>
+<section class="seo-article wrap">
+  <h2>Everything You Can Do With This Qdoba Calculator</h2>
+  <p>Qdoba calorie calculator built the way a real order actually works, not a fixed menu of examples. Choose your base, protein, toppings, and sauces exactly the way you'd order in person.</p>
+  
+  <h3>How to Use the Qdoba Nutrition Calculator</h3>
+  <p>Tracking your bowl shouldn't be complicated. Here is how to get the most accurate nutrition estimate for your next Qdoba run:</p>
+  <ul>
+    <li><strong>Choose Your Base:</strong> Bowl or Salad (0-15 calories), Burrito (~300 cal), Tacos or Quesadilla. The base alone can be the difference between 650 and 950 calories.</li>
+    <li><strong>Add Your Protein:</strong> Grilled Adobo Chicken (~190 cal) is leanest. Grilled Steak or Impossible Plant-Based are also great options.</li>
+    <li><strong>Build with Toppings:</strong> Add Rice, Beans, Pico de Gallo, and Fajita Veggies. Watch out for Cheese, Sour Cream, and Guacamole where fat climbs fastest.</li>
+  </ul>
+
+  <h3>Popular Qdoba Builds & Their Macros</h3>
+  <div class="seo-table-wrap">
+    <table class="seo-table">
+      <thead>
+        <tr>
+          <th>Menu Item</th>
+          <th>Calories</th>
+          <th>Protein</th>
+          <th>Carbs</th>
+          <th>Fat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Grilled Chicken Bowl (rice, black beans, pico, cheese)</td>
+          <td>650</td>
+          <td>47g</td>
+          <td>69g</td>
+          <td>16g</td>
+        </tr>
+        <tr>
+          <td>Chicken Protein Bowl (no rice)</td>
+          <td>360</td>
+          <td>38g</td>
+          <td>32g</td>
+          <td>4g</td>
+        </tr>
+        <tr>
+          <td>Steak Bowl (rice, beans, pico, cheese)</td>
+          <td>640</td>
+          <td>40g</td>
+          <td>70g</td>
+          <td>22g</td>
+        </tr>
+        <tr>
+          <td>Grilled Chicken Burrito (rice, beans, pico, cheese)</td>
+          <td>950</td>
+          <td>55g</td>
+          <td>119g</td>
+          <td>24g</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>Making Healthy Choices at Qdoba</h3>
+  <div class="seo-callout-box">
+    <h4>Bowl instead of Burrito</h4>
+    <p>Skips the tortilla entirely. Saves ~300 calories.</p>
+  </div>
+  <div class="seo-callout-box">
+    <h4>Fajita Veggies or Beans instead of Rice</h4>
+    <p>Adds fiber while trimming calories. Saves 170-190 calories.</p>
+  </div>
+  <div class="seo-callout-box">
+    <h4>Pico de Gallo or Salsa instead of Cheese & Sour Cream</h4>
+    <p>Flavor with almost no sodium. Saves 100-150 calories.</p>
+  </div>
+
+  <h3>Frequently Asked Questions (FAQs)</h3>
+  <div class="seo-faq-accordion">
+    <details>
+      <summary>How many calories are in a Qdoba-style bowl?</summary>
+      <p>A standard Grilled Chicken Bowl with rice, black beans, pico, and cheese runs around 650 calories with 47g of protein.</p>
+    </details>
+    <details>
+      <summary>How many calories are in a Qdoba-style burrito?</summary>
+      <p>A loaded Chicken Burrito with rice, beans, pico, and cheese runs about 950 calories.</p>
+    </details>
+    <details>
+      <summary>What's the healthiest order?</summary>
+      <p>A Grilled Chicken Salad with black beans, pico de gallo, and guacamole, no dressing, no cheese, comes in around 435 calories with 39g of protein and 19g of fiber.</p>
+    </details>
+    <details>
+      <summary>Can I build a keto or low-carb order?</summary>
+      <p>Yes, a Steak Keto Bowl runs around 385 calories with roughly 14g of total carbs.</p>
+    </details>
+  </div>
+</section>
+
+<section class="brand-content wrap">
+  <div>
+    <div class="eyebrow"><span></span> Qdoba calories, simply</div>
+    <h2>Plan the treat.<br><em>Keep the joy.</em></h2>
+  </div>
+  <div>
+    <p>This Qdoba calorie calculator helps you compare popular bowl and burrito options before you order. Choose a base, select proteins and toppings, and use the instant result as a practical guide for your day.</p>
+    <p>Food and drink nutrition can vary by location. For allergies or exact ingredient lists, always check Qdoba’s official information directly.</p>
+  </div>
+</section>
+
+<section id="faq" class="faq wrap mini">
+  <div>
+    <div class="eyebrow"><span></span> FAQs</div>
+    <h2>Qdoba<br><em>questions.</em></h2>
+  </div>
+  <div class="questions">
+    <details open>
+      <summary>Does portion size change calories?<b>+</b></summary>
+      <p>Usually, yes. Double protein or extra rice can meaningfully change calories and macros. This calculator applies a typical adjustment for the selected portion options.</p>
+    </details>
+    <details>
+      <summary>Are salsas and sides included?<b>+</b></summary>
+      <p>The displayed base is an estimate for the listed item. You can add sides like chips and guac manually to your order.</p>
+    </details>
+    <details>
+      <summary>Is this an official Qdoba tool?<b>+</b></summary>
+      <p>No. NutriRoute is independent and is not affiliated with Qdoba. This page is for information only.</p>
+    </details>
+  </div>
+</section>
+</main>
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      <nav class="breadcrumbs" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" aria-label="breadcrumb"><a href="../index.html">Home</a> › <a href="../index.html#brands">Calculators</a> › <span class="active-crumb">Qdoba Nutrition Calculator</span></nav>
+    </div>
+    <footer data-site-footer></footer><script src="../footer.js?v=1785571469075"></script><script src="calculator.js?v=1785535923023"></script></body></html>

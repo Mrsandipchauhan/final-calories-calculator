@@ -1,0 +1,134 @@
+{
+  "brand": {
+    "id": "raisingcanes",
+    "name": "Raising Cane's",
+    "category": "CHICKEN FINGERS",
+    "desc": "Chicken fingers, fries & Texas toast",
+    "bg": "#fff9c4",
+    "meta_title": "Raising Cane's Calorie Calculator — Chicken Fingers, Fries & Combos | NutriRoute",
+    "meta_description": "Check calories in Raising Cane's chicken fingers, combos, Texas toast, coleslaw and Cane's sauce.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍗",
+      "3 Chicken Fingers",
+      390,
+      27,
+      18,
+      24,
+      "Chicken Fingers",
+      277
+    ],
+    [
+      "🍗",
+      "4 Chicken Fingers",
+      520,
+      36,
+      24,
+      32,
+      "Chicken Fingers",
+      278
+    ],
+    [
+      "🍗",
+      "6 Chicken Fingers",
+      780,
+      54,
+      36,
+      48,
+      "Chicken Fingers",
+      279
+    ],
+    [
+      "🍞",
+      "Texas Toast (1 slice)",
+      150,
+      3,
+      17,
+      8,
+      "Sides",
+      280
+    ],
+    [
+      "🍟",
+      "Crinkle-Cut Fries (Regular)",
+      350,
+      4,
+      40,
+      19,
+      "Sides",
+      281
+    ],
+    [
+      "🍟",
+      "Crinkle-Cut Fries (Large)",
+      530,
+      6,
+      60,
+      29,
+      "Sides",
+      282
+    ],
+    [
+      "🥗",
+      "Coleslaw (Regular)",
+      200,
+      1,
+      17,
+      15,
+      "Sides",
+      283
+    ],
+    [
+      "🫙",
+      "Cane's Sauce (1 serving)",
+      190,
+      1,
+      5,
+      18,
+      "Sauces",
+      284
+    ],
+    [
+      "🥤",
+      "Lemonade (Regular)",
+      200,
+      0,
+      50,
+      0,
+      "Drinks",
+      285
+    ],
+    [
+      "🥤",
+      "Sweet Tea (Regular)",
+      170,
+      0,
+      44,
+      0,
+      "Drinks",
+      286
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular",
+      0,
+      42
+    ]
+  ],
+  "options": [
+    [
+      "With Cane's Sauce",
+      0,
+      60
+    ],
+    [
+      "No Sauce",
+      -190,
+      61
+    ]
+  ]
+}

@@ -1,0 +1,27 @@
+{
+  "brand": {
+    "id": "kfc",
+    "name": "KFC",
+    "category": "FAST FOOD",
+    "desc": "Fried Chicken and Sides",
+    "bg": "#ffe6e6",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍗",
+      "Original Recipe Drumstick",
+      130,
+      12,
+      4,
+      7,
+      "Entrees",
+      110
+    ]
+  ],
+  "sizes": [],
+  "options": []
+}

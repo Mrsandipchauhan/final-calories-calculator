@@ -1,0 +1,159 @@
+{
+  "brand": {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "category": "COFFEE & CAFÉ",
+    "desc": "Drinks, bakery & breakfast",
+    "bg": "#dcebc9",
+    "meta_title": "Starbucks Calorie Calculator — Full Menu Nutrition Facts | NutriRoute",
+    "meta_description": "Check calories in every Starbucks drink and food item. Customize milk, size, and toppings to see exact nutrition info before you order.",
+    "seo_content": "<div class=\"seo-section\"><h2>How to Use the Starbucks Calorie Calculator</h2><p>Pick any drink or bakery item from the menu above, then choose your preferred size (Tall, Grande, or Venti) and milk option to see the calorie count update instantly. This tool pulls from published Starbucks nutrition data so you can plan ahead before visiting your local store.</p><div class=\"info-card tip\"><strong>Quick Tip</strong><p>Switching from 2% milk to almond milk saves roughly 40 calories on a Grande latte. Over a week of daily coffees, that adds up to nearly 300 fewer calories without changing your drink order.</p></div><h2>Understanding Starbucks Nutrition</h2><p>Starbucks drinks vary widely in calorie content. A plain black coffee has almost zero calories, while a Venti White Chocolate Mocha with whipped cream can top 500 calories — more than many full meals. The biggest calorie drivers are syrups, whipped cream, and whole milk.</p><p>Food items like the Butter Croissant (250 cal) or Turkey Bacon sandwich (230 cal) pair well with lower-calorie drink choices if you want to keep your total order under 400 calories.</p><h2>Best Low-Calorie Starbucks Orders</h2><p>If you are watching your intake, these combinations keep things under 200 calories:</p><ul><li>Tall Caffè Latte with almond milk — roughly 100 calories</li><li>Grande Cold Brew with a splash of oat milk — about 35 calories</li><li>Tall Iced Matcha Latte with almond milk — around 120 calories</li></ul><p>You can also ask for sugar-free syrups or half the usual pumps to reduce the sugar content of any flavored drink.</p></div>",
+    "logo_path": null
+  },
+  "items": [
+    [
+      "☕",
+      "Caffè Latte",
+      190,
+      13,
+      18,
+      7,
+      "Drinks",
+      1
+    ],
+    [
+      "🧊",
+      "Iced Brown Sugar Oatmilk Shaken Espresso",
+      120,
+      2,
+      23,
+      1,
+      "Drinks",
+      2
+    ],
+    [
+      "🍫",
+      "White Chocolate Mocha",
+      430,
+      14,
+      56,
+      18,
+      "Drinks",
+      3
+    ],
+    [
+      "☕",
+      "Caramel Macchiato",
+      250,
+      10,
+      35,
+      7,
+      "Drinks",
+      4
+    ],
+    [
+      "🧊",
+      "Cold Brew with Salted Caramel Cold Foam",
+      240,
+      2,
+      25,
+      14,
+      "Drinks",
+      5
+    ],
+    [
+      "🍓",
+      "Pink Drink",
+      140,
+      1,
+      28,
+      2.5,
+      "Drinks",
+      6
+    ],
+    [
+      "🍵",
+      "Iced Matcha Latte",
+      200,
+      9,
+      34,
+      5,
+      "Drinks",
+      7
+    ],
+    [
+      "🥐",
+      "Butter Croissant",
+      250,
+      5,
+      32,
+      13,
+      "Food & Bakery",
+      8
+    ],
+    [
+      "🥚",
+      "Egg White Sous Vide Egg Bites",
+      170,
+      12,
+      11,
+      8,
+      "Food & Bakery",
+      9
+    ],
+    [
+      "🥪",
+      "Turkey Bacon & Egg White Sandwich",
+      230,
+      17,
+      28,
+      5,
+      "Food & Bakery",
+      10
+    ],
+    [
+      "🥯",
+      "Sprouted Grain Bagel",
+      330,
+      12,
+      64,
+      1.5,
+      "Food & Bakery",
+      11
+    ]
+  ],
+  "sizes": [
+    [
+      "Tall",
+      -30,
+      1
+    ],
+    [
+      "Grande",
+      0,
+      2
+    ],
+    [
+      "Venti",
+      50,
+      3
+    ]
+  ],
+  "options": [
+    [
+      "2% milk",
+      0,
+      1
+    ],
+    [
+      "Oat milk",
+      20,
+      2
+    ],
+    [
+      "Almond milk",
+      -20,
+      3
+    ]
+  ]
+}

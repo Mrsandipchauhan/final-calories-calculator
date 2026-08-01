@@ -1,0 +1,114 @@
+{
+  "brand": {
+    "id": "subway",
+    "name": "Subway",
+    "category": "SANDWICHES",
+    "desc": "Build your perfect sub",
+    "bg": "#ffe0ac",
+    "meta_title": "Subway Calorie Calculator — Subs, Wraps & Sides Nutrition | NutriRoute",
+    "meta_description": "Calculate exact calories for any Subway sub. Choose your bread, size and fillings to see complete nutrition facts for your custom order.",
+    "seo_content": "<div class=\"seo-section\"><h2>How Subway Calories Work</h2><p>Subway markets itself as a healthier fast food option, and there is truth to that — a 6-inch Veggie Delite on wheat bread is just 230 calories with 8g of protein. But calorie counts vary dramatically based on bread choice, protein, cheese, sauces, and size.</p><div class=\"info-card tip\"><strong>Bread Matters</strong><p>The difference between Italian bread and a Flatbread is about 20 extra calories. Choosing a 6-inch sub instead of a Footlong immediately halves the calories from bread alone.</p></div><h2>Lowest-Calorie Subway Orders</h2><p>If you are counting calories, stick to these 6-inch options under 350 calories:</p><ul><li>Veggie Delite — 230 cal (add all the vegetables you want at zero extra calories)</li><li>Turkey Breast — 280 cal</li><li>Oven Roasted Chicken — 320 cal</li></ul><p>Keep in mind that sauces are where hidden calories sneak in. Mayo adds about 110 calories per serving. Mustard, vinegar, or a light drizzle of oil and vinegar are lower-calorie alternatives that keep your sub flavourful.</p></div>",
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🥪",
+      "Turkey Cali Club",
+      530,
+      34,
+      50,
+      24,
+      "Classic Subs",
+      12
+    ],
+    [
+      "🥪",
+      "Veggie Delite",
+      230,
+      8,
+      44,
+      3,
+      "Classic Subs",
+      13
+    ],
+    [
+      "🥪",
+      "Italian B.M.T.",
+      410,
+      20,
+      45,
+      18,
+      "Classic Subs",
+      14
+    ],
+    [
+      "🥪",
+      "Tuna Sub",
+      480,
+      20,
+      44,
+      25,
+      "Classic Subs",
+      15
+    ],
+    [
+      "🥪",
+      "Meatball Marinara",
+      480,
+      22,
+      59,
+      18,
+      "Classic Subs",
+      16
+    ],
+    [
+      "🍪",
+      "Chocolate Chip Cookie",
+      210,
+      2,
+      30,
+      10,
+      "Sides & Sweets",
+      17
+    ],
+    [
+      "🍟",
+      "Lay's Potato Chips",
+      230,
+      3,
+      23,
+      15,
+      "Sides & Sweets",
+      18
+    ]
+  ],
+  "sizes": [
+    [
+      "6 inch",
+      0,
+      4
+    ],
+    [
+      "Footlong",
+      250,
+      5
+    ]
+  ],
+  "options": [
+    [
+      "Italian bread",
+      0,
+      4
+    ],
+    [
+      "Wheat bread",
+      10,
+      5
+    ],
+    [
+      "Flatbread",
+      20,
+      6
+    ]
+  ]
+}

@@ -1,0 +1,99 @@
+{
+  "brand": {
+    "id": "wawa",
+    "name": "Wawa",
+    "category": "SANDWICHES & DELI",
+    "desc": "Custom-made Hoagies, breakfast sizzlis, mac & cheese, and coffees.",
+    "bg": "#fcfcf2",
+    "meta_title": "Wawa Calorie Calculator — Hoagies & Breakfast | NutriRoute",
+    "meta_description": "Track custom calories and macros for Wawa turkey and Italian hoagies, Sizzlis, and drinks. Interactive deli nutrition calculator.",
+    "seo_content": "<div class='seo-section'><h2>Wawa Nutrition & Macro Tracking Guide</h2><p>Wawa hoagies and deli foods offer highly customizable meal options. Swapping white bread for wheat, skipping heavy mayo, and requesting light cheese lets you assemble a high-protein, calorie-friendly meal.</p></div>",
+    "logo_path": "brands/images/wawa.svg"
+  },
+  "items": [
+    [
+      "🥪",
+      "Classic Turkey Hoagie (10\")",
+      780,
+      45,
+      92,
+      26,
+      "Hoagies",
+      437
+    ],
+    [
+      "🥪",
+      "Italian Hoagie (10\")",
+      890,
+      48,
+      94,
+      35,
+      "Hoagies",
+      438
+    ],
+    [
+      "🍳",
+      "Sizzli Sausage Egg Cheese Bagel",
+      520,
+      24,
+      40,
+      30,
+      "Breakfast",
+      439
+    ],
+    [
+      "🥤",
+      "Mac & Cheese (Medium)",
+      470,
+      18,
+      54,
+      20,
+      "Sides",
+      440
+    ],
+    [
+      "☕",
+      "Iced Caramel Macchiato (16oz)",
+      310,
+      8,
+      48,
+      9,
+      "Beverages",
+      441
+    ]
+  ],
+  "sizes": [
+    [
+      "Classic (10\")",
+      0,
+      93
+    ],
+    [
+      "Junior (6\")",
+      -280,
+      94
+    ],
+    [
+      "Shorti (12\")",
+      180,
+      95
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      115
+    ],
+    [
+      "Add Mayo & Oil",
+      150,
+      116
+    ],
+    [
+      "Add Extra Cheese",
+      80,
+      117
+    ]
+  ]
+}

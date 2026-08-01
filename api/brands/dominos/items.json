@@ -1,0 +1,229 @@
+{
+  "brand": {
+    "id": "dominos",
+    "name": "Domino's",
+    "category": "PIZZA",
+    "desc": "Pizzas, wings & pasta",
+    "bg": "#e3f2fd",
+    "meta_title": "Domino's Calorie Calculator — Pizza, Wings & Pasta Nutrition | NutriRoute",
+    "meta_description": "How many calories are in your Domino's pizza? Calculate nutrition for any slice, size, crust and topping combination.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍕",
+      "Cheese Pizza (1 slice, Medium Hand Tossed)",
+      200,
+      8,
+      25,
+      8,
+      "Pizza",
+      155
+    ],
+    [
+      "🍕",
+      "Pepperoni Pizza (1 slice, Medium)",
+      210,
+      9,
+      25,
+      9,
+      "Pizza",
+      156
+    ],
+    [
+      "🍕",
+      "MeatZZa Pizza (1 slice, Medium)",
+      280,
+      13,
+      26,
+      14,
+      "Pizza",
+      157
+    ],
+    [
+      "🍕",
+      "ExtravaganZZa Pizza (1 slice, Medium)",
+      280,
+      12,
+      26,
+      14,
+      "Pizza",
+      158
+    ],
+    [
+      "🍕",
+      "Pacific Veggie (1 slice, Medium)",
+      220,
+      9,
+      26,
+      9,
+      "Pizza",
+      159
+    ],
+    [
+      "🍕",
+      "Buffalo Chicken Pizza (1 slice, Medium)",
+      200,
+      10,
+      25,
+      7,
+      "Pizza",
+      160
+    ],
+    [
+      "🍕",
+      "Honolulu Hawaiian (1 slice, Medium)",
+      220,
+      10,
+      27,
+      8,
+      "Pizza",
+      161
+    ],
+    [
+      "🍗",
+      "Boneless Chicken Wings (8 pc)",
+      580,
+      32,
+      52,
+      26,
+      "Wings & Sides",
+      162
+    ],
+    [
+      "🍗",
+      "Hot Buffalo Wings (8 pc)",
+      440,
+      36,
+      8,
+      28,
+      "Wings & Sides",
+      163
+    ],
+    [
+      "🍞",
+      "Garlic Bread Twists (2 pc)",
+      220,
+      6,
+      32,
+      8,
+      "Wings & Sides",
+      164
+    ],
+    [
+      "🧀",
+      "Stuffed Cheesy Bread (2 pc)",
+      290,
+      10,
+      30,
+      14,
+      "Wings & Sides",
+      165
+    ],
+    [
+      "🥗",
+      "Garden Salad (no dressing)",
+      70,
+      4,
+      6,
+      4,
+      "Salads",
+      166
+    ],
+    [
+      "🍝",
+      "Chicken Alfredo Pasta",
+      630,
+      28,
+      64,
+      28,
+      "Pasta",
+      167
+    ],
+    [
+      "🍝",
+      "Italian Sausage Marinara Pasta",
+      690,
+      24,
+      66,
+      36,
+      "Pasta",
+      168
+    ],
+    [
+      "🍪",
+      "Chocolate Lava Crunch Cake (2 pc)",
+      690,
+      8,
+      76,
+      40,
+      "Desserts",
+      169
+    ],
+    [
+      "🍪",
+      "Cinnamon Bread Twists (2 pc)",
+      250,
+      4,
+      30,
+      12,
+      "Desserts",
+      170
+    ],
+    [
+      "🍪",
+      "Marbled Cookie Brownie (1 pc)",
+      210,
+      2,
+      26,
+      11,
+      "Desserts",
+      171
+    ],
+    [
+      "🥤",
+      "Coca-Cola (20oz)",
+      240,
+      0,
+      65,
+      0,
+      "Drinks",
+      172
+    ]
+  ],
+  "sizes": [
+    [
+      "Slice (of 8)",
+      0,
+      26
+    ],
+    [
+      "Whole Pizza (x8)",
+      700,
+      27
+    ]
+  ],
+  "options": [
+    [
+      "Hand Tossed",
+      0,
+      34
+    ],
+    [
+      "Thin Crust",
+      -30,
+      35
+    ],
+    [
+      "Brooklyn Style",
+      -15,
+      36
+    ],
+    [
+      "Pan Pizza",
+      30,
+      37
+    ]
+  ]
+}

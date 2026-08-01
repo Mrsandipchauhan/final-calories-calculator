@@ -1,0 +1,244 @@
+{
+  "brand": {
+    "id": "burgerking",
+    "name": "Burger King",
+    "category": "BURGERS",
+    "desc": "Flame-grilled burgers & shakes",
+    "bg": "#fff3e0",
+    "meta_title": "Burger King Calorie Calculator — Whopper, Nuggets & Full Menu | NutriRoute",
+    "meta_description": "Find exact calorie counts for every Burger King item. Whoppers, Chicken Fries, onion rings and more with full macro breakdowns.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍔",
+      "Whopper",
+      660,
+      28,
+      49,
+      40,
+      "Burgers",
+      135
+    ],
+    [
+      "🍔",
+      "Whopper with Cheese",
+      740,
+      33,
+      50,
+      46,
+      "Burgers",
+      136
+    ],
+    [
+      "🍔",
+      "Double Whopper",
+      900,
+      48,
+      49,
+      57,
+      "Burgers",
+      137
+    ],
+    [
+      "🍔",
+      "Bacon King",
+      1150,
+      61,
+      49,
+      79,
+      "Burgers",
+      138
+    ],
+    [
+      "🍔",
+      "Cheeseburger",
+      300,
+      17,
+      27,
+      13,
+      "Burgers",
+      139
+    ],
+    [
+      "🍔",
+      "Double Cheeseburger",
+      410,
+      25,
+      27,
+      22,
+      "Burgers",
+      140
+    ],
+    [
+      "🍗",
+      "Original Chicken Sandwich",
+      660,
+      28,
+      48,
+      40,
+      "Chicken",
+      141
+    ],
+    [
+      "🍗",
+      "Ch'King Sandwich",
+      700,
+      29,
+      50,
+      42,
+      "Chicken",
+      142
+    ],
+    [
+      "🍗",
+      "Chicken Fries (9 pc)",
+      280,
+      14,
+      20,
+      17,
+      "Chicken",
+      143
+    ],
+    [
+      "🍗",
+      "8-Piece Chicken Nuggets",
+      340,
+      17,
+      18,
+      22,
+      "Chicken",
+      144
+    ],
+    [
+      "🍟",
+      "Small French Fries",
+      240,
+      3,
+      29,
+      13,
+      "Sides",
+      145
+    ],
+    [
+      "🍟",
+      "Medium French Fries",
+      380,
+      4,
+      46,
+      20,
+      "Sides",
+      146
+    ],
+    [
+      "🍟",
+      "Large French Fries",
+      430,
+      5,
+      53,
+      23,
+      "Sides",
+      147
+    ],
+    [
+      "🧅",
+      "Onion Rings (Medium)",
+      410,
+      5,
+      44,
+      24,
+      "Sides",
+      148
+    ],
+    [
+      "🥗",
+      "Garden Side Salad",
+      60,
+      3,
+      4,
+      4,
+      "Sides",
+      149
+    ],
+    [
+      "🍦",
+      "Vanilla Shake (Medium)",
+      560,
+      11,
+      80,
+      22,
+      "Desserts",
+      150
+    ],
+    [
+      "🍦",
+      "Hershey Sundae Pie",
+      310,
+      3,
+      32,
+      19,
+      "Desserts",
+      151
+    ],
+    [
+      "🥐",
+      "Croissan'wich Sausage Egg & Cheese",
+      570,
+      23,
+      30,
+      40,
+      "Breakfast",
+      152
+    ],
+    [
+      "🥞",
+      "Pancake Platter",
+      610,
+      10,
+      73,
+      30,
+      "Breakfast",
+      153
+    ],
+    [
+      "🥤",
+      "Coca-Cola (Medium)",
+      220,
+      0,
+      59,
+      0,
+      "Drinks",
+      154
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular",
+      0,
+      24
+    ],
+    [
+      "King Size",
+      180,
+      25
+    ]
+  ],
+  "options": [
+    [
+      "No Sauce",
+      0,
+      31
+    ],
+    [
+      "Add Mayo",
+      90,
+      32
+    ],
+    [
+      "Add Ketchup",
+      20,
+      33
+    ]
+  ]
+}

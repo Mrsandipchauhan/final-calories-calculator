@@ -1,0 +1,84 @@
+{
+  "brand": {
+    "id": "innout",
+    "name": "In-N-Out Burger",
+    "category": "BURGERS",
+    "desc": "Freshly prepared West Coast burger classics & Animal Style fries.",
+    "bg": "#fff4e6",
+    "meta_title": "In-N-Out Burger Calorie Calculator — Macros | NutriRoute",
+    "meta_description": "Calculate exact calories and macros for In-N-Out burgers, cheeseburgers, Animal Style fries, and shakes. Fully interactive nutrition tool.",
+    "seo_content": "<div class='seo-section'><h2>In-N-Out Burger Nutrition & Macro Tracking Guide</h2><p>In-N-Out Burger is legendary for its fresh ingredients, custom burgers, and secret menu options. Use our calculator to check the nutritional difference between standard burgers and Animal Style upgrades. Try swapping regular buns for Lettuce Wraps (Protein Style) to save on carbs.</p></div>",
+    "logo_path": "brands/images/innout.svg"
+  },
+  "items": [
+    [
+      "🍔",
+      "Double-Double",
+      670,
+      37,
+      41,
+      41,
+      "Burgers",
+      347
+    ],
+    [
+      "🍔",
+      "Cheeseburger",
+      480,
+      22,
+      41,
+      27,
+      "Burgers",
+      348
+    ],
+    [
+      "🍔",
+      "Hamburger",
+      390,
+      16,
+      41,
+      19,
+      "Burgers",
+      349
+    ],
+    [
+      "🍟",
+      "French Fries",
+      395,
+      7,
+      54,
+      18,
+      "Sides",
+      350
+    ],
+    [
+      "🥤",
+      "Chocolate Shake",
+      590,
+      10,
+      92,
+      18,
+      "Drinks",
+      351
+    ]
+  ],
+  "sizes": [
+    [
+      "Standard Portion",
+      0,
+      50
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      71
+    ],
+    [
+      "Animal Style Sauce Add",
+      80,
+      72
+    ]
+  ]
+}

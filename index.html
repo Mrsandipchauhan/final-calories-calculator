@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="NutriRoute is a free multi-brand calorie calculator for coffee, sandwiches and fast-casual orders." />
+  <title>NutriRoute — Restaurant Calorie Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1785570186194" />
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav wrap"><a class="logo" href="index.html"><i>n</i> nutri<span>route</span></a>
+  <button class="menu" aria-label="Open menu">☰</button><nav><a href="index.html">Home</a><a href="blog.html">Blog</a><a href="#brands">Brands</a><a class="pill small" href="#brands">Calculate my order <b>→</b></a></nav></header>
+  <main>
+    <section class="hero wrap">
+      <div class="hero-copy"><div class="eyebrow"><span></span> Make every order count</div><h1>Your order,<br><em>made clearer.</em></h1><p>Build your favourite restaurant order and see calories and macros before you checkout. Simple, practical, and free.</p><div class="hero-actions"><a class="pill" href="#brands">Find your brand <b>→</b></a><a class="text-link" href="#how">See how it works <b>↓</b></a></div><div class="trust"><div class="avatars"><i>J</i><i>M</i><i>S</i></div><span>Helping mindful eaters<br><strong>make one small change</strong></span></div></div>
+      <div class="hero-art"><div class="orb orb1"></div><div class="orb orb2"></div><div class="receipt"><div class="receipt-top"><span>Today’s order</span><b>12:42 PM</b></div><div class="receipt-item"><i class="cup">☕</i><div><b>Iced latte</b><small>Oat milk · Grande</small></div><strong>150</strong></div><div class="receipt-item"><i class="cup">🥪</i><div><b>Turkey sandwich</b><small>Toasted</small></div><strong>310</strong></div><div class="receipt-total"><span>Your total</span><b>460 <small>cal</small></b></div></div><a href="#brands" class="sticker" style="text-decoration: none;" onclick="setTimeout(function(){ document.getElementById('brandSearch').focus(); }, 400)">Know<br>before<br>you go <b>↗</b></a><div class="scribble">good choices<br>add up! <span>↙</span></div></div>
+    </section>
+    <section class="ticker"><div>CALORIES <b>✦</b> PROTEIN <b>✦</b> CARBS <b>✦</b> FAT <b>✦</b> CALORIES <b>✦</b> PROTEIN <b>✦</b> CARBS <b>✦</b> FAT <b>✦</b></div></section>
+    <section id="brands" class="brands wrap"><div class="section-head"><div><div class="eyebrow"><span></span> Fast Food Calorie Calculator</div><h2>Check your food<br><em>Calories & Nutrition.</em></h2><p style="margin-top: 8px; font-size: 0.95rem; color: #666; max-width: 320px;">Find exact nutrition facts from your favorite restaurants using our free calculator.</p></div><div class="search-box premium-search">
+  <input type="text" id="brandSearch" placeholder="What are you looking for?" aria-label="Search brands" autocomplete="off">
+  <div class="search-controls">
+    <button class="search-submit" aria-label="Submit search">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+    </button>
+  </div>
+  <div class="search-suggestions" id="searchSuggestions" hidden></div>
+</div></div><div class="brand-grid" id="brandGrid">
+      <a href="brands/chickfila.html" class="brand-card chickfila">
+        <div class="brand-icon chickfila-mark"><i>C</i></div>
+        <div><small>Calculators</small><h3>Chick-fil-A</h3><p>Chicken sandwiches, nuggets & sauces.</p></div>
+        <b>→</b>
+      </a>
+      <a href="brands/panera.html" class="brand-card panera">
+        <div class="brand-icon panera-mark"><i>P</i></div>
+        <div><small>Calculators</small><h3>Panera Bread</h3><p>Soups, salads, sandwiches & bakery.</p></div>
+        <b>→</b>
+      </a>
+      <a href="brands/pandaexpress.html" class="brand-card panda">
+        <div class="brand-icon panda-mark"><i>PE</i></div>
+        <div><small>Calculators</small><h3>Panda Express</h3><p>Orange chicken, bowls & sides.</p></div>
+        <b>→</b>
+      </a>
+      <div class="brand-card coming">
+        <div class="brand-icon">?</div>
+        <div><small>Coming Soon</small><h3>More Brands</h3><p>We are adding new restaurants weekly.</p></div>
+      </div>
+    </div></section>
+    <section id="how" class="how"><div class="wrap"><div class="section-head"><div><div class="eyebrow light"><span></span> Zero fuss</div><h2>Good decisions<br>in <em>three steps.</em></h2></div><p>You don’t need another food diary to use this. Just a minute before ordering.</p></div><div class="steps"><article><span>01</span><div class="step-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect><line x1="9" y1="3" x2="9" y2="21"></line><path d="M14 8h3"></path><path d="M14 12h3"></path><path d="M14 16h3"></path></svg></div><h3>Choose your brand</h3><p>Head to the menu you’re about to order from.</p></article><article><span>02</span><div class="step-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="21" x2="4" y2="14"></line><line x1="4" y1="10" x2="4" y2="3"></line><line x1="12" y1="21" x2="12" y2="12"></line><line x1="12" y1="8" x2="12" y2="3"></line><line x1="20" y1="21" x2="20" y2="16"></line><line x1="20" y1="12" x2="20" y2="3"></line><line x1="1" y1="14" x2="7" y2="14"></line><line x1="9" y1="8" x2="15" y2="8"></line><line x1="17" y1="16" x2="23" y2="16"></line></svg></div><h3>Build the order</h3><p>Pick an item and tailor its size, milk, bread or extras.</p></article><article><span>03</span><div class="step-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.21 15.89A10 10 0 1 1 8 2.83"></path><path d="M22 12A10 10 0 0 0 12 2v10z"></path></svg></div><h3>See the full picture</h3><p>Get calorie and macro estimates instantly, all in one place.</p></article></div></div></section>
+    <section class="insight wrap"><div class="insight-visual"><div class="chart"><div class="ring"><b>24<small>g</small></b><span>protein</span></div><div class="legend"><span><i></i>Protein <b>24g</b></span><span><i></i>Carbs <b>42g</b></span><span><i></i>Fat <b>16g</b></span></div></div><div class="note-card"><span>FYI</span><p>Protein keeps you fuller for longer.</p></div></div><div class="insight-copy"><div class="eyebrow"><span></span> Beyond calories</div><h2>It’s not just a<br>number on a menu.</h2><p>Calories are useful context, but the fuller picture includes protein, carbs and fat. NutriRoute brings the facts together so you can choose what feels right for your day.</p><a class="text-link" href="#faq">Read our nutrition FAQs <b>→</b></a></div></section>
+    <section id="faq" class="faq wrap"><div><div class="eyebrow"><span></span> Questions, answered</div><h2>The practical<br><em>details.</em></h2><p>Clear answers, no judgement.</p></div><div class="questions"><details open><summary>How accurate are the calorie estimates?<b>+</b></summary><p>Our calculator uses published brand nutrition information and applies the selections you make. Recipes and portions can vary by location, so treat every result as a helpful estimate.</p></details><details><summary>Is NutriRoute affiliated with these restaurants?<b>+</b></summary><p>No. NutriRoute is an independent educational tool. Brand names are used only to help you identify the menu you want to explore.</p></details><details><summary>Can I calculate customisations?<b>+</b></summary><p>Yes—our brand calculators include common choices such as size, milk, bread and add-ons, with results updated as you build.</p></details><details><summary>Why don’t I see every menu item?<b>+</b></summary><p>We are growing the database in carefully reviewed batches. Check back often: new options are added to existing brands regularly.</p></details></div></section>
+    <section class="cta wrap"><div><p>READY WHEN YOU ARE</p><h2>Small choice.<br><em>Big picture.</em></h2><a class="pill cream" href="#brands">Start calculating <b>→</b></a></div><div class="cta-mark">n</div></section>
+  </main><footer data-site-footer></footer><script src="footer.js?v=1785571469080"></script><script src="script.js?v=1785574800000"></script>
+</body></html>
+
+
+

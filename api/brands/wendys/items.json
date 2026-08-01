@@ -1,0 +1,284 @@
+{
+  "brand": {
+    "id": "wendys",
+    "name": "Wendy's",
+    "category": "BURGERS",
+    "desc": "Fresh beef burgers & frosties",
+    "bg": "#fde8e8",
+    "meta_title": "Wendy's Calorie Calculator — Burgers, Chicken & Frosty Nutrition | NutriRoute",
+    "meta_description": "Check calories in every Wendy's menu item. Baconators, nuggets, Frostys and more — see the full nutrition breakdown.",
+    "seo_content": "<div class=\"seo-section\"><h2>Wendy's Nutrition Guide</h2><p>Wendy's is known for fresh, never-frozen beef patties and their signature Frosty desserts. Calorie counts range from under 300 for a Jr. Cheeseburger to over 900 for a Baconator. Use this calculator to build your order and check the numbers before you pull up to the drive-through.</p><div class=\"info-card tip\"><strong>Smart Swap</strong><p>A Jr. Cheeseburger (310 cal, 17g protein) is a satisfying option when you want the burger experience at a fraction of the Baconator's 960 calories.</p></div><h2>Best Options Under 500 Calories</h2><ul><li>Jr. Bacon Cheeseburger — 380 cal</li><li>Grilled Chicken Sandwich — 370 cal</li><li>6-Piece Nuggets — 250 cal</li><li>Apple Bites — 35 cal</li></ul></div>",
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍔",
+      "Dave's Single",
+      570,
+      30,
+      40,
+      34,
+      "Burgers",
+      111
+    ],
+    [
+      "🍔",
+      "Dave's Double",
+      810,
+      49,
+      41,
+      51,
+      "Burgers",
+      112
+    ],
+    [
+      "🍔",
+      "Dave's Triple",
+      1070,
+      69,
+      42,
+      69,
+      "Burgers",
+      113
+    ],
+    [
+      "🍔",
+      "Baconator",
+      960,
+      58,
+      40,
+      63,
+      "Burgers",
+      114
+    ],
+    [
+      "🍔",
+      "Jr. Bacon Cheeseburger",
+      380,
+      20,
+      26,
+      23,
+      "Burgers",
+      115
+    ],
+    [
+      "🍔",
+      "Jr. Cheeseburger",
+      310,
+      17,
+      27,
+      15,
+      "Burgers",
+      116
+    ],
+    [
+      "🍗",
+      "Classic Chicken Sandwich",
+      490,
+      29,
+      44,
+      22,
+      "Chicken",
+      117
+    ],
+    [
+      "🍗",
+      "Spicy Chicken Sandwich",
+      490,
+      29,
+      44,
+      22,
+      "Chicken",
+      118
+    ],
+    [
+      "🥗",
+      "Grilled Chicken Sandwich",
+      370,
+      35,
+      36,
+      10,
+      "Chicken",
+      119
+    ],
+    [
+      "🍗",
+      "4-Piece Nuggets",
+      170,
+      10,
+      10,
+      10,
+      "Chicken",
+      120
+    ],
+    [
+      "🍗",
+      "6-Piece Nuggets",
+      250,
+      16,
+      16,
+      14,
+      "Chicken",
+      121
+    ],
+    [
+      "🍗",
+      "10-Piece Nuggets",
+      420,
+      26,
+      26,
+      24,
+      "Chicken",
+      122
+    ],
+    [
+      "🍟",
+      "Small French Fries",
+      260,
+      3,
+      34,
+      13,
+      "Sides",
+      123
+    ],
+    [
+      "🍟",
+      "Medium French Fries",
+      380,
+      5,
+      50,
+      18,
+      "Sides",
+      124
+    ],
+    [
+      "🍟",
+      "Large French Fries",
+      480,
+      6,
+      63,
+      23,
+      "Sides",
+      125
+    ],
+    [
+      "🥗",
+      "Caesar Side Salad",
+      190,
+      11,
+      9,
+      13,
+      "Sides",
+      126
+    ],
+    [
+      "🍦",
+      "Small Frosty (Chocolate)",
+      340,
+      9,
+      53,
+      9,
+      "Desserts",
+      127
+    ],
+    [
+      "🍦",
+      "Small Frosty (Vanilla)",
+      340,
+      9,
+      51,
+      9,
+      "Desserts",
+      128
+    ],
+    [
+      "🥤",
+      "Lemonade (Medium)",
+      310,
+      0,
+      79,
+      0,
+      "Drinks",
+      129
+    ],
+    [
+      "🥔",
+      "Baked Potato (Plain)",
+      270,
+      7,
+      61,
+      0,
+      "Sides",
+      130
+    ],
+    [
+      "🥔",
+      "Baked Potato (Sour Cream & Chive)",
+      310,
+      8,
+      63,
+      4,
+      "Sides",
+      131
+    ],
+    [
+      "🌯",
+      "Breakfast Baconator",
+      730,
+      34,
+      41,
+      49,
+      "Breakfast",
+      132
+    ],
+    [
+      "🥚",
+      "Sausage Egg & Cheese Biscuit",
+      610,
+      23,
+      38,
+      42,
+      "Breakfast",
+      133
+    ],
+    [
+      "🍟",
+      "Seasoned Potatoes",
+      240,
+      3,
+      30,
+      12,
+      "Breakfast",
+      134
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular",
+      0,
+      22
+    ],
+    [
+      "Value Size",
+      -100,
+      23
+    ]
+  ],
+  "options": [
+    [
+      "No Sauce",
+      0,
+      28
+    ],
+    [
+      "Add Cheese",
+      70,
+      29
+    ],
+    [
+      "Add Bacon",
+      80,
+      30
+    ]
+  ]
+}

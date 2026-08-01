@@ -1,0 +1,199 @@
+{
+  "brand": {
+    "id": "jerseymikes",
+    "name": "Jersey Mike's",
+    "category": "SUBS",
+    "desc": "Fresh-sliced subs & wraps",
+    "bg": "#e8eaf6",
+    "meta_title": "Jersey Mike's Calorie Calculator — Subs & Wraps Nutrition | NutriRoute",
+    "meta_description": "Check calorie counts for every Jersey Mike's sub. Cold subs, hot subs, and wraps with full nutrition breakdowns.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🥪",
+      "#13 The Original Italian (Regular)",
+      680,
+      32,
+      55,
+      37,
+      "Cold Subs",
+      262
+    ],
+    [
+      "🥪",
+      "#2 Jersey Shore's Favorite (Regular)",
+      570,
+      26,
+      56,
+      27,
+      "Cold Subs",
+      263
+    ],
+    [
+      "🥪",
+      "#7 Turkey & Provolone (Regular)",
+      520,
+      28,
+      54,
+      22,
+      "Cold Subs",
+      264
+    ],
+    [
+      "🥪",
+      "#3 Ham & Provolone (Regular)",
+      540,
+      28,
+      55,
+      23,
+      "Cold Subs",
+      265
+    ],
+    [
+      "🥪",
+      "#6 Roast Beef & Provolone (Regular)",
+      540,
+      30,
+      54,
+      23,
+      "Cold Subs",
+      266
+    ],
+    [
+      "🥪",
+      "#9 Club Supreme (Regular)",
+      640,
+      34,
+      55,
+      32,
+      "Cold Subs",
+      267
+    ],
+    [
+      "🥪",
+      "#17 Mike's Famous Philly (Regular)",
+      670,
+      38,
+      56,
+      32,
+      "Hot Subs",
+      268
+    ],
+    [
+      "🥪",
+      "#42 Chipotle Cheese Steak (Regular)",
+      720,
+      38,
+      58,
+      36,
+      "Hot Subs",
+      269
+    ],
+    [
+      "🍗",
+      "#43 Chipotle Chicken Cheese Steak (Regular)",
+      670,
+      35,
+      58,
+      32,
+      "Hot Subs",
+      270
+    ],
+    [
+      "🥪",
+      "#56 Big Kahuna Chicken Cheese Steak (Regular)",
+      740,
+      42,
+      60,
+      36,
+      "Hot Subs",
+      271
+    ],
+    [
+      "🍗",
+      "#99 Grilled Chicken & Pepperjack (Regular)",
+      590,
+      36,
+      56,
+      24,
+      "Hot Subs",
+      272
+    ],
+    [
+      "🍪",
+      "Chocolate Chip Cookie",
+      350,
+      4,
+      46,
+      17,
+      "Sides & Desserts",
+      273
+    ],
+    [
+      "🍪",
+      "Sugar Cookie",
+      340,
+      3,
+      48,
+      16,
+      "Sides & Desserts",
+      274
+    ],
+    [
+      "🍟",
+      "Regular Chips",
+      230,
+      2,
+      24,
+      14,
+      "Sides & Desserts",
+      275
+    ],
+    [
+      "🥤",
+      "Fountain Drink (Medium)",
+      200,
+      0,
+      54,
+      0,
+      "Drinks",
+      276
+    ]
+  ],
+  "sizes": [
+    [
+      "Mini",
+      -200,
+      39
+    ],
+    [
+      "Regular",
+      0,
+      40
+    ],
+    [
+      "Giant",
+      300,
+      41
+    ]
+  ],
+  "options": [
+    [
+      "White Sub Roll",
+      0,
+      57
+    ],
+    [
+      "Wheat Sub Roll",
+      10,
+      58
+    ],
+    [
+      "Sub in a Tub (no bread)",
+      -200,
+      59
+    ]
+  ]
+}

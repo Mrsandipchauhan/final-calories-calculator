@@ -1,0 +1,16 @@
+id,name,source_url
+
+# CSV columns: id,name,source_url,domain (domain optional - helps Clearbit/site lookups)
+starbucks,Starbucks,,starbucks.com
+mcdonalds,McDonald's,,mcdonalds.com
+subway,Subway,,subway.com
+chipotle,Chipotle,,chipotle.com
+tacobell,Taco Bell,,tacobell.com
+dunkin,Dunkin',,dunkindonuts.com
+chickfila,Chick-fil-A,,chick-fil-a.com
+panera,Panera Bread,,panerabread.com
+qdoba,Qdoba,,qdoba.com
+pandaexpress,Panda Express,,pandaexpress.com
+burgerking,Burger King,,burgerking.com
+kfc,KFC,,kfc.com
+cava,CAVA,,cava.com

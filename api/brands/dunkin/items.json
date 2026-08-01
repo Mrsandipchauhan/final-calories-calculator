@@ -1,0 +1,99 @@
+{
+  "brand": {
+    "id": "dunkin",
+    "name": "Dunkin'",
+    "category": "COFFEE & DONUTS",
+    "desc": "Donuts, coffee & breakfast",
+    "bg": "#fff0e6",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍩",
+      "Boston Kreme Donut",
+      300,
+      4,
+      39,
+      15,
+      "Donuts & Bakery",
+      36
+    ],
+    [
+      "🍩",
+      "Glazed Donut",
+      240,
+      3,
+      33,
+      11,
+      "Donuts & Bakery",
+      37
+    ],
+    [
+      "🥐",
+      "Sausage Egg & Cheese Croissant",
+      720,
+      21,
+      43,
+      52,
+      "Breakfast Sandwiches",
+      38
+    ],
+    [
+      "☕",
+      "Original Blend Hot Coffee",
+      5,
+      0,
+      0,
+      0,
+      "Drinks",
+      39
+    ],
+    [
+      "☕",
+      "Iced Caramel Latte",
+      350,
+      9,
+      54,
+      11,
+      "Drinks",
+      40
+    ]
+  ],
+  "sizes": [
+    [
+      "Small",
+      -70,
+      12
+    ],
+    [
+      "Medium",
+      0,
+      13
+    ],
+    [
+      "Large",
+      80,
+      14
+    ]
+  ],
+  "options": [
+    [
+      "Whole Milk",
+      0,
+      16
+    ],
+    [
+      "Oat Milk",
+      -20,
+      17
+    ],
+    [
+      "Skim Milk",
+      -50,
+      18
+    ]
+  ]
+}

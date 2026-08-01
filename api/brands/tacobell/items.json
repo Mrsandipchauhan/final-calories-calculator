@@ -1,0 +1,84 @@
+{
+  "brand": {
+    "id": "tacobell",
+    "name": "Taco Bell",
+    "category": "MEXICAN FAST FOOD",
+    "desc": "Tacos, burritos & specialties",
+    "bg": "#f6effb",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🌮",
+      "Crunchwrap Supreme",
+      540,
+      16,
+      71,
+      21,
+      "Specialties",
+      32
+    ],
+    [
+      "🌮",
+      "Cheesy Gordita Crunch",
+      500,
+      20,
+      41,
+      28,
+      "Tacos & Burritos",
+      33
+    ],
+    [
+      "🌯",
+      "Bean Burrito",
+      350,
+      13,
+      54,
+      9,
+      "Tacos & Burritos",
+      34
+    ],
+    [
+      "🥨",
+      "Cinnamon Twists",
+      170,
+      1,
+      27,
+      6,
+      "Sides & Sweets",
+      35
+    ]
+  ],
+  "sizes": [
+    [
+      "Standard",
+      0,
+      10
+    ],
+    [
+      "Supreme Style",
+      30,
+      11
+    ]
+  ],
+  "options": [
+    [
+      "Seasoned Beef",
+      0,
+      13
+    ],
+    [
+      "Grilled Chicken",
+      -20,
+      14
+    ],
+    [
+      "Black Beans",
+      -50,
+      15
+    ]
+  ]
+}

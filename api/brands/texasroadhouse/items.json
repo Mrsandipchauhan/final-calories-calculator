@@ -1,0 +1,94 @@
+{
+  "brand": {
+    "id": "texasroadhouse",
+    "name": "Texas Roadhouse",
+    "category": "STEAKHOUSE",
+    "desc": "USDA Choice steaks, fresh-baked rolls, ribs & southern sides.",
+    "bg": "#fcf8ee",
+    "meta_title": "Texas Roadhouse Calorie Calculator — Steaks & Rolls | NutriRoute",
+    "meta_description": "Calculate custom calories and macros for Texas Roadhouse sirloin steaks, ribs, and fresh bread rolls with honey butter. Free nutrition tool.",
+    "seo_content": "<div class='seo-section'><h2>Texas Roadhouse Nutrition & Macro Tracking Guide</h2><p>Texas Roadhouse is famous for USDA choice steaks and bottomless rolls. Steaks are excellent for clean protein, but butter glazes and sides add up. Use our calculator to track sirloin, ribeye, and legendary rolls with cinnamon butter.</p></div>",
+    "logo_path": "brands/images/texasroadhouse.svg"
+  },
+  "items": [
+    [
+      "🥩",
+      "6 oz USDA Choice Sirloin",
+      250,
+      46,
+      3,
+      6,
+      "Steaks",
+      432
+    ],
+    [
+      "🥩",
+      "Ft. Worth Ribeye 12 oz",
+      960,
+      84,
+      8,
+      64,
+      "Steaks",
+      433
+    ],
+    [
+      "🥖",
+      "Fresh-Baked Bread Roll (1pc)",
+      120,
+      3,
+      20,
+      3,
+      "Sides",
+      434
+    ],
+    [
+      "🍟",
+      "Steak Fries",
+      360,
+      5,
+      48,
+      16,
+      "Sides",
+      435
+    ],
+    [
+      "🥗",
+      "House Salad with Ranch",
+      310,
+      6,
+      8,
+      28,
+      "Salads",
+      436
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular Portion",
+      0,
+      91
+    ],
+    [
+      "Shareable / Full Size",
+      180,
+      92
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      112
+    ],
+    [
+      "Add Cinnamon Honey Butter",
+      80,
+      113
+    ],
+    [
+      "Smother Steak (Mushrooms & Onions)",
+      120,
+      114
+    ]
+  ]
+}

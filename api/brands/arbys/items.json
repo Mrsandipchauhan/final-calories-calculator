@@ -1,0 +1,94 @@
+{
+  "brand": {
+    "id": "arbys",
+    "name": "Arby's",
+    "category": "SANDWICHES",
+    "desc": "Famous Roast Beef sandwiches, curly fries & cheddar sauce.",
+    "bg": "#fbebe8",
+    "meta_title": "Arby's Calorie Calculator — Roast Beef & Curly Fries | NutriRoute",
+    "meta_description": "Track exact calories and macros for Arby's classic roast beef sandwiches, curly fries, and cheddar cheese. Free interactive nutrition calculator.",
+    "seo_content": "<div class='seo-section'><h2>Arby's Nutrition & Macro Tracking Guide</h2><p>Arby's boasts 'We Have The Meats', offering a massive range of protein-packed sandwiches. From the Classic Roast Beef to their seasoned Curly Fries, check our interactive calculator to see how adding extra cheese sauce alters your daily macro budget.</p></div>",
+    "logo_path": "brands/images/arbys.svg"
+  },
+  "items": [
+    [
+      "🥪",
+      "Classic Roast Beef",
+      360,
+      23,
+      37,
+      14,
+      "Sandwiches",
+      352
+    ],
+    [
+      "🥪",
+      "Double Roast Beef",
+      510,
+      38,
+      38,
+      24,
+      "Sandwiches",
+      353
+    ],
+    [
+      "🥪",
+      "Beef n Cheddar Classic",
+      450,
+      23,
+      45,
+      20,
+      "Sandwiches",
+      354
+    ],
+    [
+      "🍟",
+      "Curly Fries",
+      410,
+      5,
+      49,
+      21,
+      "Sides",
+      355
+    ],
+    [
+      "🧀",
+      "Mozzarella Sticks (4pc)",
+      440,
+      15,
+      37,
+      25,
+      "Sides",
+      356
+    ]
+  ],
+  "sizes": [
+    [
+      "Small",
+      -80,
+      51
+    ],
+    [
+      "Medium",
+      0,
+      52
+    ],
+    [
+      "Large",
+      120,
+      53
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      73
+    ],
+    [
+      "Extra Cheddar Cheese Sauce",
+      60,
+      74
+    ]
+  ]
+}

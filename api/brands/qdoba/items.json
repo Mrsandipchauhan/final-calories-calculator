@@ -1,0 +1,294 @@
+{
+  "brand": {
+    "id": "qdoba",
+    "name": "Qdoba",
+    "category": "MEXICAN EATS",
+    "desc": "Bowls, burritos & tacos",
+    "bg": "#fef1e8",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🌯",
+      "Burrito Tortilla",
+      300,
+      8,
+      48,
+      8,
+      "Base",
+      85
+    ],
+    [
+      "🌮",
+      "Taco Shell (Crunchy)",
+      60,
+      1,
+      8,
+      3,
+      "Base",
+      86
+    ],
+    [
+      "🌮",
+      "Soft Flour Tortilla (Taco)",
+      90,
+      2,
+      14,
+      2,
+      "Base",
+      87
+    ],
+    [
+      "🥗",
+      "Salad Shell",
+      320,
+      6,
+      32,
+      18,
+      "Base",
+      88
+    ],
+    [
+      "🥩",
+      "Grilled Adobo Chicken",
+      190,
+      28,
+      1,
+      7,
+      "Protein",
+      89
+    ],
+    [
+      "🥩",
+      "Grilled Adobo Steak",
+      180,
+      22,
+      1,
+      8,
+      "Protein",
+      90
+    ],
+    [
+      "🥩",
+      "Smoked Brisket",
+      180,
+      17,
+      1,
+      12,
+      "Protein",
+      91
+    ],
+    [
+      "🥩",
+      "Impossible Plant-Based",
+      170,
+      14,
+      9,
+      8,
+      "Protein",
+      92
+    ],
+    [
+      "🥩",
+      "Pulled Pork",
+      160,
+      16,
+      2,
+      9,
+      "Protein",
+      93
+    ],
+    [
+      "🍚",
+      "Cilantro Lime Rice",
+      180,
+      4,
+      38,
+      2,
+      "Rice & Beans",
+      94
+    ],
+    [
+      "🍚",
+      "Brown Rice",
+      170,
+      4,
+      34,
+      3,
+      "Rice & Beans",
+      95
+    ],
+    [
+      "🥫",
+      "Black Beans",
+      140,
+      9,
+      23,
+      1,
+      "Rice & Beans",
+      96
+    ],
+    [
+      "🥫",
+      "Pinto Beans",
+      140,
+      8,
+      24,
+      1,
+      "Rice & Beans",
+      97
+    ],
+    [
+      "🧀",
+      "3-Cheese Queso",
+      120,
+      5,
+      4,
+      9,
+      "Toppings",
+      98
+    ],
+    [
+      "🧀",
+      "Queso Diablo",
+      120,
+      5,
+      4,
+      9,
+      "Toppings",
+      99
+    ],
+    [
+      "🥑",
+      "Guacamole",
+      110,
+      2,
+      6,
+      10,
+      "Toppings",
+      100
+    ],
+    [
+      "🍅",
+      "Pico de Gallo",
+      10,
+      0,
+      2,
+      0,
+      "Salsa",
+      101
+    ],
+    [
+      "🌶️",
+      "Salsa Verde",
+      15,
+      0,
+      3,
+      0,
+      "Salsa",
+      102
+    ],
+    [
+      "🌶️",
+      "Salsa Roja",
+      15,
+      0,
+      3,
+      0,
+      "Salsa",
+      103
+    ],
+    [
+      "🌽",
+      "Roasted Chile Corn Salsa",
+      60,
+      2,
+      12,
+      1,
+      "Salsa",
+      104
+    ],
+    [
+      "🥬",
+      "Shredded Lettuce",
+      5,
+      0,
+      1,
+      0,
+      "Toppings",
+      105
+    ],
+    [
+      "🧀",
+      "Shredded Cheese",
+      110,
+      7,
+      1,
+      9,
+      "Toppings",
+      106
+    ],
+    [
+      "🥛",
+      "Sour Cream",
+      110,
+      2,
+      2,
+      10,
+      "Toppings",
+      107
+    ],
+    [
+      "🧅",
+      "Fajita Veggies",
+      30,
+      1,
+      5,
+      1,
+      "Toppings",
+      108
+    ],
+    [
+      "🌮",
+      "Tortilla Chips",
+      390,
+      5,
+      49,
+      19,
+      "Sides",
+      109
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular",
+      0,
+      20
+    ],
+    [
+      "Double",
+      100,
+      21
+    ]
+  ],
+  "options": [
+    [
+      "Half",
+      -50,
+      25
+    ],
+    [
+      "Regular",
+      0,
+      26
+    ],
+    [
+      "Extra",
+      50,
+      27
+    ]
+  ]
+}

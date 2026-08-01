@@ -1,0 +1,94 @@
+{
+  "brand": {
+    "id": "crumbl",
+    "name": "Crumbl Cookies",
+    "category": "COOKIES & SWEETS",
+    "desc": "Weekly rotating gourmet cookies, frosting & dessert boxes.",
+    "bg": "#fff0f3",
+    "meta_title": "Crumbl Cookies Calorie Calculator — Macros | NutriRoute",
+    "meta_description": "Calculate calories and macros for Crumbl milk chocolate chip, pink sugar, and weekly rotating cookies. Free interactive nutrition tracker.",
+    "seo_content": "<div class='seo-section'><h2>Crumbl Cookies Nutrition & Macro Tracking Guide</h2><p>Crumbl Cookies is legendary for its massive, rotating gourmet cookie flavors. Since a single cookie can easily range from 600 to 900+ calories, our calculator helps you estimate custom serving portions (like a quarter or mini cookies) to fit these delicious treats into your macro plan.</p></div>",
+    "logo_path": "brands/images/crumbl.svg"
+  },
+  "items": [
+    [
+      "🍪",
+      "Milk Chocolate Chip Cookie",
+      720,
+      8,
+      92,
+      36,
+      "Cookies",
+      422
+    ],
+    [
+      "🍪",
+      "Classic Pink Sugar Cookie",
+      760,
+      8,
+      100,
+      36,
+      "Cookies",
+      423
+    ],
+    [
+      "🧁",
+      "Churro Cookie",
+      680,
+      6,
+      86,
+      34,
+      "Cookies",
+      424
+    ],
+    [
+      "🍪",
+      "Buckeye Brownie Cookie",
+      800,
+      10,
+      104,
+      38,
+      "Cookies",
+      425
+    ],
+    [
+      "🍪",
+      "Key Lime Pie Cookie",
+      640,
+      6,
+      82,
+      30,
+      "Cookies",
+      426
+    ]
+  ],
+  "sizes": [
+    [
+      "Whole Cookie",
+      0,
+      85
+    ],
+    [
+      "Single Serving (1/4 Cookie)",
+      -540,
+      86
+    ],
+    [
+      "Crumbl Mini Cookie",
+      -320,
+      87
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      107
+    ],
+    [
+      "Add Extra Cream Cheese Frosting",
+      120,
+      108
+    ]
+  ]
+}

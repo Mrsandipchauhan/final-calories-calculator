@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Read the latest nutrition insights and healthy eating blogs on NutriRoute." />
+  <title>Blog — NutriRoute Restaurant Calorie Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css?v=1785570186194" />
+  <style>
+    .blog-hero {
+      padding: 60px 0 40px;
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .blog-hero h1 {
+      font-size: clamp(40px, 5.5vw, 64px);
+      margin-bottom: 15px;
+    }
+    .blog-hero p {
+      color: var(--muted);
+      font-size: 16px;
+      line-height: 1.6;
+    }
+    
+    /* Grid View */
+    .blog-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px;
+      margin-bottom: 80px;
+    }
+    .blog-card {
+      background: #fffef9;
+      border: 2px solid var(--ink);
+      border-radius: 24px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+      color: var(--ink);
+      transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .blog-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 15px 30px rgba(27, 33, 29, 0.05);
+    }
+    .blog-image {
+      height: 220px;
+      width: 100%;
+      object-fit: cover;
+      border-bottom: 2px solid var(--ink);
+    }
+    .blog-card-content {
+      padding: 28px;
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+    }
+    .blog-card-content small {
+      font: 500 11px 'DM Mono', monospace;
+      color: var(--orange);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+    .blog-card-content h3 {
+      font: 700 24px 'Playfair Display', Georgia, serif;
+      margin: 10px 0 12px;
+      line-height: 1.2;
+    }
+    .blog-card-content p {
+      color: #575d55;
+      font-size: 14px;
+      line-height: 1.6;
+      margin: 0 0 20px;
+      flex: 1;
+    }
+    .blog-read-more {
+      font-size: 13px;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+    .blog-read-more b {
+      color: var(--orange);
+      font-size: 18px;
+    }
+
+    /* Single Post View */
+    .post-view {
+      max-width: 760px;
+      margin: 40px auto 100px;
+      background: #fffef9;
+      border: 2px solid var(--ink);
+      border-radius: 28px;
+      overflow: hidden;
+      box-shadow: 0 20px 40px rgba(0,0,0,0.02);
+    }
+    .post-header-img {
+      width: 100%;
+      height: 380px;
+      object-fit: cover;
+      border-bottom: 2px solid var(--ink);
+    }
+    .post-body {
+      padding: 50px;
+    }
+    .post-meta {
+      font: 500 12px 'DM Mono', monospace;
+      color: var(--muted);
+      margin-bottom: 15px;
+      display: flex;
+      gap: 15px;
+    }
+    .post-meta span:first-child {
+      color: var(--orange);
+      font-weight: bold;
+    }
+    .post-body h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: clamp(32px, 4.5vw, 48px);
+      margin-top: 0;
+      margin-bottom: 24px;
+      line-height: 1.1;
+    }
+    .post-text {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #3b423a;
+    }
+    .post-text p {
+      margin-bottom: 24px;
+    }
+    .post-text h2, .post-text h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      color: var(--ink);
+      margin-top: 40px;
+      margin-bottom: 16px;
+    }
+    .post-text ul, .post-text ol {
+      margin-bottom: 24px;
+      padding-left: 20px;
+    }
+    .post-text li {
+      margin-bottom: 10px;
+    }
+    .back-to-blogs {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      text-decoration: none;
+      color: var(--ink);
+      font-weight: 700;
+      margin-bottom: 25px;
+      font-size: 14px;
+    }
+    .back-to-blogs:hover {
+      color: var(--orange);
+    }
+
+    @media(max-width: 760px) {
+      .blog-grid {
+        grid-template-columns: 1fr;
+      }
+      .post-body {
+        padding: 30px 20px;
+      }
+      .post-header-img {
+        height: 240px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="noise"></div>
+  <header class="nav wrap">
+    <a class="logo" href="index.html"><i>n</i> nutri<span>route</span></a>
+    <button class="menu" aria-label="Open menu">☰</button>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="index.html#brands">Brands</a>
+      <a class="pill small" href="index.html#brands">Calculate my order <b>→</b></a>
+    </nav>
+  </header>
+
+  <main class="wrap">
+    <!-- Grid List View -->
+    <div id="blogListView">
+      <section class="blog-hero">
+        <div class="eyebrow" style="justify-content: center;"><span></span> Fresh Nutrition Knowledge</div>
+        <h1>Read our latest<br><em>nutrition insights.</em></h1>
+        <p>Simple, practical advice to help you feel good about every order. No judgment, just facts.</p>
+      </section>
+      <div class="blog-grid" id="blogGrid">
+        <!-- Dynamically loaded -->
+      </div>
+    </div>
+
+    <!-- Single Article View -->
+    <div id="blogPostView" hidden>
+      <div id="blogBreadcrumbs" style="font-size: 13px; color: var(--muted); margin-bottom: 20px; font-weight: 500;">
+        <a href="/" style="color: var(--ink); text-decoration: none;">Home</a> / 
+        <a href="/blog" style="color: var(--ink); text-decoration: none;" onclick="showListView(event)">Blog</a> / 
+        <span id="breadcrumbTitle" style="color: var(--muted);">Post Title</span>
+      </div>
+      <a href="/blog" class="back-to-blogs" onclick="showListView(event)"><b>←</b> Back to all blogs</a>
+      <article class="post-view">
+        <img id="postImage" class="post-header-img" src="" alt="" />
+        <div class="post-body">
+          <div class="post-meta">
+            <span>INSIGHTS</span>
+            <span id="postDate"></span>
+          </div>
+          <h1 id="postTitle"></h1>
+          <div id="postContent" class="post-text"></div>
+        </div>
+      </article>
+
+      <!-- Related Posts Section -->
+      <section style="margin-top: 60px; border-top: 2px dashed var(--line); padding-top: 40px; margin-bottom: 80px;">
+        <h3 style="font-family: 'Playfair Display', Georgia, serif; font-size: clamp(24px, 3.5vw, 36px); margin-top: 0; margin-bottom: 24px;">Related Articles</h3>
+        <div class="blog-grid" id="relatedPostsGrid">
+          <!-- Injected Related Posts -->
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer data-site-footer></footer>
+  <script src="/footer.js?v=1785571469080"></script>
+  <script>
+    let allPosts = [];
+
+    document.addEventListener('DOMContentLoaded', () => {
+      loadBlogs().then(() => {
+        // Handle server-rendered clean URL route or popstate
+        const bodySlug = document.body.dataset.blogSlug;
+        const pathSlug = window.location.pathname.startsWith('/blog/') ? window.location.pathname.split('/')[2] : null;
+        const slug = bodySlug || pathSlug;
+        
+        if (slug) {
+          loadSinglePost(slug);
+        } else {
+          showListView();
+        }
+      });
+
+      // Handle back/forward navigation
+      window.addEventListener('popstate', (e) => {
+        const path = window.location.pathname;
+        if (path.startsWith('/blog/')) {
+          const slug = path.split('/')[2];
+          loadSinglePost(slug);
+        } else {
+          showListView();
+        }
+      });
+    });
+
+    async function loadBlogs() {
+      try {
+        const res = await fetch('/api/blogs');
+        allPosts = await res.json();
+        const grid = document.getElementById('blogGrid');
+        
+        grid.innerHTML = allPosts.map(post => `
+          <a href="/blog/${post.slug}" class="blog-card" onclick="openPost('${post.slug}', event)">
+            <img class="blog-image" src="${post.image_url || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600'}" alt="${post.title}">
+            <div class="blog-card-content">
+              <small>Insights · ${new Date(post.created_at).toLocaleDateString()}</small>
+              <h3>${post.title}</h3>
+              <p>${post.summary}</p>
+              <span class="blog-read-more">Read article <b>→</b></span>
+            </div>
+          </a>
+        `).join('');
+      } catch (err) {
+        console.error('Error loading blogs:', err);
+      }
+    }
+
+    function openPost(slug, e) {
+      if (e) e.preventDefault();
+      history.pushState({ slug }, '', `/blog/${slug}`);
+      loadSinglePost(slug);
+    }
+
+    async function loadSinglePost(slug) {
+      try {
+        const res = await fetch(`/api/blogs/${slug}`);
+        if (!res.ok) return showListView();
+        
+        const post = await res.json();
+        
+        document.getElementById('postImage').src = post.image_url || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600';
+        document.getElementById('postImage').alt = post.title;
+        document.getElementById('postDate').textContent = new Date(post.created_at).toLocaleDateString();
+        document.getElementById('postTitle').textContent = post.title;
+        document.getElementById('breadcrumbTitle').textContent = post.title;
+        
+        // Render content (HTML if contains tags, otherwise fallback markdown converter)
+        const content = post.content || '';
+        if (content.includes('<p>') || content.includes('<div>') || content.includes('<h')) {
+          document.getElementById('postContent').innerHTML = content;
+        } else {
+          let htmlContent = content
+            .replace(/### (.*)/g, '<h3>$1</h3>')
+            .replace(/## (.*)/g, '<h2>$1</h2>')
+            .replace(/\*\*([^*]+)\*\*/g, '<strong>$1</strong>')
+            .replace(/\n\n/g, '</p><p>')
+            .replace(/- (.*)/g, '<li>$1</li>');
+            
+          if (!htmlContent.startsWith('<h') && !htmlContent.startsWith('<p')) {
+            htmlContent = '<p>' + htmlContent + '</p>';
+          }
+          document.getElementById('postContent').innerHTML = htmlContent;
+        }
+        
+        // Generate related posts (filter current and get top 2)
+        const related = allPosts.filter(p => p.slug !== slug).slice(0, 2);
+        const relatedGrid = document.getElementById('relatedPostsGrid');
+        if (related.length > 0) {
+          relatedGrid.innerHTML = related.map(post => `
+            <a href="/blog/${post.slug}" class="blog-card" onclick="openPost('${post.slug}', event)">
+              <img class="blog-image" src="${post.image_url || 'https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600'}" alt="${post.title}">
+              <div class="blog-card-content">
+                <small>Insights · ${new Date(post.created_at).toLocaleDateString()}</small>
+                <h3>${post.title}</h3>
+                <p>${post.summary}</p>
+                <span class="blog-read-more">Read article <b>→</b></span>
+              </div>
+            </a>
+          `).join('');
+          relatedGrid.parentElement.style.display = 'block';
+        } else {
+          relatedGrid.parentElement.style.display = 'none';
+        }
+
+        document.getElementById('blogListView').hidden = true;
+        document.getElementById('blogPostView').hidden = false;
+        window.scrollTo(0, 0);
+      } catch (err) {
+        console.error('Error loading single post:', err);
+        showListView();
+      }
+    }
+
+    function showListView(e) {
+      if (e) e.preventDefault();
+      history.pushState(null, '', '/blog');
+      document.getElementById('blogListView').hidden = false;
+      document.getElementById('blogPostView').hidden = true;
+    }
+  </script>
+</body>
+</html>
+

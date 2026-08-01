@@ -1,0 +1,1358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Admin Dashboard — NutriRoute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Include Quill styles -->
+  <link href="https://cdn.quilljs.com/1.3.6/quill.snow.css" rel="stylesheet">
+  <style>
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: Manrope, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .admin-container {
+      max-width: 1200px;
+      margin: 40px auto;
+      padding: 0 24px;
+    }
+    .auth-card {
+      max-width: 400px;
+      margin: 100px auto;
+      background: #fffef9;
+      border: 2px solid var(--ink);
+      border-radius: 24px;
+      padding: 40px;
+      box-shadow: 0 20px 40px rgba(27,33,29,0.06);
+    }
+    .auth-card h2 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 32px;
+      margin-top: 0;
+      margin-bottom: 24px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      font-size: 12px;
+      font-weight: 700;
+      margin-bottom: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+    }
+    .form-control {
+      width: 100%;
+      padding: 12px 16px;
+      border: 1.5px solid var(--line);
+      border-radius: 12px;
+      font-family: inherit;
+      font-size: 14px;
+      outline: none;
+      background: #fff;
+      transition: border-color 0.2s;
+    }
+    .form-control:focus {
+      border-color: var(--orange);
+    }
+    .admin-btn {
+      background: var(--ink);
+      color: #fff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 14px;
+      font-weight: 700;
+      border-radius: 99px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      transition: all 0.2s;
+    }
+    .admin-btn:hover {
+      background: var(--orange);
+      transform: translateY(-2px);
+    }
+    .admin-btn.danger {
+      background: #d8241d;
+    }
+    .admin-btn.danger:hover {
+      background: #9f1a14;
+    }
+    .admin-btn.secondary {
+      background: transparent;
+      color: var(--ink);
+      border: 1.5px solid var(--ink);
+    }
+    .admin-btn.secondary:hover {
+      background: rgba(27,33,29,0.05);
+    }
+    
+    /* Dashboard Layout */
+    .dashboard-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 30px;
+      border-bottom: 2px dashed var(--line);
+      padding-bottom: 20px;
+    }
+    .dashboard-header h1 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 40px;
+      margin: 0;
+    }
+    .dashboard-tabs {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 30px;
+      flex-wrap: wrap;
+    }
+    .tab-btn {
+      background: #fffef9;
+      border: 2px solid var(--line);
+      border-radius: 99px;
+      padding: 10px 20px;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .tab-btn:hover, .tab-btn.active {
+      border-color: var(--ink);
+      color: var(--ink);
+      background: var(--lime);
+    }
+    .dashboard-panel {
+      background: #fffef9;
+      border: 2px solid var(--ink);
+      border-radius: 24px;
+      padding: 35px;
+      box-shadow: 0 15px 30px rgba(0,0,0,0.03);
+    }
+    .panel-title-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 24px;
+    }
+    .panel-title-bar h2 {
+      margin: 0;
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 28px;
+    }
+    
+    /* Table / List Styles */
+    .data-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 15px;
+    }
+    .data-table th, .data-table td {
+      padding: 14px 18px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .data-table th {
+      font-weight: 700;
+      background: rgba(27,33,29,0.02);
+      border-bottom: 2px solid var(--ink);
+    }
+    .data-table tr:hover td {
+      background: rgba(214, 255, 82, 0.05);
+    }
+    .emoji-badge {
+      font-size: 20px;
+    }
+    
+    /* Modal styles */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(27,33,29,0.4);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow-y: auto;
+      padding: 40px 0;
+    }
+    .modal-overlay[hidden] {
+      display: none !important;
+    }
+    .modal-box {
+      background: #fffef9;
+      border: 2px solid var(--ink);
+      border-radius: 24px;
+      width: 90%;
+      max-width: 650px;
+      padding: 35px;
+      box-shadow: 0 30px 60px rgba(0,0,0,0.15);
+      animation: modalSlideUp 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+      margin: auto;
+    }
+    @keyframes modalSlideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    .modal-box h3 {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 24px;
+      margin-top: 0;
+      margin-bottom: 20px;
+    }
+    .modal-actions {
+      display: flex;
+      justify-content: flex-end;
+      gap: 12px;
+      margin-top: 25px;
+    }
+
+    /* Media library items */
+    .media-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+      gap: 16px;
+      margin-top: 20px;
+    }
+    .media-card {
+      border: 1px solid var(--line);
+      border-radius: 12px;
+      background: #fff;
+      padding: 8px;
+      text-align: center;
+      position: relative;
+    }
+    .media-card img {
+      width: 100%;
+      height: 90px;
+      object-fit: cover;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    .media-card .media-name {
+      font-size: 10px;
+      font-weight: bold;
+      margin-top: 6px;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .media-card .media-delete {
+      position: absolute;
+      top: 4px;
+      right: 4px;
+      background: rgba(216, 36, 29, 0.9);
+      color: #fff;
+      border: none;
+      border-radius: 50%;
+      width: 20px;
+      height: 20px;
+      font-size: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    /* Custom buttons for info cards inside Quill Toolbar */
+    .ql-tip::after {
+      content: "💡 Tip" !important;
+    }
+    .ql-warning::after {
+      content: "⚠️ Warning" !important;
+    }
+    .ql-nutrition::after {
+      content: "📊 Fact" !important;
+    }
+    .ql-tip, .ql-warning, .ql-nutrition {
+      width: auto !important;
+      font-size: 11px !important;
+      font-weight: bold !important;
+      padding: 0 4px !important;
+    }
+  </style>
+</head>
+<body>
+  <div class="admin-container">
+    <!-- Auth Panel -->
+    <div id="authSection" class="auth-card">
+      <h2>Admin Login</h2>
+      <form id="loginForm">
+        <div class="form-group">
+          <label for="username">Username</label>
+          <input type="text" id="username" class="form-control" placeholder="Enter username" required />
+        </div>
+        <div class="form-group">
+          <label for="password">Password</label>
+          <input type="password" id="password" class="form-control" placeholder="Enter password" required />
+        </div>
+        <button type="submit" class="admin-btn">Log In <b>→</b></button>
+      </form>
+      <div id="loginError" style="color: #d8241d; font-size: 13px; margin-top: 15px; font-weight: 600;" hidden></div>
+    </div>
+
+    <!-- Main Dashboard -->
+    <div id="dashboardSection" hidden>
+      <header class="dashboard-header">
+        <div>
+          <h1>NutriRoute</h1>
+          <span style="font-size: 13px; color: var(--muted); font-weight: 600;">Control Center</span>
+        </div>
+        <button id="logoutBtn" class="admin-btn secondary">Log Out <b>↗</b></button>
+      </header>
+
+      <nav class="dashboard-tabs">
+        <button class="tab-btn active" onclick="switchTab('brands')">🏢 Brands</button>
+        <button class="tab-btn" onclick="switchTab('items')">🍔 Menu Items</button>
+        <button class="tab-btn" onclick="switchTab('configs')">⚙️ Sizes & Options</button>
+        <button class="tab-btn" onclick="switchTab('blogs')">✍️ Blogs</button>
+        <button class="tab-btn" onclick="switchTab('media')">📁 Media Library</button>
+        <button class="tab-btn" onclick="switchTab('settings')">⚙️ Site Settings</button>
+      </nav>
+
+      <!-- Panel: Brands -->
+      <div id="brandsPanel" class="dashboard-panel tab-panel">
+        <div class="panel-title-bar">
+          <h2>Manage Brands</h2>
+          <button class="admin-btn" onclick="openAddBrandModal()">+ Add Brand</button>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Logo</th>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Description</th>
+                <th>BG Color</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="brandsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel: Menu Items -->
+      <div id="itemsPanel" class="dashboard-panel tab-panel" hidden>
+        <div class="panel-title-bar">
+          <h2>Manage Menu Items</h2>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <select id="itemBrandFilter" class="form-control" style="width: 200px;" onchange="loadItems()"></select>
+            <button class="admin-btn" onclick="openAddItemModal()">+ Add Item</button>
+          </div>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Icon</th>
+                <th>Name</th>
+                <th>Category</th>
+                <th>Calories</th>
+                <th>Protein</th>
+                <th>Carbs</th>
+                <th>Fat</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="itemsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel: Sizes & Options -->
+      <div id="configsPanel" class="dashboard-panel tab-panel" hidden>
+        <div class="panel-title-bar">
+          <h2>Manage Sizes & Options</h2>
+          <div style="display: flex; gap: 12px; align-items: center;">
+            <select id="configBrandFilter" class="form-control" style="width: 200px;" onchange="loadConfigs()"></select>
+            <button class="admin-btn" onclick="openAddConfigModal()">+ Add Config</button>
+          </div>
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 30px;">
+          <div>
+            <h3>Sizes</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Size Name</th>
+                  <th>Calorie Adjust</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="sizesTableBody"></tbody>
+            </table>
+          </div>
+          <div>
+            <h3>Options / Milks</h3>
+            <table class="data-table">
+              <thead>
+                <tr>
+                  <th>Option Name</th>
+                  <th>Calorie Adjust</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody id="optionsTableBody"></tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+
+      <!-- Panel: Blogs -->
+      <div id="blogsPanel" class="dashboard-panel tab-panel" hidden>
+        <div class="panel-title-bar">
+          <h2>Manage Blog Posts</h2>
+          <button class="admin-btn" onclick="openAddBlogModal()">+ Create Post</button>
+        </div>
+        <div class="table-responsive">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Title</th>
+                <th>Slug</th>
+                <th>Status</th>
+                <th>Author</th>
+                <th>Date</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody id="blogsTableBody">
+              <!-- Dynamically populated -->
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Panel: Media Library -->
+      <div id="mediaPanel" class="dashboard-panel tab-panel" hidden>
+        <div class="panel-title-bar">
+          <h2>Media Library</h2>
+          <form id="mediaUploadForm" style="display: flex; gap: 12px; align-items: center;">
+            <input type="file" id="mediaUploadFile" class="form-control" style="width: auto;" required />
+            <input type="text" id="mediaAltText" class="form-control" placeholder="Alt text" style="width: 200px;" />
+            <button type="submit" class="admin-btn">Upload Image</button>
+          </form>
+        </div>
+        <div class="media-grid" id="mediaLibraryGrid">
+          <!-- Images populated here -->
+        </div>
+      </div>
+
+      <!-- Panel: Site Settings -->
+      <div id="settingsPanel" class="dashboard-panel tab-panel" hidden>
+        <h2>Site-wide SEO & Code Settings</h2>
+        <form id="settingsForm" style="margin-top: 20px;">
+          <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+            <div>
+              <div class="form-group">
+                <label for="settingsSiteTitle">Site Title</label>
+                <input type="text" id="settingsSiteTitle" class="form-control" />
+              </div>
+              <div class="form-group">
+                <label for="settingsSiteDescription">Site Description</label>
+                <textarea id="settingsSiteDescription" class="form-control" rows="3"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="settingsSiteUrl">Site Canonical Domain URL</label>
+                <input type="url" id="settingsSiteUrl" class="form-control" placeholder="https://nutriroute.com" />
+              </div>
+              <div class="form-group">
+                <label for="settingsAnalyticsId">Google Analytics ID (Measurement ID)</label>
+                <input type="text" id="settingsAnalyticsId" class="form-control" placeholder="G-XXXXXXXXXX" />
+              </div>
+              <div class="form-group">
+                <label for="settingsSearchConsoleCode">Google Search Console HTML Meta Code</label>
+                <textarea id="settingsSearchConsoleCode" class="form-control" placeholder='<meta name="google-site-verification" content="..." />' rows="2"></textarea>
+              </div>
+              <div class="form-group">
+                <label for="settingsAdsenseCode">Google AdSense Head Script Code</label>
+                <textarea id="settingsAdsenseCode" class="form-control" placeholder='<script async src="https://pagead2.googlesyndication.com/..."></script>' rows="2"></textarea>
+              </div>
+            </div>
+            <div>
+              <div class="form-group">
+                <label for="settingsHeadCode">Custom Header Injection Code (&lt;head&gt;)</label>
+                <textarea id="settingsHeadCode" class="form-control" rows="6" placeholder="Any additional tracking script, meta tag, or CSS link..."></textarea>
+              </div>
+              <div class="form-group">
+                <label for="settingsBodyCode">Custom Footer Injection Code (&lt;body&gt;)</label>
+                <textarea id="settingsBodyCode" class="form-control" rows="6" placeholder="Any tracking pixels or scripts to inject before </body>..."></textarea>
+              </div>
+              <button type="submit" class="admin-btn">Save SEO & Code Injection Settings</button>
+              <div id="settingsMessage" style="margin-top: 15px; font-weight: 600; font-size: 14px;"></div>
+            </div>
+          </div>
+        </form>
+
+        <h2 style="margin-top: 40px; border-top: 2px dashed var(--line); padding-top: 30px;">Account Password Settings</h2>
+        <form id="passwordForm" style="max-width: 400px; margin-top: 20px;">
+          <div class="form-group">
+            <label for="currentPassword">Current Password</label>
+            <input type="password" id="currentPassword" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="newPassword">New Password</label>
+            <input type="password" id="newPassword" class="form-control" required />
+          </div>
+          <button type="submit" class="admin-btn">Change Password <b>→</b></button>
+        </form>
+        <div id="passwordMessage" style="margin-top: 15px; font-weight: 600; font-size: 14px;"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal: Brand -->
+  <div id="brandModal" class="modal-overlay" hidden>
+    <div class="modal-box" style="max-width: 750px;">
+      <h3 id="brandModalTitle">Add New Brand</h3>
+      <form id="brandForm">
+        <input type="hidden" id="editBrandId" />
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
+          <div>
+            <h4>Brand Parameters</h4>
+            <div class="form-group">
+              <label for="brandId">Brand ID (Unique, lowercase no spaces)</label>
+              <input type="text" id="brandId" class="form-control" placeholder="e.g. chickfila" required />
+            </div>
+            <div class="form-group">
+              <label for="brandName">Brand Name</label>
+              <input type="text" id="brandName" class="form-control" placeholder="e.g. Chick-fil-A" required />
+            </div>
+            <div class="form-group">
+              <label for="brandCategory">Category</label>
+              <input type="text" id="brandCategory" class="form-control" placeholder="e.g. CHICKEN" required />
+            </div>
+            <div class="form-group">
+              <label for="brandDesc">Description</label>
+              <input type="text" id="brandDesc" class="form-control" placeholder="e.g. Chicken sandwiches and sauces" required />
+            </div>
+            <div class="form-group">
+              <label for="brandBg">Background Hex Color</label>
+              <input type="text" id="brandBg" class="form-control" placeholder="e.g. #fdf0f1" required />
+            </div>
+            <div class="form-group">
+              <label for="brandLogoFile">Brand Logo Image</label>
+              <input type="file" id="brandLogoFile" class="form-control" />
+              <div id="brandLogoPreview" style="margin-top: 8px;"></div>
+            </div>
+          </div>
+          <div>
+            <h4>SEO Optimization</h4>
+            <div class="form-group">
+              <label for="brandMetaTitle">Meta Title Override</label>
+              <input type="text" id="brandMetaTitle" class="form-control" placeholder="Brand Name Calorie Calculator..." />
+            </div>
+            <div class="form-group">
+              <label for="brandMetaDescription">Meta Description Override</label>
+              <textarea id="brandMetaDescription" class="form-control" rows="3" placeholder="Check calories and nutrition facts for..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="brandSeoContent">SEO Rich Content Section (HTML Supported)</label>
+              <textarea id="brandSeoContent" class="form-control" rows="7" placeholder="<h2>Helpful Title</h2><p>Provide deep nutritional analysis, menu tips, macro highlights, etc.</p>"></textarea>
+            </div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="admin-btn secondary" onclick="closeModal('brandModal')">Cancel</button>
+          <button type="submit" class="admin-btn">Save Brand</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Menu Item -->
+  <div id="itemModal" class="modal-overlay" hidden>
+    <div class="modal-box">
+      <h3 id="itemModalTitle">Add Menu Item</h3>
+      <form id="itemForm">
+        <input type="hidden" id="editItemId" />
+        <div class="form-group">
+          <label for="itemEmoji">Emoji</label>
+          <input type="text" id="itemEmoji" class="form-control" placeholder="e.g. 🍔" required />
+        </div>
+        <div class="form-group">
+          <label for="itemName">Item Name</label>
+          <input type="text" id="itemName" class="form-control" placeholder="e.g. Spicy Chicken Sandwich" required />
+        </div>
+        <div class="form-group">
+          <label for="itemCategory">Category / Section</label>
+          <input type="text" id="itemCategory" class="form-control" placeholder="e.g. Entrees" required />
+        </div>
+        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+          <div class="form-group">
+            <label for="itemCalories">Calories</label>
+            <input type="number" id="itemCalories" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="itemProtein">Protein (g)</label>
+            <input type="number" id="itemProtein" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="itemCarbs">Carbs (g)</label>
+            <input type="number" id="itemCarbs" class="form-control" required />
+          </div>
+          <div class="form-group">
+            <label for="itemFat">Fat (g)</label>
+            <input type="number" id="itemFat" class="form-control" required />
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="admin-btn secondary" onclick="closeModal('itemModal')">Cancel</button>
+          <button type="submit" class="admin-btn">Save Item</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Size / Option Config -->
+  <div id="configModal" class="modal-overlay" hidden>
+    <div class="modal-box">
+      <h3>Add Configuration (Size / Option)</h3>
+      <form id="configForm">
+        <div class="form-group">
+          <label for="configType">Configuration Type</label>
+          <select id="configType" class="form-control" required>
+            <option value="sizes">Size</option>
+            <option value="options">Option / Milk / Extras</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="configName">Configuration Name</label>
+          <input type="text" id="configName" class="form-control" placeholder="e.g. Venti / Almond milk" required />
+        </div>
+        <div class="form-group">
+          <label for="configCalAdjust">Calorie Adjustment (Relative to Base)</label>
+          <input type="number" id="configCalAdjust" class="form-control" placeholder="e.g. 50 or -30" required />
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="admin-btn secondary" onclick="closeModal('configModal')">Cancel</button>
+          <button type="submit" class="admin-btn">Save Configuration</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Modal: Blog -->
+  <div id="blogModal" class="modal-overlay" hidden>
+    <div class="modal-box" style="max-width: 900px;">
+      <h3 id="blogModalTitle">Create Blog Post</h3>
+      <form id="blogForm">
+        <input type="hidden" id="editBlogId" />
+        <div style="display: grid; grid-template-columns: 1.2fr 1fr; gap: 24px;">
+          <div>
+            <h4>Post Details & WYSIWYG Content</h4>
+            <div class="form-group">
+              <label for="blogTitle">Title</label>
+              <input type="text" id="blogTitle" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label for="blogSlug">Slug (Clean URL URL-path)</label>
+              <input type="text" id="blogSlug" class="form-control" placeholder="e.g. standard-calorie-saving-hacks" />
+            </div>
+            <div class="form-group">
+              <label for="blogSummary">Summary</label>
+              <input type="text" id="blogSummary" class="form-control" required />
+            </div>
+            <div class="form-group">
+              <label>Content (Classic Rich Text Editor)</label>
+              <!-- Quill Container -->
+              <div id="blogEditor" style="height: 280px; background: #fff;"></div>
+            </div>
+          </div>
+          <div>
+            <h4>SEO & Metadata</h4>
+            <div class="form-group">
+              <label for="blogImageUrl">Featured Image URL</label>
+              <input type="text" id="blogImageUrl" class="form-control" placeholder="/uploads/filename.png" required />
+              <div style="font-size: 11px; margin-top: 4px; color: var(--muted);">Upload images in the Media Library tab and paste their URL here.</div>
+            </div>
+            <div class="form-group">
+              <label for="blogAuthor">Author</label>
+              <input type="text" id="blogAuthor" class="form-control" value="NutriRoute Team" required />
+            </div>
+            <div class="form-group">
+              <label for="blogStatus">Status</label>
+              <select id="blogStatus" class="form-control">
+                <option value="published">Published</option>
+                <option value="draft">Draft / Hidden</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="blogMetaTitle">SEO Meta Title (Unique)</label>
+              <input type="text" id="blogMetaTitle" class="form-control" placeholder="Default: Title — NutriRoute Blog" />
+            </div>
+            <div class="form-group">
+              <label for="blogMetaDescription">SEO Meta Description</label>
+              <textarea id="blogMetaDescription" class="form-control" rows="2" placeholder="Under 160 characters summary..."></textarea>
+            </div>
+            <div class="form-group">
+              <label for="blogCanonical">Canonical URL override</label>
+              <input type="url" id="blogCanonical" class="form-control" placeholder="https://nutriroute.com/blog/..." />
+            </div>
+            <div class="form-group">
+              <label for="blogSchemaType">Schema.org Structured Type</label>
+              <select id="blogSchemaType" class="form-control">
+                <option value="Article">Article (Standard)</option>
+                <option value="BlogPosting">BlogPosting (SEO optimal)</option>
+                <option value="NewsArticle">NewsArticle</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="modal-actions">
+          <button type="button" class="admin-btn secondary" onclick="closeModal('blogModal')">Cancel</button>
+          <button type="submit" class="admin-btn">Save Post</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Include Quill library -->
+  <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+
+  <script>
+    // State
+    let brandsList = [];
+    let quill = null;
+
+    document.addEventListener('DOMContentLoaded', () => {
+      checkAuth();
+      
+      document.getElementById('loginForm').addEventListener('submit', handleLogin);
+      document.getElementById('logoutBtn').addEventListener('click', handleLogout);
+      document.getElementById('passwordForm').addEventListener('submit', handlePasswordChange);
+      document.getElementById('settingsForm').addEventListener('submit', handleSettingsSave);
+      document.getElementById('mediaUploadForm').addEventListener('submit', handleMediaUpload);
+      
+      // Form Submits
+      document.getElementById('brandForm').addEventListener('submit', saveBrand);
+      document.getElementById('itemForm').addEventListener('submit', saveItem);
+      document.getElementById('configForm').addEventListener('submit', saveConfig);
+      document.getElementById('blogForm').addEventListener('submit', saveBlog);
+
+      // Initialize Quill
+      initQuill();
+    });
+
+    function initQuill() {
+      quill = new Quill('#blogEditor', {
+        modules: {
+          toolbar: {
+            container: [
+              ['bold', 'italic', 'underline'],
+              ['link', 'image', 'blockquote'],
+              [{ 'header': [1, 2, 3, false] }],
+              [{ 'list': 'ordered'}, { 'list': 'bullet' }],
+              ['clean'],
+              ['tip', 'warning', 'nutrition'] // Custom toolbar buttons
+            ],
+            handlers: {
+              'tip': function() {
+                const range = this.quill.getSelection();
+                if (range) {
+                  this.quill.clipboard.dangerouslyPasteHTML(range.index, `
+<div class="info-card tip">
+  <strong>💡 Pro Tip</strong>
+  <p>Add your helpful calorie-saving tip here...</p>
+</div><p></p>`);
+                }
+              },
+              'warning': function() {
+                const range = this.quill.getSelection();
+                if (range) {
+                  this.quill.clipboard.dangerouslyPasteHTML(range.index, `
+<div class="info-card warning">
+  <strong>⚠️ Nutrition Warning</strong>
+  <p>Add your warning about high-sodium or high-fat menu traps here...</p>
+</div><p></p>`);
+                }
+              },
+              'nutrition': function() {
+                const range = this.quill.getSelection();
+                if (range) {
+                  this.quill.clipboard.dangerouslyPasteHTML(range.index, `
+<div class="info-card nutrition-fact">
+  <strong>📊 Macro Fact</strong>
+  <p>Add interesting food/macro facts here...</p>
+</div><p></p>`);
+                }
+              }
+            }
+          }
+        },
+        theme: 'snow'
+      });
+    }
+
+    async function checkAuth() {
+      const res = await fetch('/api/admin/check');
+      const data = await res.json();
+      if (data.loggedIn) {
+        document.getElementById('authSection').hidden = true;
+        document.getElementById('dashboardSection').hidden = false;
+        loadBrands();
+        loadBlogPosts();
+      } else {
+        document.getElementById('authSection').hidden = false;
+        document.getElementById('dashboardSection').hidden = true;
+      }
+    }
+
+    async function handleLogin(e) {
+      e.preventDefault();
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      
+      const res = await fetch('/api/admin/login', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ username, password })
+      });
+      const data = await res.json();
+      if (res.ok && data.success) {
+        checkAuth();
+      } else {
+        const errDiv = document.getElementById('loginError');
+        errDiv.textContent = data.error;
+        errDiv.hidden = false;
+      }
+    }
+
+    async function handleLogout() {
+      const res = await fetch('/api/admin/logout', { method: 'POST' });
+      if (res.ok) checkAuth();
+    }
+
+    async function handlePasswordChange(e) {
+      e.preventDefault();
+      const currentPassword = document.getElementById('currentPassword').value;
+      const newPassword = document.getElementById('newPassword').value;
+      const msgDiv = document.getElementById('passwordMessage');
+      
+      const res = await fetch('/api/admin/change-password', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ currentPassword, newPassword })
+      });
+      const data = await res.json();
+      if (res.ok) {
+        msgDiv.style.color = '#247644';
+        msgDiv.textContent = data.message;
+        document.getElementById('passwordForm').reset();
+      } else {
+        msgDiv.style.color = '#d8241d';
+        msgDiv.textContent = data.error;
+      }
+    }
+
+    function switchTab(tabId) {
+      document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+      document.querySelectorAll('.tab-panel').forEach(p => p.hidden = true);
+      
+      // Activate button
+      const activeBtn = [...document.querySelectorAll('.tab-btn')].find(b => b.textContent.toLowerCase().includes(tabId));
+      if (activeBtn) activeBtn.classList.add('active');
+      
+      const activePanel = document.getElementById(`${tabId}Panel`);
+      if (activePanel) activePanel.hidden = false;
+      
+      if (tabId === 'items') loadItems();
+      if (tabId === 'configs') loadConfigs();
+      if (tabId === 'blogs') loadBlogPosts();
+      if (tabId === 'media') loadMediaLibrary();
+      if (tabId === 'settings') loadSettings();
+    }
+
+    // Modal helpers
+    function openModal(id) {
+      document.getElementById(id).hidden = false;
+    }
+    function closeModal(id) {
+      document.getElementById(id).hidden = true;
+    }
+
+    // 1. Brands Manager
+    async function loadBrands() {
+      const res = await fetch('/api/brands');
+      brandsList = await res.json();
+      
+      const tbody = document.getElementById('brandsTableBody');
+      tbody.innerHTML = brandsList.map(b => `
+        <tr>
+          <td>${b.logo_path ? `<img src="${b.logo_path}" style="width:36px; height:36px; border-radius:50%; object-fit:cover; border:1.5px solid var(--ink);" />` : '<span style="font-size:24px;">🏢</span>'}</td>
+          <td><strong>${b.id}</strong></td>
+          <td>${b.name}</td>
+          <td><span style="font-family: 'DM Mono'; font-size: 11px;">${b.category}</span></td>
+          <td>${b.desc}</td>
+          <td><span style="display:inline-block; width:12px; height:12px; background:${b.bg}; border:1px solid #000; border-radius:50%; margin-right:6px;"></span>${b.bg}</td>
+          <td>
+            <button class="admin-btn secondary" style="padding: 6px 12px; font-size:12px;" onclick="openEditBrandModal('${b.id}')">Edit & SEO</button>
+            <button class="admin-btn danger" style="padding: 6px 12px; font-size:12px;" onclick="deleteBrand('${b.id}')">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+      
+      // Update filters
+      const itemFilter = document.getElementById('itemBrandFilter');
+      const configFilter = document.getElementById('configBrandFilter');
+      const options = brandsList.map(b => `<option value="${b.id}">${b.name}</option>`).join('');
+      itemFilter.innerHTML = options;
+      configFilter.innerHTML = options;
+    }
+
+    function openAddBrandModal() {
+      document.getElementById('brandForm').reset();
+      document.getElementById('editBrandId').value = '';
+      document.getElementById('brandId').disabled = false;
+      document.getElementById('brandModalTitle').textContent = 'Add New Brand';
+      document.getElementById('brandLogoPreview').innerHTML = '';
+      openModal('brandModal');
+    }
+
+    async function openEditBrandModal(id) {
+      document.getElementById('brandModalTitle').textContent = 'Edit Brand & SEO settings';
+      document.getElementById('editBrandId').value = id;
+      document.getElementById('brandId').value = id;
+      document.getElementById('brandId').disabled = true;
+
+      // Fetch all detailed fields of the brand (including SEO settings)
+      const res = await fetch(`/api/brands/${id}/items`);
+      const data = await res.json();
+      const b = data.brand;
+
+      document.getElementById('brandName').value = b.name;
+      document.getElementById('brandCategory').value = b.category;
+      document.getElementById('brandDesc').value = b.desc;
+      document.getElementById('brandBg').value = b.bg;
+
+      document.getElementById('brandMetaTitle').value = b.meta_title || '';
+      document.getElementById('brandMetaDescription').value = b.meta_description || '';
+      document.getElementById('brandSeoContent').value = b.seo_content || '';
+
+      const previewDiv = document.getElementById('brandLogoPreview');
+      if (b.logo_path) {
+        previewDiv.innerHTML = `<img src="${b.logo_path}" style="width: 50px; height: 50px; border-radius: 50%; object-fit: cover;" /><br/><small>Current Logo</small>`;
+      } else {
+        previewDiv.innerHTML = '';
+      }
+
+      openModal('brandModal');
+    }
+
+    async function saveBrand(e) {
+      e.preventDefault();
+      const editId = document.getElementById('editBrandId').value;
+      const id = document.getElementById('brandId').value;
+      const name = document.getElementById('brandName').value;
+      const category = document.getElementById('brandCategory').value;
+      const desc = document.getElementById('brandDesc').value;
+      const bg = document.getElementById('brandBg').value;
+
+      const meta_title = document.getElementById('brandMetaTitle').value;
+      const meta_description = document.getElementById('brandMetaDescription').value;
+      const seo_content = document.getElementById('brandSeoContent').value;
+      
+      const url = editId ? `/api/admin/brands/${editId}` : `/api/admin/brands`;
+      const method = editId ? 'PUT' : 'POST';
+      
+      const res = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ id, name, category, desc, bg })
+      });
+      
+      if (res.ok) {
+        const finalId = editId || id.toLowerCase().replace(/\s+/g, '-');
+        
+        // Save SEO details
+        await fetch(`/api/admin/brands/${finalId}/seo`, {
+          method: 'PUT',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ meta_title, meta_description, seo_content })
+        });
+
+        // Save Logo file if chosen
+        const logoFile = document.getElementById('brandLogoFile').files[0];
+        if (logoFile) {
+          const formData = new FormData();
+          formData.append('logo', logoFile);
+          await fetch(`/api/admin/brands/${finalId}/logo`, {
+            method: 'POST',
+            body: formData
+          });
+        }
+
+        closeModal('brandModal');
+        loadBrands();
+      } else {
+        const data = await res.json();
+        alert(data.error);
+      }
+    }
+
+    async function deleteBrand(id) {
+      if (confirm(`Are you sure you want to delete brand "${id}"? This will delete all its menu items, sizes and option configs permanently.`)) {
+        const res = await fetch(`/api/admin/brands/${id}`, { method: 'DELETE' });
+        if (res.ok) loadBrands();
+      }
+    }
+
+    // 2. Menu Items
+    async function loadItems() {
+      const brandId = document.getElementById('itemBrandFilter').value;
+      if (!brandId) return;
+      
+      const res = await fetch(`/api/brands/${brandId}/items`);
+      const data = await res.json();
+      
+      const tbody = document.getElementById('itemsTableBody');
+      tbody.innerHTML = data.items.map(item => `
+        <tr>
+          <td><span class="emoji-badge">${item[0]}</span></td>
+          <td><strong>${item[1]}</strong></td>
+          <td>${item[6]}</td>
+          <td>${item[2]} kcal</td>
+          <td>${item[3]}g</td>
+          <td>${item[4]}g</td>
+          <td>${item[5]}g</td>
+          <td>
+            <button class="admin-btn secondary" style="padding: 6px 12px; font-size:12px;" onclick="openEditItemModal(${item[7]}, '${item[0]}', '${item[1]}', '${item[6]}', ${item[2]}, ${item[3]}, ${item[4]}, ${item[5]})">Edit</button>
+            <button class="admin-btn danger" style="padding: 6px 12px; font-size:12px;" onclick="deleteItem(${item[7]})">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function openAddItemModal() {
+      document.getElementById('itemForm').reset();
+      document.getElementById('editItemId').value = '';
+      document.getElementById('itemModalTitle').textContent = 'Add Menu Item';
+      openModal('itemModal');
+    }
+
+    function openEditItemModal(id, emoji, name, category, calories, protein, carbs, fat) {
+      document.getElementById('editItemId').value = id;
+      document.getElementById('itemEmoji').value = emoji;
+      document.getElementById('itemName').value = name;
+      document.getElementById('itemCategory').value = category;
+      document.getElementById('itemCalories').value = calories;
+      document.getElementById('itemProtein').value = protein;
+      document.getElementById('itemCarbs').value = carbs;
+      document.getElementById('itemFat').value = fat;
+      document.getElementById('itemModalTitle').textContent = 'Edit Menu Item';
+      openModal('itemModal');
+    }
+
+    async function saveItem(e) {
+      e.preventDefault();
+      const brand_id = document.getElementById('itemBrandFilter').value;
+      const editId = document.getElementById('editItemId').value;
+      const emoji = document.getElementById('itemEmoji').value;
+      const name = document.getElementById('itemName').value;
+      const category = document.getElementById('itemCategory').value;
+      const calories = parseInt(document.getElementById('itemCalories').value);
+      const protein = parseInt(document.getElementById('itemProtein').value);
+      const carbs = parseInt(document.getElementById('itemCarbs').value);
+      const fat = parseInt(document.getElementById('itemFat').value);
+      
+      const url = editId ? `/api/admin/items/${editId}` : `/api/admin/items`;
+      const method = editId ? 'PUT' : 'POST';
+      
+      const res = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ brand_id, emoji, name, calories, protein, carbs, fat, category })
+      });
+      if (res.ok) {
+        closeModal('itemModal');
+        loadItems();
+      }
+    }
+
+    async function deleteItem(id) {
+      if (confirm('Are you sure you want to delete this menu item?')) {
+        const res = await fetch(`/api/admin/items/${id}`, { method: 'DELETE' });
+        if (res.ok) loadItems();
+      }
+    }
+
+    // 3. Sizes & Options
+    async function loadConfigs() {
+      const brandId = document.getElementById('configBrandFilter').value;
+      if (!brandId) return;
+      
+      const res = await fetch(`/api/brands/${brandId}/items`);
+      const data = await res.json();
+      
+      const sizesBody = document.getElementById('sizesTableBody');
+      const optionsBody = document.getElementById('optionsTableBody');
+      
+      sizesBody.innerHTML = data.sizes.map(size => `
+        <tr>
+          <td><strong>${size[0]}</strong></td>
+          <td>${size[1] >= 0 ? '+' : ''}${size[1]} kcal</td>
+          <td>
+            <button class="admin-btn danger" style="padding: 4px 10px; font-size:11px;" onclick="deleteConfig('sizes', ${size[2]})">Remove</button>
+          </td>
+        </tr>
+      `).join('');
+      
+      optionsBody.innerHTML = data.options.map(opt => `
+        <tr>
+          <td><strong>${opt[0]}</strong></td>
+          <td>${opt[1] >= 0 ? '+' : ''}${opt[1]} kcal</td>
+          <td>
+            <button class="admin-btn danger" style="padding: 4px 10px; font-size:11px;" onclick="deleteConfig('options', ${opt[2]})">Remove</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function openAddConfigModal() {
+      document.getElementById('configForm').reset();
+      openModal('configModal');
+    }
+
+    async function saveConfig(e) {
+      e.preventDefault();
+      const brand_id = document.getElementById('configBrandFilter').value;
+      const type = document.getElementById('configType').value;
+      const name = document.getElementById('configName').value;
+      const calorie_adjust = parseInt(document.getElementById('configCalAdjust').value);
+      
+      const res = await fetch('/api/admin/configs', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ brand_id, type, name, calorie_adjust })
+      });
+      if (res.ok) {
+        closeModal('configModal');
+        loadConfigs();
+      }
+    }
+
+    async function deleteConfig(type, id) {
+      if (confirm('Remove this configuration?')) {
+        const res = await fetch(`/api/admin/configs/${type}/${id}`, { method: 'DELETE' });
+        if (res.ok) loadConfigs();
+      }
+    }
+
+    // 4. Blogs Manager
+    async function loadBlogPosts() {
+      const res = await fetch('/api/admin/blogs');
+      const posts = await res.json();
+      
+      const tbody = document.getElementById('blogsTableBody');
+      tbody.innerHTML = posts.map(post => `
+        <tr>
+          <td><strong>${post.title}</strong></td>
+          <td><span style="font-family:'DM Mono'; font-size:12px;">/blog/${post.slug}</span></td>
+          <td><span style="font-size:11px; font-weight:700; text-transform:uppercase;">${post.status || 'published'}</span></td>
+          <td>${post.author || 'Admin'}</td>
+          <td>${new Date(post.created_at).toLocaleDateString()}</td>
+          <td>
+            <button class="admin-btn secondary" style="padding: 6px 12px; font-size:12px;" onclick="openEditBlogModal(${post.id})">Edit & SEO</button>
+            <button class="admin-btn danger" style="padding: 6px 12px; font-size:12px;" onclick="deleteBlog(${post.id})">Delete</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function openAddBlogModal() {
+      document.getElementById('blogForm').reset();
+      document.getElementById('editBlogId').value = '';
+      quill.setText('');
+      document.getElementById('blogModalTitle').textContent = 'Create Blog Post';
+      openModal('blogModal');
+    }
+
+    async function openEditBlogModal(id) {
+      document.getElementById('blogModalTitle').textContent = 'Edit Blog Post & SEO';
+      document.getElementById('editBlogId').value = id;
+
+      const res = await fetch('/api/admin/blogs');
+      const posts = await res.json();
+      const p = posts.find(post => post.id === id);
+      if (!p) return;
+
+      document.getElementById('blogTitle').value = p.title;
+      document.getElementById('blogSlug').value = p.slug;
+      document.getElementById('blogSummary').value = p.summary;
+      document.getElementById('blogImageUrl').value = p.image_url || '';
+      document.getElementById('blogAuthor').value = p.author || 'NutriRoute Team';
+      document.getElementById('blogStatus').value = p.status || 'published';
+      
+      document.getElementById('blogMetaTitle').value = p.meta_title || '';
+      document.getElementById('blogMetaDescription').value = p.meta_description || '';
+      document.getElementById('blogCanonical').value = p.canonical_url || '';
+      document.getElementById('blogSchemaType').value = p.schema_type || 'Article';
+
+      quill.root.innerHTML = p.content || '';
+
+      openModal('blogModal');
+    }
+
+    async function saveBlog(e) {
+      e.preventDefault();
+      const editId = document.getElementById('editBlogId').value;
+      const title = document.getElementById('blogTitle').value;
+      const slug = document.getElementById('blogSlug').value;
+      const summary = document.getElementById('blogSummary').value;
+      const image_url = document.getElementById('blogImageUrl').value;
+      const author = document.getElementById('blogAuthor').value;
+      const status = document.getElementById('blogStatus').value;
+
+      const meta_title = document.getElementById('blogMetaTitle').value;
+      const meta_description = document.getElementById('blogMetaDescription').value;
+      const canonical_url = document.getElementById('blogCanonical').value;
+      const schema_type = document.getElementById('blogSchemaType').value;
+
+      const content = quill.root.innerHTML;
+      
+      const url = editId ? `/api/admin/blogs/${editId}` : `/api/admin/blogs`;
+      const method = editId ? 'PUT' : 'POST';
+      
+      const res = await fetch(url, {
+        method,
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ 
+          title, slug, summary, content, image_url, author, status,
+          meta_title, meta_description, canonical_url, schema_type
+        })
+      });
+      if (res.ok) {
+        closeModal('blogModal');
+        loadBlogPosts();
+      } else {
+        const data = await res.json();
+        alert(data.error);
+      }
+    }
+
+    async function deleteBlog(id) {
+      if (confirm('Delete this blog post?')) {
+        const res = await fetch(`/api/admin/blogs/${id}`, { method: 'DELETE' });
+        if (res.ok) loadBlogPosts();
+      }
+    }
+
+    // 5. Media Library
+    async function loadMediaLibrary() {
+      const res = await fetch('/api/admin/media');
+      const media = await res.json();
+      const grid = document.getElementById('mediaLibraryGrid');
+
+      grid.innerHTML = media.map(m => `
+        <div class="media-card">
+          <button class="media-delete" onclick="deleteMedia(${m.id})">✕</button>
+          <img src="/uploads/${m.filename}" onclick="copyMediaUrl('/uploads/${m.filename}')" title="Click to copy path" />
+          <div class="media-name">${m.original_name}</div>
+        </div>
+      `).join('');
+    }
+
+    async function handleMediaUpload(e) {
+      e.preventDefault();
+      const fileInput = document.getElementById('mediaUploadFile');
+      const altInput = document.getElementById('mediaAltText');
+      if (!fileInput.files[0]) return;
+
+      const formData = new FormData();
+      formData.append('image', fileInput.files[0]);
+      formData.append('alt_text', altInput.value);
+
+      const res = await fetch('/api/admin/upload', {
+        method: 'POST',
+        body: formData
+      });
+      if (res.ok) {
+        fileInput.value = '';
+        altInput.value = '';
+        loadMediaLibrary();
+      } else {
+        const data = await res.json();
+        alert(data.error || 'Upload failed');
+      }
+    }
+
+    async function deleteMedia(id) {
+      if (confirm('Are you sure you want to delete this media image from your library?')) {
+        const res = await fetch(`/api/admin/media/${id}`, { method: 'DELETE' });
+        if (res.ok) loadMediaLibrary();
+      }
+    }
+
+    function copyMediaUrl(url) {
+      navigator.clipboard.writeText(url).then(() => {
+        alert('Image path copied to clipboard: ' + url + '\nPaste this in the featured image input or content section.');
+      });
+    }
+
+    // 6. Site Settings
+    async function loadSettings() {
+      const res = await fetch('/api/admin/settings');
+      const settings = await res.json();
+
+      document.getElementById('settingsSiteTitle').value = settings.site_title || '';
+      document.getElementById('settingsSiteDescription').value = settings.site_description || '';
+      document.getElementById('settingsSiteUrl').value = settings.site_url || '';
+      document.getElementById('settingsAnalyticsId').value = settings.analytics_id || '';
+      document.getElementById('settingsSearchConsoleCode').value = settings.search_console_code || '';
+      document.getElementById('settingsAdsenseCode').value = settings.adsense_code || '';
+      document.getElementById('settingsHeadCode').value = settings.head_code || '';
+      document.getElementById('settingsBodyCode').value = settings.body_code || '';
+    }
+
+    async function handleSettingsSave(e) {
+      e.preventDefault();
+      const msgDiv = document.getElementById('settingsMessage');
+
+      const updates = {
+        site_title: document.getElementById('settingsSiteTitle').value,
+        site_description: document.getElementById('settingsSiteDescription').value,
+        site_url: document.getElementById('settingsSiteUrl').value,
+        analytics_id: document.getElementById('settingsAnalyticsId').value,
+        search_console_code: document.getElementById('settingsSearchConsoleCode').value,
+        adsense_code: document.getElementById('settingsAdsenseCode').value,
+        head_code: document.getElementById('settingsHeadCode').value,
+        body_code: document.getElementById('settingsBodyCode').value
+      };
+
+      const res = await fetch('/api/admin/settings', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(updates)
+      });
+      if (res.ok) {
+        msgDiv.style.color = '#247644';
+        msgDiv.textContent = 'Settings saved and updated successfully!';
+        setTimeout(() => msgDiv.textContent = '', 4000);
+      } else {
+        msgDiv.style.color = '#d8241d';
+        msgDiv.textContent = 'Failed to save settings.';
+      }
+    }
+  </script>
+</body>
+</html>

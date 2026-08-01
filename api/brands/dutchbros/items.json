@@ -1,0 +1,99 @@
+{
+  "brand": {
+    "id": "dutchbros",
+    "name": "Dutch Bros Coffee",
+    "category": "COFFEE & DRINKS",
+    "desc": "Espresso drinks, Blue Rebel energy, freezes, teas & cold brews.",
+    "bg": "#eef5fc",
+    "meta_title": "Dutch Bros Calorie Calculator — Rebels & Golden Eagle | NutriRoute",
+    "meta_description": "Calculate custom calories and macros for Dutch Bros Rebels, Golden Eagle, freezes, and shakes. Live interactive nutrition calculator.",
+    "seo_content": "<div class='seo-section'><h2>Dutch Bros Coffee Nutrition & Macro Tracking Guide</h2><p>Dutch Bros Coffee is rapidly expanding and highly popular for its creative, sweet coffee and Rebel energy drinks. Swapping standard whole milk for almond/coconut milk and choosing sugar-free syrups is the fastest way to slash empty carbs and calories while keeping the taste.</p></div>",
+    "logo_path": "brands/images/dutchbros.svg"
+  },
+  "items": [
+    [
+      "☕",
+      "Double Torture (Iced)",
+      390,
+      11,
+      48,
+      17,
+      "Coffee",
+      427
+    ],
+    [
+      "☕",
+      "Golden Eagle (Iced)",
+      480,
+      9,
+      58,
+      24,
+      "Coffee",
+      428
+    ],
+    [
+      "⚡",
+      "Blue Rebel Energy Drink",
+      160,
+      0,
+      40,
+      0,
+      "Rebel",
+      429
+    ],
+    [
+      "🥤",
+      "Picture Perfect Freeze",
+      680,
+      12,
+      102,
+      24,
+      "Freeze",
+      430
+    ],
+    [
+      "🍵",
+      "Peach Green Tea",
+      140,
+      0,
+      36,
+      0,
+      "Tea",
+      431
+    ]
+  ],
+  "sizes": [
+    [
+      "Medium (24oz)",
+      0,
+      88
+    ],
+    [
+      "Small (16oz)",
+      -100,
+      89
+    ],
+    [
+      "Large (32oz)",
+      120,
+      90
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      109
+    ],
+    [
+      "Add Soft Top (Whipped)",
+      90,
+      110
+    ],
+    [
+      "Sugar-Free Syrup Swap",
+      -80,
+      111
+    ]
+  ]
+}

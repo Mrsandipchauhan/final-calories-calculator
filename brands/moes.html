@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Build your Moe's Southwest Grill order and estimate calories, protein, carbs and fat in real-time.">
+  <title>Moe's Southwest Grill Calorie Calculator | NutriRoute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calculator.css?v=1785535307635">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Moe's Calorie Calculator",
+  "url": "https://starbucks-calorie-calculator.com/brands/moes.html",
+  "description": "Build your Moe's Southwest Grill order and estimate calories, protein, carbs and fat in real-time.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5."
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://starbucks-calorie-calculator.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://starbucks-calorie-calculator.com/index.html#brands"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "Moe's Calorie Calculator",
+      "item": "https://starbucks-calorie-calculator.com/brands/moes.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a Moe's \"Stack\"?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A Moe's Stack is a customizable item featuring your choice of protein and toppings, folded between two crunchy corn shells and wrapped in a grilled flour tortilla (similar to a crunchwrap). It averages 600-800 calories depending on toppings."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is the guacamole free at Moe's?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, at Moe's, guacamole is included for free on the Homewrecker Burrito and Homewrecker Bowl. For other items, it is an add-on."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does Moe's have vegan options?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Moe's offers organic Tofu, black beans, pinto beans, and a wide array of fresh salsas and veggies, making it highly vegan-friendly."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Moe's suitable for a keto diet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Build a Burrito Bowl with a salad/lettuce base, double protein (chicken/steak), cheese, sour cream, and guacamole for a perfect high-fat, high-protein, low-carb keto meal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many calories are in Moe's Famous Queso?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Moe's Famous Queso contains roughly 230 calories and 20g of fat per serving."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Homewrecker and Joey Bag of Donuts?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Homewrecker is a larger burrito and includes guacamole. The Joey Bag of Donuts is slightly smaller and does not include guacamole by default."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an official Moe's tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. NutriRoute is independent and is not affiliated with Moe's Southwest Grill. This page is for information only."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="calc-page moes-page" data-brand="moes">
+  <header class="nav wrap">
+    <a class="logo" href="../index.html"><i>n</i> nutri<span>route</span></a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#brands">All brands</a>
+      <a class="pill small" href="#calculator">Build an order <b>↓</b></a>
+    </nav>
+  <button class="menu" aria-label="Toggle menu">☰</button></header>
+
+  <main>
+    <section class="calc-hero wrap">
+      
+      <div class="eyebrow">
+        <span></span> Welcome to Moe's! Fresh stats in real-time.
+      </div>
+      <h1>Moe's Southwest Grill Calories &<br><em>Nutrition Calculator</em></h1>
+      <p>Use our interactive calorie calculator to customize your Moe's order. Select burritos, bowls, stacks, or quesadillas, choose your toppings, and track your macros instantly.</p>
+    </section>
+
+    <section id="calculator" class="calculator-shell">
+      <div class="wrap calc-layout">
+        <div class="builder">
+          <div class="builder-head">
+            <div>
+              <small>STEP 1 OF 2</small>
+              <h2>Build your order</h2>
+            </div>
+            <div class="brand-badge-vertical" data-brand="moes">
+  <div class="badge-logo-circle">
+    <img src="images/moes.png" alt="Moe's logo">
+  </div>
+  <span class="badge-text">Moe's</span>
+</div>
+          </div>
+          
+          <label class="label">Choose an item</label>
+          <div class="item-grid" id="items"></div>
+          
+          <div class="customize" id="customize">
+            <div>
+              <label class="label">Size / Portion</label>
+              <div class="chips" id="sizes"></div>
+            </div>
+            <div>
+              <label class="label">Customisation</label>
+              <div class="chips" id="milks"></div>
+            </div>
+          </div>
+          <p class="disclaimer">Results are estimates based on common US menu nutrition data. Location recipes and portions may vary.</p>
+        </div>
+
+        <aside class="order-card">
+          <span class="order-label">YOUR ORDER</span>
+          <div class="order-empty" id="orderEmpty">Pick an item to<br>see the details <span>↑</span></div>
+          <div id="orderContent" hidden>
+            <div class="order-title">
+              <span id="orderIcon">🌯</span>
+              <div>
+                <h3 id="orderName">My Order</h3>
+                <p id="orderOptions"></p>
+              </div>
+            </div>
+            <div class="calories">
+              <span>Estimated calories</span>
+              <strong id="calories">0</strong>
+              <small>kcal</small>
+            </div>
+            <div class="macro-bars">
+              <div><span>Protein <b id="protein">0g</b></span><i><em id="proteinBar"></em></i></div>
+              <div><span>Carbs <b id="carbs">0g</b></span><i><em id="carbsBar"></em></i></div>
+              <div><span>Fat <b id="fat">0g</b></span><i><em id="fatBar"></em></i></div>
+            </div>
+            <button class="reset" id="reset">↺ Start again</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-article wrap">
+      <h2>Moe's Southwest Grill Nutrition & Macro Tracking Guide</h2>
+      <p>Moe's Southwest Grill is famous for its customizable southwestern food, signature salsas, and welcoming catchphrase: <em>"Welcome to Moe's!"</em>. Because every burrito, bowl, and stack is made to order, calorie counts can fluctuate wildly depending on your selections. Our independent Moe's calorie calculator helps you build the perfect southwestern meal, track your macros in real-time, and make smart swaps. Looking to compare southwestern options? Check out our <a href="chipotle.html">Chipotle Calorie Calculator</a> or our <a href="qdoba.html">Qdoba Calorie Calculator</a>.</p>
+
+      <h3>How to Use the Moe's Calorie Calculator</h3>
+      <p>Calculating your macros at Moe's is quick and simple. Here is how to build your meal:</p>
+      <ul>
+        <li><strong>Select Your Base:</strong> Choose a Homewrecker Burrito, a Homewrecker Bowl, a Stack, or Tacos.</li>
+        <li><strong>Choose Your Protein:</strong> Compare values for Grilled Steak, White Meat Chicken, organic Tofu, or Carnitas.</li>
+        <li><strong>Add Toppings & Salsas:</strong> See how toppings like Moe's Famous Queso, guacamole, cheese, and fresh salsas affect your calorie and fat limits.</li>
+      </ul>
+
+      <h3>Popular Moe's Menu Items & Their Macros</h3>
+      <p>Plan your southwestern cravings with confidence by checking these base estimates (excluding extra toppings/sauces):</p>
+      <div class="seo-table-wrap">
+        <table class="seo-table">
+          <thead>
+            <tr>
+              <th>Menu Item</th>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Carbs</th>
+              <th>Fat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Homewrecker Burrito Base (with Tortilla)</td>
+              <td>310</td>
+              <td>9g</td>
+              <td>50g</td>
+              <td>9g</td>
+            </tr>
+            <tr>
+              <td>Homewrecker Bowl Base (no Tortilla)</td>
+              <td>45</td>
+              <td>1g</td>
+              <td>9g</td>
+              <td>0.5g</td>
+            </tr>
+            <tr>
+              <td>Adobo Chicken Portion</td>
+              <td>160</td>
+              <td>19g</td>
+              <td>1g</td>
+              <td>9g</td>
+            </tr>
+            <tr>
+              <td>Sirloin Steak Portion</td>
+              <td>130</td>
+              <td>17g</td>
+              <td>1g</td>
+              <td>6g</td>
+            </tr>
+            <tr>
+              <td>Organics Tofu Portion</td>
+              <td>110</td>
+              <td>9g</td>
+              <td>3g</td>
+              <td>7g</td>
+            </tr>
+            <tr>
+              <td>Moe's Famous Queso (Side)</td>
+              <td>230</td>
+              <td>7g</td>
+              <td>6g</td>
+              <td>20g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Making Healthy Choices at Moe's</h3>
+      <p>Moe's makes eating healthy easy with fresh ingredients, but signature items like queso and chips can double your calories. Keep these tips in mind:</p>
+      <div class="seo-callout-box">
+        <h4>Bowl Over Burrito</h4>
+        <p>A standard flour tortilla adds 310 calories and 50g of carbs to your burrito. Choosing a Burrito Bowl instead instantly saves you those calories, allowing you to load up on healthy toppings like black beans and corn salsa.</p>
+      </div>
+      <div class="seo-callout-box">
+        <h4>Smart Sauce & Queso Management</h4>
+        <p>Moe's Famous Queso is legendary, but a standard side serving adds 230 calories and 20g of fat. If you want to cut down on fat, stick to fresh salsas like Pico de Gallo (5 cal) or Kaiser Salsa (10 cal) for bold flavor with almost zero calories.</p>
+      </div>
+      <div class="seo-callout-box">
+        <h4>Watch the Chips</h4>
+        <p>Every meal at Moe's comes with free chips, but a standard basket of chips adds 370 calories and 19g of fat. Skip the chips or split them with a friend to keep your macros clean.</p>
+      </div>
+
+      <h3>Frequently Asked Questions (FAQs)</h3>
+      <div class="seo-faq-accordion">
+        <details>
+          <summary>What is a Moe's "Stack"?</summary>
+          <p>A Moe's Stack is a customizable item featuring your choice of protein and toppings, folded between two crunchy corn shells and wrapped in a grilled flour tortilla (similar to a crunchwrap). It averages 600-800 calories depending on toppings.</p>
+        </details>
+        <details>
+          <summary>Is the guacamole free at Moe's?</summary>
+          <p>Yes, at Moe's, guacamole is included for free on the Homewrecker Burrito and Homewrecker Bowl. For other items, it is an add-on.</p>
+        </details>
+        <details>
+          <summary>Does Moe's have vegan options?</summary>
+          <p>Yes, Moe's offers organic Tofu, black beans, pinto beans, and a wide array of fresh salsas and veggies, making it highly vegan-friendly.</p>
+        </details>
+        <details>
+          <summary>Is Moe's suitable for a keto diet?</summary>
+          <p>Yes. Build a Burrito Bowl with a salad/lettuce base, double protein (chicken/steak), cheese, sour cream, and guacamole for a perfect high-fat, high-protein, low-carb keto meal.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="brand-content wrap">
+      <div>
+        <div class="eyebrow"><span></span> Moe's calories, simply</div>
+        <h2>Southwestern Flavor.<br><em>Clear information.</em></h2>
+      </div>
+      <div>
+        <p>This Moe's Southwest Grill calorie calculator helps you quickly check the nutrition of customizable southwestern favorites. Choose a burrito, bowl, or stack, customize it with fresh proteins and toppings, and see how ingredients like Famous Queso or Tofu affect your meal.</p>
+        <p>Actual values can vary depending on local food assembly and menu changes. Check Moe's official website for exact current allergen and nutrition information.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq wrap mini">
+      <div>
+        <div class="eyebrow"><span></span> FAQs</div>
+        <h2>Moe's<br><em>questions.</em></h2>
+      </div>
+      <div class="questions">
+        <details open>
+          <summary>How many calories are in Moe's Famous Queso?<b>+</b></summary>
+          <p>Moe's Famous Queso contains roughly 230 calories and 20g of fat per serving.</p>
+        </details>
+        <details>
+          <summary>What is the difference between Homewrecker and Joey Bag of Donuts?<b>+</b></summary>
+          <p>The Homewrecker is a larger burrito and includes guacamole. The Joey Bag of Donuts is slightly smaller and does not include guacamole by default.</p>
+        </details>
+        <details>
+          <summary>Is this an official Moe's tool?<b>+</b></summary>
+          <p>No. NutriRoute is independent and is not affiliated with Moe's Southwest Grill. This page is for information only.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      <nav class="breadcrumbs" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" aria-label="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../index.html#brands">Calculators</a> › 
+        <span class="active-crumb">Moe's Calculator</span>
+      </nav>
+    </div>
+    <footer data-site-footer></footer>
+  <script src="../footer.js?v=1785571469076"></script>
+  <script src="calculator.js?v=1785535923024"></script>
+</body>
+</html>

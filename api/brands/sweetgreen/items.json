@@ -1,0 +1,84 @@
+{
+  "brand": {
+    "id": "sweetgreen",
+    "name": "Sweetgreen",
+    "category": "SALADS & BOWLS",
+    "desc": "Organic warm grain bowls, fresh salads & healthy plates.",
+    "bg": "#eef6f0",
+    "meta_title": "Sweetgreen Calorie Calculator — Warm Bowls & Salads | NutriRoute",
+    "meta_description": "Calculate custom macros and calories for Sweetgreen harvest bowls, salads, and vinaigrettes. Perfect for healthy meal prep tracking.",
+    "seo_content": "<div class='seo-section'><h2>Sweetgreen Nutrition & Macro Tracking Guide</h2><p>Sweetgreen is a premium destination for healthy, custom-made salad and warm bowls. Packed with whole grains, seeds, and fresh proteins, our calorie calculator tracks your exact vitamins, macros, and diet lifestyles in real-time.</p></div>",
+    "logo_path": "brands/images/sweetgreen.svg"
+  },
+  "items": [
+    [
+      "🥣",
+      "Harvest Bowl",
+      705,
+      36,
+      48,
+      41,
+      "Warm Bowls",
+      357
+    ],
+    [
+      "🥣",
+      "Crispy Rice Bowl",
+      520,
+      14,
+      66,
+      23,
+      "Warm Bowls",
+      358
+    ],
+    [
+      "🥗",
+      "Guacamole Greens",
+      530,
+      24,
+      26,
+      38,
+      "Salads",
+      359
+    ],
+    [
+      "🥣",
+      "Buffalo Chicken Bowl",
+      630,
+      38,
+      42,
+      34,
+      "Warm Bowls",
+      360
+    ],
+    [
+      "🥗",
+      "Kale Caesar",
+      400,
+      19,
+      12,
+      30,
+      "Salads",
+      361
+    ]
+  ],
+  "sizes": [
+    [
+      "Standard Portion",
+      0,
+      54
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      75
+    ],
+    [
+      "Double Protein Add",
+      180,
+      76
+    ]
+  ]
+}

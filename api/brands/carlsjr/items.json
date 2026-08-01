@@ -1,0 +1,89 @@
+{
+  "brand": {
+    "id": "carlsjr",
+    "name": "Carl's Jr.",
+    "category": "BURGERS",
+    "desc": "Charbroiled thickburgers, chicken clubs & seasoned fries.",
+    "bg": "#fffdeb",
+    "meta_title": "Carl's Jr. Calorie Calculator — Charbroiled Burgers | NutriRoute",
+    "meta_description": "Find calorie counts and nutritional values for Carl's Jr. Charbroiled burgers, tenders, and waffle fries. Dynamic macros tracker.",
+    "seo_content": "<div class='seo-section'><h2>Carl's Jr. Nutrition & Macro Tracking Guide</h2><p>Carl's Jr. is legendary for flame-charbroiled Thickburgers and Western Bacon Cheeseburgers. Check how different bun configurations and extra cheese selections affect your calorie intake using our calculator.</p></div>",
+    "logo_path": "brands/images/carlsjr.svg"
+  },
+  "items": [
+    [
+      "🍔",
+      "Famous Star with Cheese",
+      670,
+      28,
+      50,
+      38,
+      "Burgers",
+      367
+    ],
+    [
+      "🍔",
+      "Super Star with Cheese",
+      920,
+      47,
+      50,
+      59,
+      "Burgers",
+      368
+    ],
+    [
+      "🍔",
+      "Western Bacon Cheeseburger",
+      750,
+      34,
+      75,
+      34,
+      "Burgers",
+      369
+    ],
+    [
+      "🥪",
+      "Charbroiled Chicken Club",
+      620,
+      38,
+      48,
+      30,
+      "Sandwiches",
+      370
+    ],
+    [
+      "🍟",
+      "Waffle Fries",
+      360,
+      4,
+      44,
+      19,
+      "Sides",
+      371
+    ]
+  ],
+  "sizes": [
+    [
+      "Medium",
+      0,
+      57
+    ],
+    [
+      "Large Upgrade",
+      140,
+      58
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      79
+    ],
+    [
+      "Add Extra Cheese Slice",
+      60,
+      80
+    ]
+  ]
+}

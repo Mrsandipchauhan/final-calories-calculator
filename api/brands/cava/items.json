@@ -1,0 +1,269 @@
+{
+  "brand": {
+    "id": "cava",
+    "name": "CAVA",
+    "category": "MEDITERRANEAN FAST CASUAL",
+    "desc": "Build your customizable Mediterranean bowls & pitas",
+    "bg": "#f5f0eb",
+    "meta_title": "CAVA Calorie Calculator — Mediterranean Bowls & Pitas | NutriRoute",
+    "meta_description": "Calculate exact calories, protein, carbs, and fat for your custom CAVA bowl or pita. Choose your greens, grains, proteins, dips, and dressings.",
+    "seo_content": "\n    <div class=\"seo-section\">\n      <h2>How to Use the CAVA Calorie Calculator</h2>\n      <p>Select your base (like a Greens & Grains bowl or Pita), choose your protein (such as Grilled Chicken or Spicy Lamb Meatballs), and add your favorite dips, toppings, and dressings. The calorie and macronutrient totals will update in real-time based on CAVA's official nutrition information.</p>\n      \n      <div class=\"info-card tip\">\n        <strong>Healthy Eating Tip</strong>\n        <p>CAVA's dressings and dips can add substantial calories. Swapping a heavy Garlic Dressing (130 cal) for Yogurt Dill (40 cal) or Tzatziki (30 cal) is a great way to cut down calories without losing the creamy texture.</p>\n      </div>\n\n      <h2>CAVA Nutrition Guide</h2>\n      <p>CAVA offers some of the most customizable and nutrient-dense options in fast-casual dining. A typical salad bowl with grilled chicken, hummus, cucumber, tomato, and a light dressing can be as low as 350-400 calories, packed with high-quality protein and fiber.</p>\n      \n      <h2>Low-Calorie CAVA Ordering Strategies</h2>\n      <ul>\n        <li><strong>Choose a Salad Base:</strong> Opting for Supergreens instead of Rice saves about 150-200 calories.</li>\n        <li><strong>Go lean on proteins:</strong> Grilled Chicken (170 cal) and Falafel (190 cal) are lighter than Spicy Lamb Meatballs (240 cal).</li>\n        <li><strong>Dip smart:</strong> Tzatziki (30 cal) and Harissa (45 cal) are lower calorie options than Crazy Feta (70 cal) or Hummus (70 cal).</li>\n      </ul>\n    </div>\n    ",
+    "logo_path": "brands/images/cava.png"
+  },
+  "items": [
+    [
+      "🥣",
+      "Greens + Grains Bowl Base",
+      200,
+      4,
+      38,
+      3,
+      "Base",
+      287
+    ],
+    [
+      "🥣",
+      "Grain Bowl Base",
+      280,
+      6,
+      52,
+      4,
+      "Base",
+      288
+    ],
+    [
+      "🥗",
+      "Salad Bowl Base",
+      45,
+      2,
+      8,
+      1,
+      "Base",
+      289
+    ],
+    [
+      "🫓",
+      "Pita Base",
+      220,
+      7,
+      43,
+      2,
+      "Base",
+      290
+    ],
+    [
+      "🍗",
+      "Grilled Chicken",
+      170,
+      26,
+      1,
+      6,
+      "Protein",
+      291
+    ],
+    [
+      "🍗",
+      "Harissa Honey Chicken",
+      215,
+      25,
+      7,
+      9,
+      "Protein",
+      292
+    ],
+    [
+      "🥩",
+      "Spicy Lamb Meatballs",
+      240,
+      17,
+      5,
+      17,
+      "Protein",
+      293
+    ],
+    [
+      "🥩",
+      "Grilled Steak",
+      160,
+      21,
+      0,
+      8,
+      "Protein",
+      294
+    ],
+    [
+      "🧆",
+      "Falafel",
+      190,
+      5,
+      19,
+      10,
+      "Protein",
+      295
+    ],
+    [
+      "🥔",
+      "Roasted White Sweet Potato",
+      120,
+      2,
+      24,
+      2,
+      "Protein",
+      296
+    ],
+    [
+      "🧀",
+      "Crazy Feta",
+      70,
+      2,
+      1,
+      6,
+      "Dips",
+      297
+    ],
+    [
+      "🥣",
+      "Tzatziki",
+      30,
+      1,
+      2,
+      2,
+      "Dips",
+      298
+    ],
+    [
+      "🥣",
+      "Hummus",
+      70,
+      2,
+      6,
+      4,
+      "Dips",
+      299
+    ],
+    [
+      "🌶️",
+      "Harissa",
+      45,
+      1,
+      3,
+      3,
+      "Dips",
+      300
+    ],
+    [
+      "🥣",
+      "Red Pepper Hummus",
+      80,
+      2,
+      6,
+      5,
+      "Dips",
+      301
+    ],
+    [
+      "🧀",
+      "Crumbled Feta",
+      75,
+      5,
+      1,
+      6,
+      "Toppings",
+      302
+    ],
+    [
+      "🧅",
+      "Pickled Onions",
+      15,
+      0,
+      3,
+      0,
+      "Toppings",
+      303
+    ],
+    [
+      "🥒",
+      "Tomato + Cucumber",
+      15,
+      0,
+      3,
+      0,
+      "Toppings",
+      304
+    ],
+    [
+      "🥨",
+      "Pita Chips",
+      115,
+      2,
+      16,
+      5,
+      "Toppings",
+      305
+    ],
+    [
+      "🧴",
+      "Garlic Dressing",
+      130,
+      0,
+      1,
+      14,
+      "Dressings",
+      306
+    ],
+    [
+      "🧴",
+      "Lemon Herb Tahini",
+      110,
+      2,
+      3,
+      10,
+      "Dressings",
+      307
+    ],
+    [
+      "🧴",
+      "Greek Vinaigrette",
+      140,
+      0,
+      1,
+      15,
+      "Dressings",
+      308
+    ],
+    [
+      "🧴",
+      "Yogurt Dill",
+      40,
+      1,
+      2,
+      3,
+      "Dressings",
+      309
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular Bowl",
+      0,
+      43
+    ],
+    [
+      "Double Protein Bowl",
+      150,
+      44
+    ]
+  ],
+  "options": [
+    [
+      "No Pita",
+      0,
+      62
+    ],
+    [
+      "Include Pita on Side",
+      220,
+      63
+    ]
+  ]
+}

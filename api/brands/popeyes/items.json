@@ -1,0 +1,224 @@
+{
+  "brand": {
+    "id": "popeyes",
+    "name": "Popeyes",
+    "category": "CHICKEN",
+    "desc": "Louisiana-style fried chicken",
+    "bg": "#fff8e1",
+    "meta_title": "Popeyes Calorie Calculator — Chicken Sandwich, Tenders & Sides | NutriRoute",
+    "meta_description": "Find nutrition facts for every Popeyes item. Check calories in the famous chicken sandwich, tenders, biscuits and cajun sides.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍗",
+      "Chicken Sandwich (Classic)",
+      700,
+      28,
+      50,
+      42,
+      "Sandwiches",
+      191
+    ],
+    [
+      "🍗",
+      "Chicken Sandwich (Spicy)",
+      700,
+      28,
+      50,
+      42,
+      "Sandwiches",
+      192
+    ],
+    [
+      "🍗",
+      "Breast (Mild)",
+      380,
+      28,
+      14,
+      24,
+      "Chicken Pieces",
+      193
+    ],
+    [
+      "🍗",
+      "Breast (Spicy)",
+      360,
+      27,
+      11,
+      24,
+      "Chicken Pieces",
+      194
+    ],
+    [
+      "🍗",
+      "Leg (Mild)",
+      160,
+      14,
+      5,
+      9,
+      "Chicken Pieces",
+      195
+    ],
+    [
+      "🍗",
+      "Thigh (Mild)",
+      280,
+      17,
+      9,
+      20,
+      "Chicken Pieces",
+      196
+    ],
+    [
+      "🍗",
+      "Wing (Mild)",
+      210,
+      10,
+      8,
+      14,
+      "Chicken Pieces",
+      197
+    ],
+    [
+      "🍗",
+      "3-Piece Tenders (Mild)",
+      340,
+      18,
+      20,
+      21,
+      "Chicken Pieces",
+      198
+    ],
+    [
+      "🍗",
+      "5-Piece Tenders (Mild)",
+      570,
+      29,
+      34,
+      35,
+      "Chicken Pieces",
+      199
+    ],
+    [
+      "🍞",
+      "Biscuit",
+      260,
+      3,
+      27,
+      15,
+      "Sides",
+      200
+    ],
+    [
+      "🍚",
+      "Red Beans & Rice (Regular)",
+      230,
+      7,
+      30,
+      9,
+      "Sides",
+      201
+    ],
+    [
+      "🌽",
+      "Cajun Fries (Regular)",
+      260,
+      3,
+      33,
+      14,
+      "Sides",
+      202
+    ],
+    [
+      "🥗",
+      "Coleslaw (Regular)",
+      170,
+      1,
+      14,
+      13,
+      "Sides",
+      203
+    ],
+    [
+      "🌽",
+      "Corn on the Cob",
+      200,
+      5,
+      24,
+      10,
+      "Sides",
+      204
+    ],
+    [
+      "🧁",
+      "Mashed Potatoes (Regular, no gravy)",
+      110,
+      2,
+      17,
+      4,
+      "Sides",
+      205
+    ],
+    [
+      "🍗",
+      "Popcorn Shrimp (Regular)",
+      340,
+      12,
+      28,
+      20,
+      "Seafood",
+      206
+    ],
+    [
+      "🍗",
+      "Butterfly Shrimp (8 pc)",
+      310,
+      12,
+      27,
+      17,
+      "Seafood",
+      207
+    ],
+    [
+      "🍩",
+      "Cinnamon Apple Pie",
+      230,
+      2,
+      26,
+      14,
+      "Desserts",
+      208
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular",
+      0,
+      30
+    ],
+    [
+      "Combo (add fries + drink)",
+      520,
+      31
+    ]
+  ],
+  "options": [
+    [
+      "Mild",
+      0,
+      42
+    ],
+    [
+      "Spicy",
+      0,
+      43
+    ],
+    [
+      "Cajun Sparkle",
+      5,
+      44
+    ]
+  ]
+}

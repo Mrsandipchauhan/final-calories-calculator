@@ -1,0 +1,249 @@
+{
+  "brand": {
+    "id": "wingstop",
+    "name": "Wingstop",
+    "category": "WINGS",
+    "desc": "Chicken wings & tenders",
+    "bg": "#e8f5e9",
+    "meta_title": "Wingstop Calorie Calculator — Wings, Tenders & Sides Nutrition | NutriRoute",
+    "meta_description": "How many calories in Wingstop wings? Check nutrition for classic wings, boneless wings, chicken tenders and sides.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍗",
+      "Classic Wings (2 pc, Plain)",
+      180,
+      18,
+      0,
+      12,
+      "Classic Wings",
+      243
+    ],
+    [
+      "🍗",
+      "Classic Wings (2 pc, Atomic)",
+      190,
+      18,
+      1,
+      13,
+      "Classic Wings",
+      244
+    ],
+    [
+      "🍗",
+      "Classic Wings (2 pc, Lemon Pepper)",
+      200,
+      18,
+      1,
+      14,
+      "Classic Wings",
+      245
+    ],
+    [
+      "🍗",
+      "Classic Wings (2 pc, Garlic Parmesan)",
+      210,
+      18,
+      2,
+      15,
+      "Classic Wings",
+      246
+    ],
+    [
+      "🍗",
+      "Classic Wings (2 pc, Mango Habanero)",
+      200,
+      18,
+      5,
+      12,
+      "Classic Wings",
+      247
+    ],
+    [
+      "🍗",
+      "Classic Wings (2 pc, Original Hot)",
+      190,
+      18,
+      1,
+      13,
+      "Classic Wings",
+      248
+    ],
+    [
+      "🍗",
+      "Boneless Wings (3 pc, Plain)",
+      190,
+      12,
+      14,
+      10,
+      "Boneless Wings",
+      249
+    ],
+    [
+      "🍗",
+      "Boneless Wings (3 pc, Lemon Pepper)",
+      210,
+      12,
+      14,
+      12,
+      "Boneless Wings",
+      250
+    ],
+    [
+      "🍗",
+      "Boneless Wings (3 pc, Mango Habanero)",
+      210,
+      12,
+      18,
+      10,
+      "Boneless Wings",
+      251
+    ],
+    [
+      "🍗",
+      "Crispy Tenders (3 pc)",
+      350,
+      25,
+      20,
+      18,
+      "Tenders",
+      252
+    ],
+    [
+      "🍗",
+      "Crispy Tenders (5 pc)",
+      580,
+      42,
+      33,
+      30,
+      "Tenders",
+      253
+    ],
+    [
+      "🍗",
+      "Thigh Bites (Regular)",
+      400,
+      26,
+      22,
+      22,
+      "Thigh Bites",
+      254
+    ],
+    [
+      "🍟",
+      "Regular Fries",
+      330,
+      3,
+      42,
+      17,
+      "Sides",
+      255
+    ],
+    [
+      "🍟",
+      "Large Fries",
+      490,
+      5,
+      63,
+      25,
+      "Sides",
+      256
+    ],
+    [
+      "🥗",
+      "Coleslaw",
+      190,
+      1,
+      14,
+      15,
+      "Sides",
+      257
+    ],
+    [
+      "🧁",
+      "Cajun Corn",
+      200,
+      3,
+      22,
+      12,
+      "Sides",
+      258
+    ],
+    [
+      "🍞",
+      "Roll",
+      240,
+      6,
+      38,
+      7,
+      "Sides",
+      259
+    ],
+    [
+      "🫘",
+      "Ranch Beans",
+      290,
+      8,
+      30,
+      16,
+      "Sides",
+      260
+    ],
+    [
+      "🥤",
+      "Sweet Tea (Large)",
+      220,
+      0,
+      58,
+      0,
+      "Drinks",
+      261
+    ]
+  ],
+  "sizes": [
+    [
+      "2 Piece",
+      0,
+      36
+    ],
+    [
+      "6 Piece",
+      200,
+      37
+    ],
+    [
+      "10 Piece",
+      400,
+      38
+    ]
+  ],
+  "options": [
+    [
+      "Plain",
+      0,
+      52
+    ],
+    [
+      "Lemon Pepper",
+      10,
+      53
+    ],
+    [
+      "Garlic Parmesan",
+      20,
+      54
+    ],
+    [
+      "Mango Habanero",
+      15,
+      55
+    ],
+    [
+      "Atomic",
+      5,
+      56
+    ]
+  ]
+}

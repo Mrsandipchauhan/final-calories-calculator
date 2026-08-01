@@ -1,0 +1,74 @@
+{
+  "brand": {
+    "id": "panera",
+    "name": "Panera Bread",
+    "category": "BAKERY & CAFÉ",
+    "desc": "Soups, salads & sandwiches",
+    "bg": "#f2f6ee",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🥣",
+      "Broccoli Cheddar Soup",
+      370,
+      15,
+      30,
+      21,
+      "Soups & Salads",
+      45
+    ],
+    [
+      "🥪",
+      "Bacon Turkey Bravo Sandwich",
+      720,
+      41,
+      63,
+      33,
+      "Sandwiches & Bowls",
+      46
+    ],
+    [
+      "🥯",
+      "Cinnamon Crunch Bagel",
+      420,
+      10,
+      82,
+      7,
+      "Bakery",
+      47
+    ]
+  ],
+  "sizes": [
+    [
+      "Cup / Half",
+      -150,
+      18
+    ],
+    [
+      "Bowl / Whole",
+      0,
+      19
+    ]
+  ],
+  "options": [
+    [
+      "No Side",
+      0,
+      22
+    ],
+    [
+      "French Baguette",
+      180,
+      23
+    ],
+    [
+      "Apple",
+      80,
+      24
+    ]
+  ]
+}

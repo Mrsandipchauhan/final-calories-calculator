@@ -1,0 +1,224 @@
+{
+  "brand": {
+    "id": "sonic",
+    "name": "Sonic Drive-In",
+    "category": "DRIVE-IN",
+    "desc": "Burgers, hot dogs & slushies",
+    "bg": "#e1f5fe",
+    "meta_title": "Sonic Drive-In Calorie Calculator — Burgers, Shakes & Slushies | NutriRoute",
+    "meta_description": "Check Sonic menu calorie counts for burgers, coney dogs, tater tots, shakes, and slushies with full nutrition facts.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍔",
+      "Sonic Cheeseburger",
+      630,
+      27,
+      52,
+      36,
+      "Burgers",
+      209
+    ],
+    [
+      "🍔",
+      "SuperSonic Double Cheeseburger",
+      930,
+      46,
+      55,
+      58,
+      "Burgers",
+      210
+    ],
+    [
+      "🍔",
+      "Jr. Burger",
+      310,
+      15,
+      30,
+      14,
+      "Burgers",
+      211
+    ],
+    [
+      "🌭",
+      "All-American Hot Dog",
+      470,
+      14,
+      36,
+      30,
+      "Hot Dogs",
+      212
+    ],
+    [
+      "🌭",
+      "Chili Cheese Coney",
+      460,
+      17,
+      32,
+      30,
+      "Hot Dogs",
+      213
+    ],
+    [
+      "🌭",
+      "Footlong Quarter Pound Coney",
+      700,
+      24,
+      49,
+      45,
+      "Hot Dogs",
+      214
+    ],
+    [
+      "🍗",
+      "Jumbo Popcorn Chicken",
+      440,
+      22,
+      28,
+      26,
+      "Chicken",
+      215
+    ],
+    [
+      "🍗",
+      "Crispy Chicken Sandwich",
+      490,
+      22,
+      44,
+      24,
+      "Chicken",
+      216
+    ],
+    [
+      "🍟",
+      "Medium Tater Tots",
+      330,
+      3,
+      35,
+      20,
+      "Sides",
+      217
+    ],
+    [
+      "🍟",
+      "Large Tater Tots",
+      490,
+      5,
+      52,
+      30,
+      "Sides",
+      218
+    ],
+    [
+      "🍟",
+      "Medium French Fries",
+      330,
+      3,
+      40,
+      18,
+      "Sides",
+      219
+    ],
+    [
+      "🧅",
+      "Medium Onion Rings",
+      440,
+      6,
+      53,
+      22,
+      "Sides",
+      220
+    ],
+    [
+      "🥤",
+      "Cherry Limeade (Medium)",
+      170,
+      0,
+      45,
+      0,
+      "Drinks",
+      221
+    ],
+    [
+      "🥤",
+      "Ocean Water (Medium)",
+      200,
+      0,
+      52,
+      0,
+      "Drinks",
+      222
+    ],
+    [
+      "🍦",
+      "Vanilla Shake (Medium)",
+      550,
+      11,
+      74,
+      24,
+      "Shakes & Desserts",
+      223
+    ],
+    [
+      "🍦",
+      "Oreo Blast (Medium)",
+      620,
+      13,
+      84,
+      26,
+      "Shakes & Desserts",
+      224
+    ],
+    [
+      "🍦",
+      "Sonic Blast (M&M, Medium)",
+      680,
+      14,
+      88,
+      30,
+      "Shakes & Desserts",
+      225
+    ],
+    [
+      "🧁",
+      "Single Wacky Pack (Kids Meal)",
+      420,
+      15,
+      42,
+      21,
+      "Kids",
+      226
+    ]
+  ],
+  "sizes": [
+    [
+      "Regular",
+      0,
+      32
+    ],
+    [
+      "Large",
+      180,
+      33
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      45
+    ],
+    [
+      "Add Chili",
+      50,
+      46
+    ],
+    [
+      "Add Cheese",
+      70,
+      47
+    ]
+  ]
+}

@@ -1,0 +1,50 @@
+[
+  {
+    "id": 3,
+    "title": "Healthy Eating at KFC",
+    "slug": "healthy-eating-at-kfc",
+    "content": "This is a guide to eating healthy at KFC. Look for grilled chicken and sides like corn or green beans.",
+    "summary": "How to make smart choices when ordering from KFC.",
+    "created_at": "2026-08-01 08:52:44",
+    "image_url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600",
+    "meta_title": null,
+    "meta_description": null,
+    "canonical_url": null,
+    "schema_type": "Article",
+    "status": "published",
+    "author": "NutriRoute Team",
+    "updated_at": null
+  },
+  {
+    "id": 1,
+    "title": "5 Simple Swaps to Lower Starbucks Calories",
+    "slug": "5-simple-swaps-starbucks-calories",
+    "content": "Customizing your coffee is one of the easiest ways to save calories without sacrificing taste. Here are the top 5 simple swaps you can make at Starbucks:\n\n1. **Swap Whole Milk for Almond Milk**: Almond milk has about 60 calories per cup, compared to 150 calories for whole milk.\n2. **Choose Sugar-Free Syrups**: Swapping standard syrup for sugar-free vanilla saves about 20 calories and 5g of sugar per pump.\n3. **Skip the Whipped Cream**: Whipped cream on a Grande mocha adds roughly 80 to 110 calories.\n4. **Downsize Your Cup**: Simply swapping from Venti to Grande or Tall reduces calorie intake automatically.\n5. **Go for Cold Brew**: Cold brews naturally taste sweeter and require less cream and syrup than hot drip coffees.",
+    "summary": "Love Starbucks coffee but want to cut down on extra calories? Discover five easy and delicious drink customization tricks to keep your fitness goals on track.",
+    "created_at": "2026-08-01 08:28:04",
+    "image_url": "https://images.unsplash.com/photo-1544787219-7f47ccb76574?auto=format&fit=crop&q=80&w=600",
+    "meta_title": null,
+    "meta_description": null,
+    "canonical_url": null,
+    "schema_type": "Article",
+    "status": "published",
+    "author": "NutriRoute Team",
+    "updated_at": null
+  },
+  {
+    "id": 2,
+    "title": "Understanding Macros: Protein, Carbs, and Fat",
+    "slug": "understanding-macros-nutrition-guide",
+    "content": "A healthy diet is about more than just a number. It's about what types of calories you eat. The three primary macronutrients are:\n\n- **Protein (4 calories/gram)**: Essential for repairing muscles and keeping you full.\n- **Carbs (4 calories/gram)**: The body's primary source of energy, fuel for active lifestyles.\n- **Fat (9 calories/gram)**: Vital for hormone production, vitamin absorption, and brain health.\n\nNutriRoute helps you track these ratios in real-time.",
+    "summary": "Calorie counting is useful, but tracking macronutrients gives you the complete picture. Learn what protein, carbs, and fat actually do for your body.",
+    "created_at": "2026-08-01 08:28:04",
+    "image_url": "https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&q=80&w=600",
+    "meta_title": null,
+    "meta_description": null,
+    "canonical_url": null,
+    "schema_type": "Article",
+    "status": "published",
+    "author": "NutriRoute Team",
+    "updated_at": null
+  }
+]

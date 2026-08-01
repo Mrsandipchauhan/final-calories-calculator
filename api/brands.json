@@ -1,0 +1,274 @@
+[
+  {
+    "id": "starbucks",
+    "name": "Starbucks",
+    "category": "COFFEE & CAFÉ",
+    "desc": "Drinks, bakery & breakfast",
+    "bg": "#dcebc9",
+    "logo_path": null
+  },
+  {
+    "id": "subway",
+    "name": "Subway",
+    "category": "SANDWICHES",
+    "desc": "Build your perfect sub",
+    "bg": "#ffe0ac",
+    "logo_path": null
+  },
+  {
+    "id": "mcdonalds",
+    "name": "McDonald’s",
+    "category": "QUICK SERVICE",
+    "desc": "Meals, sides & drinks",
+    "bg": "#ffcec4",
+    "logo_path": null
+  },
+  {
+    "id": "chipotle",
+    "name": "Chipotle",
+    "category": "MEXICAN GRILL",
+    "desc": "Burritos, bowls & salads",
+    "bg": "#fbece6",
+    "logo_path": null
+  },
+  {
+    "id": "tacobell",
+    "name": "Taco Bell",
+    "category": "MEXICAN FAST FOOD",
+    "desc": "Tacos, burritos & specialties",
+    "bg": "#f6effb",
+    "logo_path": null
+  },
+  {
+    "id": "dunkin",
+    "name": "Dunkin'",
+    "category": "COFFEE & DONUTS",
+    "desc": "Donuts, coffee & breakfast",
+    "bg": "#fff0e6",
+    "logo_path": null
+  },
+  {
+    "id": "chickfila",
+    "name": "Chick-fil-A",
+    "category": "CHICKEN",
+    "desc": "Sandwiches, nuggets & fries",
+    "bg": "#fdf0f1",
+    "logo_path": null
+  },
+  {
+    "id": "panera",
+    "name": "Panera Bread",
+    "category": "BAKERY & CAFÉ",
+    "desc": "Soups, salads & sandwiches",
+    "bg": "#f2f6ee",
+    "logo_path": null
+  },
+  {
+    "id": "pandaexpress",
+    "name": "Panda Express",
+    "category": "CHINESE FAST FOOD",
+    "desc": "Orange chicken, bowls & sides",
+    "bg": "#fdeeee",
+    "logo_path": null
+  },
+  {
+    "id": "qdoba",
+    "name": "Qdoba",
+    "category": "MEXICAN EATS",
+    "desc": "Bowls, burritos & tacos",
+    "bg": "#fef1e8",
+    "logo_path": null
+  },
+  {
+    "id": "kfc",
+    "name": "KFC",
+    "category": "FAST FOOD",
+    "desc": "Fried Chicken and Sides",
+    "bg": "#ffe6e6",
+    "logo_path": null
+  },
+  {
+    "id": "wendys",
+    "name": "Wendy's",
+    "category": "BURGERS",
+    "desc": "Fresh beef burgers & frosties",
+    "bg": "#fde8e8",
+    "logo_path": null
+  },
+  {
+    "id": "burgerking",
+    "name": "Burger King",
+    "category": "BURGERS",
+    "desc": "Flame-grilled burgers & shakes",
+    "bg": "#fff3e0",
+    "logo_path": null
+  },
+  {
+    "id": "dominos",
+    "name": "Domino's",
+    "category": "PIZZA",
+    "desc": "Pizzas, wings & pasta",
+    "bg": "#e3f2fd",
+    "logo_path": null
+  },
+  {
+    "id": "pizzahut",
+    "name": "Pizza Hut",
+    "category": "PIZZA",
+    "desc": "Pan pizzas, wings & breadsticks",
+    "bg": "#fce4ec",
+    "logo_path": null
+  },
+  {
+    "id": "popeyes",
+    "name": "Popeyes",
+    "category": "CHICKEN",
+    "desc": "Louisiana-style fried chicken",
+    "bg": "#fff8e1",
+    "logo_path": null
+  },
+  {
+    "id": "sonic",
+    "name": "Sonic Drive-In",
+    "category": "DRIVE-IN",
+    "desc": "Burgers, hot dogs & slushies",
+    "bg": "#e1f5fe",
+    "logo_path": null
+  },
+  {
+    "id": "fiveguys",
+    "name": "Five Guys",
+    "category": "BURGERS",
+    "desc": "Custom burgers & famous fries",
+    "bg": "#fef9e7",
+    "logo_path": null
+  },
+  {
+    "id": "wingstop",
+    "name": "Wingstop",
+    "category": "WINGS",
+    "desc": "Chicken wings & tenders",
+    "bg": "#e8f5e9",
+    "logo_path": null
+  },
+  {
+    "id": "jerseymikes",
+    "name": "Jersey Mike's",
+    "category": "SUBS",
+    "desc": "Fresh-sliced subs & wraps",
+    "bg": "#e8eaf6",
+    "logo_path": null
+  },
+  {
+    "id": "raisingcanes",
+    "name": "Raising Cane's",
+    "category": "CHICKEN FINGERS",
+    "desc": "Chicken fingers, fries & Texas toast",
+    "bg": "#fff9c4",
+    "logo_path": null
+  },
+  {
+    "id": "cava",
+    "name": "CAVA",
+    "category": "MEDITERRANEAN FAST CASUAL",
+    "desc": "Build your customizable Mediterranean bowls & pitas",
+    "bg": "#f5f0eb",
+    "logo_path": "brands/images/cava.png"
+  },
+  {
+    "id": "moes",
+    "name": "Moe's Southwest Grill",
+    "category": "SOUTHWESTERN FAST FOOD",
+    "desc": "Welcome to Moe's! Customize burritos, bowls, tacos & stacks.",
+    "bg": "#fbf6ec",
+    "logo_path": "brands/images/moes.png"
+  },
+  {
+    "id": "sevenbrew",
+    "name": "7 Brew Coffee",
+    "category": "DRIVE-THRU COFFEE & ENERGY",
+    "desc": "Drive-thru coffee, energy mixes, teas, and custom shakes.",
+    "bg": "#eef2ff",
+    "logo_path": "brands/images/sevenbrew.png"
+  },
+  {
+    "id": "innout",
+    "name": "In-N-Out Burger",
+    "category": "BURGERS",
+    "desc": "Freshly prepared West Coast burger classics & Animal Style fries.",
+    "bg": "#fff4e6",
+    "logo_path": "brands/images/innout.svg"
+  },
+  {
+    "id": "arbys",
+    "name": "Arby's",
+    "category": "SANDWICHES",
+    "desc": "Famous Roast Beef sandwiches, curly fries & cheddar sauce.",
+    "bg": "#fbebe8",
+    "logo_path": "brands/images/arbys.svg"
+  },
+  {
+    "id": "sweetgreen",
+    "name": "Sweetgreen",
+    "category": "SALADS & BOWLS",
+    "desc": "Organic warm grain bowls, fresh salads & healthy plates.",
+    "bg": "#eef6f0",
+    "logo_path": "brands/images/sweetgreen.svg"
+  },
+  {
+    "id": "shakeshack",
+    "name": "Shake Shack",
+    "category": "BURGERS",
+    "desc": "Premium Angus beef burgers, crinkle-cut fries & classic shakes.",
+    "bg": "#f5faf3",
+    "logo_path": "brands/images/shakeshack.svg"
+  },
+  {
+    "id": "carlsjr",
+    "name": "Carl's Jr.",
+    "category": "BURGERS",
+    "desc": "Charbroiled thickburgers, chicken clubs & seasoned fries.",
+    "bg": "#fffdeb",
+    "logo_path": "brands/images/carlsjr.svg"
+  },
+  {
+    "id": "crumbl",
+    "name": "Crumbl Cookies",
+    "category": "COOKIES & SWEETS",
+    "desc": "Weekly rotating gourmet cookies, frosting & dessert boxes.",
+    "bg": "#fff0f3",
+    "logo_path": "brands/images/crumbl.svg"
+  },
+  {
+    "id": "dutchbros",
+    "name": "Dutch Bros Coffee",
+    "category": "COFFEE & DRINKS",
+    "desc": "Espresso drinks, Blue Rebel energy, freezes, teas & cold brews.",
+    "bg": "#eef5fc",
+    "logo_path": "brands/images/dutchbros.svg"
+  },
+  {
+    "id": "texasroadhouse",
+    "name": "Texas Roadhouse",
+    "category": "STEAKHOUSE",
+    "desc": "USDA Choice steaks, fresh-baked rolls, ribs & southern sides.",
+    "bg": "#fcf8ee",
+    "logo_path": "brands/images/texasroadhouse.svg"
+  },
+  {
+    "id": "wawa",
+    "name": "Wawa",
+    "category": "SANDWICHES & DELI",
+    "desc": "Custom-made Hoagies, breakfast sizzlis, mac & cheese, and coffees.",
+    "bg": "#fcfcf2",
+    "logo_path": "brands/images/wawa.svg"
+  },
+  {
+    "id": "cheesecakefactory",
+    "name": "The Cheesecake Factory",
+    "category": "RESTAURANT",
+    "desc": "Famous cheesecakes, glazed pastas, club salads & burger classics.",
+    "bg": "#fffaf2",
+    "logo_path": "brands/images/cheesecakefactory.svg"
+  }
+]

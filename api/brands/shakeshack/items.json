@@ -1,0 +1,89 @@
+{
+  "brand": {
+    "id": "shakeshack",
+    "name": "Shake Shack",
+    "category": "BURGERS",
+    "desc": "Premium Angus beef burgers, crinkle-cut fries & classic shakes.",
+    "bg": "#f5faf3",
+    "meta_title": "Shake Shack Calorie Calculator — ShackBurger & Fries | NutriRoute",
+    "meta_description": "Find calories and macros for Shake Shack single & double burgers, cheese fries, and shakes. Interactive custom order calculator.",
+    "seo_content": "<div class='seo-section'><h2>Shake Shack Nutrition & Macro Tracking Guide</h2><p>Shake Shack serves elevated versions of American fast-food classics. Made with premium Angus beef, tracking their calorie and macronutrient counts helps you fit ShackBurgers into your flexible dieting schedule.</p></div>",
+    "logo_path": "brands/images/shakeshack.svg"
+  },
+  "items": [
+    [
+      "🍔",
+      "ShackBurger Single",
+      500,
+      29,
+      26,
+      30,
+      "Burgers",
+      362
+    ],
+    [
+      "🍔",
+      "ShackBurger Double",
+      770,
+      50,
+      27,
+      52,
+      "Burgers",
+      363
+    ],
+    [
+      "🍔",
+      "SmokeShack Single",
+      570,
+      34,
+      28,
+      35,
+      "Burgers",
+      364
+    ],
+    [
+      "🍟",
+      "Crinkle Cut Fries",
+      420,
+      5,
+      56,
+      19,
+      "Sides",
+      365
+    ],
+    [
+      "🥤",
+      "Classic Shake Chocolate",
+      750,
+      15,
+      88,
+      38,
+      "Shakes",
+      366
+    ]
+  ],
+  "sizes": [
+    [
+      "Single Portion",
+      0,
+      55
+    ],
+    [
+      "Double Burger Upgrade",
+      270,
+      56
+    ]
+  ],
+  "options": [
+    [
+      "Standard",
+      0,
+      77
+    ],
+    [
+      "Add Smoked Bacon",
+      70,
+      78
+    ]
+  ]
+}

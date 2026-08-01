@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Find calorie counts and nutritional values for Carl's Jr. Charbroiled burgers, tenders, and waffle fries. Dynamic macros tracker.">
+  <title>Carl's Jr. Calorie Calculator — Charbroiled Burgers | NutriRoute</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calculator.css?v=1785535307635">
+</head>
+<body class="calc-page carlsjr-page" data-brand="carlsjr">
+  <header class="nav wrap">
+    <a class="logo" href="../index.html"><i>n</i> nutri<span>route</span></a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#brands">All brands</a>
+      <a class="pill small" href="#calculator">Build an order <b>↓</b></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="calc-hero wrap">
+      <nav class="breadcrumbs" aria-label="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../index.html#brands">Calculators</a> › 
+        <span class="active-crumb">Carl's Jr. Calculator</span>
+      </nav>
+      <div class="eyebrow">
+        <span></span> Fresh stats in real-time. Make healthy choices.
+      </div>
+      <h1>Carl's Jr. Calories &<br><em>Nutrition Calculator</em></h1>
+      <p>Charbroiled thickburgers, chicken clubs & seasoned fries.</p>
+    </section>
+
+    <section id="calculator" class="calculator-shell">
+      <div class="wrap calc-layout">
+        <div class="builder">
+          <div class="builder-head">
+            <div>
+              <small>STEP 1 OF 2</small>
+              <h2>Build your order</h2>
+            </div>
+            <div class="brand-badge-vertical" data-brand="carlsjr">
+              <div class="badge-logo-circle"></div>
+              <span class="badge-text">Carl's Jr.</span>
+            </div>
+          </div>
+          
+          <label class="label">Choose an item</label>
+          <div class="item-grid" id="items"></div>
+          
+          <div class="customize" id="customize">
+            <div>
+              <label class="label">Portion Size</label>
+              <div class="chips" id="sizes"></div>
+            </div>
+            <div>
+              <label class="label">Customisation</label>
+              <div class="chips" id="milks"></div>
+            </div>
+          </div>
+          <p class="disclaimer">Results are estimates based on common US menu nutrition data. Location recipes and portions may vary.</p>
+        </div>
+
+        <aside class="order-card">
+          <span class="order-label">YOUR ORDER</span>
+          <div class="order-empty" id="orderEmpty">Pick an item to<br>see the details <span>↑</span></div>
+          <div id="orderContent" hidden>
+            <div class="order-title">
+              <span id="orderIcon">🍔</span>
+              <div>
+                <h3 id="orderName">My Order</h3>
+                <p id="orderOptions"></p>
+              </div>
+            </div>
+            <div class="calories">
+              <span>Estimated calories</span>
+              <strong id="calories">0</strong>
+              <small>kcal</small>
+            </div>
+            <div class="macro-bars">
+              <div><span>Protein <b id="protein">0g</b></span><i><em id="proteinBar"></em></i></div>
+              <div><span>Carbs <b id="carbs">0g</b></span><i><em id="carbsBar"></em></i></div>
+              <div><span>Fat <b id="fat">0g</b></span><i><em id="fatBar"></em></i></div>
+            </div>
+            <button class="reset" id="reset">↺ Start again</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-article wrap">
+      <h2>Carl's Jr. Nutrition & Macro Tracking Guide</h2>
+      <p>Carl's Jr. is legendary for flame-charbroiled Thickburgers and Western Bacon Cheeseburgers. Check how different bun configurations and extra cheese selections affect your calorie intake using our calculator.</p>
+      
+      <h3>Healthy Customization Tips</h3>
+      <div class="seo-callout-box">
+        <h4>Base Smartly</h4>
+        <p>Swap out refined flour buns or heavy sauces for lighter toppings like extra fresh greens, low-calorie salsas, or vinegar dressings to naturally control macros.</p>
+      </div>
+
+      <h3>Frequently Asked Questions (FAQs)</h3>
+      <div class="seo-faq-accordion">
+        <details>
+          <summary>How accurate is this calorie calculator?</summary>
+          <p>All values are based on official brand nutritional documentation, providing estimates that are highly reliable for daily tracking.</p>
+        </details>
+        <details>
+          <summary>Can I customize my meals for keto or vegan diets?</summary>
+          <p>Yes. By picking high-protein/fat choices (no buns) or switching to pure vegan items (vegetables & bean bases), you can tailor your meal to fit any dietary plan.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="brand-content wrap">
+      <div>
+        <div class="eyebrow"><span></span> Carl's Jr. calories, simply</div>
+        <h2>Premium Flavors.<br><em>Clear information.</em></h2>
+      </div>
+      <div>
+        <p>This Carl's Jr. calorie calculator helps you quickly check the nutrition of your custom orders. Choose proteins, sizes, and customizations to see changes in real-time.</p>
+        <p>Actual values can vary depending on local food assembly and menu changes. Check official websites for exact current allergen and nutrition information.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq wrap mini">
+      <div>
+        <div class="eyebrow"><span></span> FAQs</div>
+        <h2>Carl's Jr.<br><em>questions.</em></h2>
+      </div>
+      <div class="questions">
+        <details open>
+          <summary>Is this an official calculator?<b>+</b></summary>
+          <p>No. NutriRoute is independent and is not affiliated with Carl's Jr.. This page is for information only.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  <footer data-site-footer></footer>
+  <script src="../footer.js?v=1785571469076"></script>
+  <script src="calculator.js?v=1785535923024"></script>
+</body>
+</html>

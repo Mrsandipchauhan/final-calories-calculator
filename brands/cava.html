@@ -1,0 +1,362 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Build your order and estimate calories, protein, carbs and fat.">
+  <title>CAVA | Restaurant Calorie Calculator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="calculator.css?v=1785535307635">
+
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "CAVA Calorie Calculator",
+  "url": "https://starbucks-calorie-calculator.com/brands/cava.html",
+  "description": "Build your order and estimate calories, protein, carbs and fat.",
+  "applicationCategory": "HealthApplication",
+  "operatingSystem": "All",
+  "browserRequirements": "Requires JavaScript. Requires HTML5."
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://starbucks-calorie-calculator.com/index.html"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Calculators",
+      "item": "https://starbucks-calorie-calculator.com/index.html#brands"
+    },
+    {
+      "@type": "ListItem",
+      "position": 3,
+      "name": "CAVA Calorie Calculator",
+      "item": "https://starbucks-calorie-calculator.com/brands/cava.html"
+    }
+  ]
+}
+  </script>
+  <script type="application/ld+json">
+  {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is the lowest calorie base at CAVA?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The Salad Bowl base is the lowest calorie option at just 45 calories. It features fresh greens like romaine, spinach, and supergreens."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are CAVA's dips and spreads healthy?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, they are made with fresh ingredients like chickpeas, sesame paste (tahini), and yogurt. However, they are calorie-dense, so moderate your portions if tracking macros."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much protein is in CAVA's Grilled Chicken?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A standard serving of Grilled Chicken provides 26g of high-quality protein for only 170 calories and 6g of fat, making it an excellent macro-friendly choice."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is CAVA suitable for a keto diet?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Absolutely. If you choose a Salad Bowl base, add Grilled Chicken or Steak, select dips like Tzatziki or Crazy Feta, and choose a low-carb dressing like Yogurt Dill, you get a premium high-protein, low-carb keto meal."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How many calories are in CAVA dressings?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "CAVA dressings range from 40 calories (Yogurt Dill) up to 140 calories (Greek Vinaigrette) per serving."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Are the falafels gluten-free and vegan?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, CAVA's falafels are made from chickpeas and spices, making them naturally gluten-free and 100% plant-based/vegan."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is this an official CAVA tool?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. NutriRoute is independent and is not affiliated with CAVA. This page is for information only."
+      }
+    }
+  ]
+}
+  </script>
+</head>
+<body class="calc-page">
+  <header class="nav wrap">
+    <a class="logo" href="../index.html"><i>n</i> nutri<span>route</span></a>
+    <nav>
+      <a href="../index.html">Home</a>
+      <a href="../blog.html">Blog</a>
+      <a href="../index.html#brands">All brands</a>
+      <a class="pill small" href="#calculator">Build an order <b>↓</b></a>
+    </nav>
+  <button class="menu" aria-label="Toggle menu">☰</button></header>
+
+  <main>
+    <section class="calc-hero wrap">
+      
+      <div class="eyebrow">
+        <span></span> Make your order work for you.
+      </div>
+      <h1>CAVA Calories &<br><em>Nutrition Calculator</em></h1>
+      <p>Use our interactive calorie calculator to customize your orders. Select sizes, options, and track calories, protein, carbs, and fat in real-time to plan your healthy restaurant runs.</p>
+    </section>
+
+    <section id="calculator" class="calculator-shell">
+      <div class="wrap calc-layout">
+        <div class="builder">
+          <div class="builder-head">
+            <div>
+              <small>STEP 1 OF 2</small>
+              <h2>Build your order</h2>
+            </div>
+            <div class="brand-badge-vertical" data-brand="cava">
+  <div class="badge-logo-circle">
+    <img src="images/cava.png" alt="CAVA logo">
+  </div>
+  <span class="badge-text">CAVA</span>
+</div>
+          </div>
+          
+          <label class="label">Choose an item</label>
+          <div class="item-grid" id="items"></div>
+          
+          <div class="customize" id="customize">
+            <div>
+              <label class="label">Size</label>
+              <div class="chips" id="sizes"></div>
+            </div>
+            <div>
+              <label class="label">Customisation</label>
+              <div class="chips" id="milks"></div>
+            </div>
+          </div>
+          <p class="disclaimer">Results are estimates based on common brand nutrition data. Location recipes and portions may vary.</p>
+        </div>
+
+        <aside class="order-card">
+          <span class="order-label">YOUR ORDER</span>
+          <div class="order-empty" id="orderEmpty">Pick an item to<br>see the details <span>↑</span></div>
+          <div id="orderContent" hidden>
+            <div class="order-title">
+              <span id="orderIcon">🥗</span>
+              <div>
+                <h3 id="orderName">My Order</h3>
+                <p id="orderOptions"></p>
+              </div>
+            </div>
+            <div class="calories">
+              <span>Estimated calories</span>
+              <strong id="calories">0</strong>
+              <small>kcal</small>
+            </div>
+            <div class="macro-bars">
+              <div><span>Protein <b id="protein">0g</b></span><i><em id="proteinBar"></em></i></div>
+              <div><span>Carbs <b id="carbs">0g</b></span><i><em id="carbsBar"></em></i></div>
+              <div><span>Fat <b id="fat">0g</b></span><i><em id="fatBar"></em></i></div>
+            </div>
+            <button class="reset" id="reset">↺ Start again</button>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="seo-article wrap">
+      <h2>CAVA Nutrition & Macro Tracking Guide</h2>
+      <p>CAVA is the ultimate destination for Mediterranean fast-casual dining, offering highly customizable, nutrient-dense bowls and pitas. Whether you are building a low-carb salad or packing in clean protein with a grains base, CAVA makes macro tracking incredibly flexible. Our independent CAVA calorie calculator helps you assemble the perfect bowl, track your metrics in real-time, and make informed choices. Looking for more customizable fast-casual calculators? Try our <a href="chipotle.html">Chipotle Calorie Calculator</a> or our <a href="subway.html">Subway Calorie Calculator</a>.</p>
+
+      <h3>How to Use the CAVA Calorie Calculator</h3>
+      <p>Building a balanced Mediterranean meal is easy when you know the details. Here is how to use the calculator:</p>
+      <ul>
+        <li><strong>Choose Your Base:</strong> Select a Greens + Grains Bowl, a hearty Grain Bowl, a light Salad Bowl, or a traditional Pita.</li>
+        <li><strong>Pick Your Protein:</strong> See the macro values for popular choices like Grilled Chicken, Spicy Lamb Meatballs, or plant-based Falafel.</li>
+        <li><strong>Add Dips and Dressings:</strong> Mediterranean dressings are loaded with healthy fats, but their calories add up quickly. Watch the totals update as you make your choices.</li>
+      </ul>
+
+      <h3>Popular CAVA Menu Items & Their Macros</h3>
+      <p>Plan your order with confidence by checking these base estimates (prior to adding extra spreads or toppings):</p>
+      <div class="seo-table-wrap">
+        <table class="seo-table">
+          <thead>
+            <tr>
+              <th>Menu Item</th>
+              <th>Calories</th>
+              <th>Protein</th>
+              <th>Carbs</th>
+              <th>Fat</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Grain Bowl Base</td>
+              <td>280</td>
+              <td>6g</td>
+              <td>52g</td>
+              <td>4g</td>
+            </tr>
+            <tr>
+              <td>Pita Base</td>
+              <td>220</td>
+              <td>7g</td>
+              <td>43g</td>
+              <td>2g</td>
+            </tr>
+            <tr>
+              <td>Grilled Chicken Portion</td>
+              <td>170</td>
+              <td>26g</td>
+              <td>1g</td>
+              <td>6g</td>
+            </tr>
+            <tr>
+              <td>Harissa Honey Chicken</td>
+              <td>215</td>
+              <td>25g</td>
+              <td>7g</td>
+              <td>9g</td>
+            </tr>
+            <tr>
+              <td>Spicy Lamb Meatballs</td>
+              <td>240</td>
+              <td>17g</td>
+              <td>5g</td>
+              <td>17g</td>
+            </tr>
+            <tr>
+              <td>Falafel Portion (3 count)</td>
+              <td>190</td>
+              <td>5g</td>
+              <td>19g</td>
+              <td>10g</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <h3>Making Healthy Choices at CAVA</h3>
+      <p>CAVA's menu is naturally rich in wholesome ingredients, but calories can quickly stack up with multiple dips and oils. Keep these tips in mind:</p>
+      <div class="seo-callout-box">
+        <h4>Base Smartly</h4>
+        <p>A full Grain Bowl base contains 280 calories. Swapping to a Greens + Grains base brings it down to 200 calories, while a pure Salad Bowl base is only 45 calories. Mixing supergreens with your grains is a great way to bulk up your volume for fewer calories.</p>
+      </div>
+      <div class="seo-callout-box">
+        <h4>Watch the Creamy Spreads</h4>
+        <p>Spreads like Crazy Feta (70 cal) and Hummus (70 cal) are delicious but add extra fats. Swapping one of them for Tzatziki (30 cal) or Harissa (45 cal) preserves taste while reducing calorie density.</p>
+      </div>
+      <div class="seo-callout-box">
+        <h4>Drizzle Wisely</h4>
+        <p>CAVA's Garlic Dressing adds 130 calories per serving. The Lemon Herb Tahini (110 cal) and Greek Vinaigrette (140 cal) are also calorie-dense. Opting for a light drizzle, or choosing Yogurt Dill (40 cal), keeps your meal clean and light.</p>
+      </div>
+
+      <h3>Frequently Asked Questions (FAQs)</h3>
+      <div class="seo-faq-accordion">
+        <details>
+          <summary>What is the lowest calorie base at CAVA?</summary>
+          <p>The Salad Bowl base is the lowest calorie option at just 45 calories. It features fresh greens like romaine, spinach, and supergreens.</p>
+        </details>
+        <details>
+          <summary>Are CAVA's dips and spreads healthy?</summary>
+          <p>Yes, they are made with fresh ingredients like chickpeas, sesame paste (tahini), and yogurt. However, they are calorie-dense, so moderate your portions if tracking macros.</p>
+        </details>
+        <details>
+          <summary>How much protein is in CAVA's Grilled Chicken?</summary>
+          <p>A standard serving of Grilled Chicken provides 26g of high-quality protein for only 170 calories and 6g of fat, making it an excellent macro-friendly choice.</p>
+        </details>
+        <details>
+          <summary>Is CAVA suitable for a keto diet?</summary>
+          <p>Absolutely. If you choose a Salad Bowl base, add Grilled Chicken or Steak, select dips like Tzatziki or Crazy Feta, and choose a low-carb dressing like Yogurt Dill, you get a premium high-protein, low-carb keto meal.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="brand-content wrap">
+      <div>
+        <div class="eyebrow"><span></span> CAVA calories, simply</div>
+        <h2>Fresh Mediterranean.<br><em>Clear information.</em></h2>
+      </div>
+      <div>
+        <p>This CAVA calorie calculator helps you quickly check the nutrition of customizable Mediterranean dishes. Choose a bowl or pita base, add proteins, spreads, and toppings, and see how ingredients like Crazy Feta or Garlic Dressing affect your numbers.</p>
+        <p>Actual values can vary depending on local food assembly and menu changes. Check CAVA's official website for exact current allergen and nutrition information.</p>
+      </div>
+    </section>
+
+    <section id="faq" class="faq wrap mini">
+      <div>
+        <div class="eyebrow"><span></span> FAQs</div>
+        <h2>CAVA<br><em>questions.</em></h2>
+      </div>
+      <div class="questions">
+        <details open>
+          <summary>How many calories are in CAVA dressings?<b>+</b></summary>
+          <p>CAVA dressings range from 40 calories (Yogurt Dill) up to 140 calories (Greek Vinaigrette) per serving.</p>
+        </details>
+        <details>
+          <summary>Are the falafels gluten-free and vegan?<b>+</b></summary>
+          <p>Yes, CAVA's falafels are made from chickpeas and spices, making them naturally gluten-free and 100% plant-based/vegan.</p>
+        </details>
+        <details>
+          <summary>Is this an official CAVA tool?<b>+</b></summary>
+          <p>No. NutriRoute is independent and is not affiliated with CAVA. This page is for information only.</p>
+        </details>
+      </div>
+    </section>
+  </main>
+
+  
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      
+    </div>
+    
+    <div class="wrap" style="margin-top: 50px; margin-bottom: 45px;">
+      <nav class="breadcrumbs" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" style="margin-bottom: 0;" aria-label="breadcrumb">
+        <a href="../index.html">Home</a> › 
+        <a href="../index.html#brands">Calculators</a> › 
+        <span class="active-crumb">CAVA Calculator</span>
+      </nav>
+    </div>
+    <footer data-site-footer></footer>
+  <script src="../footer.js?v=1785571469076"></script>
+  <script src="calculator.js?v=1785535923024"></script>
+</body>
+</html>

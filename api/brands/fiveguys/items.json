@@ -1,0 +1,209 @@
+{
+  "brand": {
+    "id": "fiveguys",
+    "name": "Five Guys",
+    "category": "BURGERS",
+    "desc": "Custom burgers & famous fries",
+    "bg": "#fef9e7",
+    "meta_title": "Five Guys Calorie Calculator — Burgers, Fries & Milkshakes | NutriRoute",
+    "meta_description": "Find calorie counts for Five Guys burgers, fries, hot dogs and milkshakes. Customize toppings to see your exact nutrition totals.",
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍔",
+      "Hamburger",
+      700,
+      39,
+      39,
+      43,
+      "Burgers",
+      227
+    ],
+    [
+      "🍔",
+      "Cheeseburger",
+      840,
+      47,
+      40,
+      55,
+      "Burgers",
+      228
+    ],
+    [
+      "🍔",
+      "Bacon Cheeseburger",
+      920,
+      51,
+      40,
+      62,
+      "Burgers",
+      229
+    ],
+    [
+      "🍔",
+      "Little Hamburger",
+      480,
+      23,
+      39,
+      26,
+      "Burgers",
+      230
+    ],
+    [
+      "🍔",
+      "Little Cheeseburger",
+      550,
+      27,
+      40,
+      32,
+      "Burgers",
+      231
+    ],
+    [
+      "🍔",
+      "Little Bacon Cheeseburger",
+      630,
+      31,
+      40,
+      39,
+      "Burgers",
+      232
+    ],
+    [
+      "🌭",
+      "Hot Dog",
+      545,
+      18,
+      40,
+      35,
+      "Hot Dogs",
+      233
+    ],
+    [
+      "🌭",
+      "Cheese Dog",
+      615,
+      22,
+      41,
+      41,
+      "Hot Dogs",
+      234
+    ],
+    [
+      "🌭",
+      "Bacon Cheese Dog",
+      695,
+      26,
+      41,
+      48,
+      "Hot Dogs",
+      235
+    ],
+    [
+      "🥪",
+      "Veggie Sandwich",
+      440,
+      16,
+      60,
+      15,
+      "Sandwiches",
+      236
+    ],
+    [
+      "🥪",
+      "Grilled Cheese",
+      470,
+      11,
+      41,
+      26,
+      "Sandwiches",
+      237
+    ],
+    [
+      "🥪",
+      "BLT",
+      430,
+      20,
+      38,
+      22,
+      "Sandwiches",
+      238
+    ],
+    [
+      "🍟",
+      "Regular Fries (Little)",
+      526,
+      7,
+      60,
+      30,
+      "Fries",
+      239
+    ],
+    [
+      "🍟",
+      "Regular Fries (Regular)",
+      953,
+      12,
+      109,
+      54,
+      "Fries",
+      240
+    ],
+    [
+      "🍟",
+      "Cajun Fries (Little)",
+      526,
+      7,
+      60,
+      30,
+      "Fries",
+      241
+    ],
+    [
+      "🍦",
+      "Vanilla Milkshake (Regular)",
+      710,
+      15,
+      78,
+      37,
+      "Milkshakes",
+      242
+    ]
+  ],
+  "sizes": [
+    [
+      "Little",
+      -200,
+      34
+    ],
+    [
+      "Regular",
+      0,
+      35
+    ]
+  ],
+  "options": [
+    [
+      "No Extras",
+      0,
+      48
+    ],
+    [
+      "Add Lettuce/Tomato",
+      5,
+      49
+    ],
+    [
+      "Add Bacon",
+      80,
+      50
+    ],
+    [
+      "Add Mushrooms",
+      10,
+      51
+    ]
+  ]
+}

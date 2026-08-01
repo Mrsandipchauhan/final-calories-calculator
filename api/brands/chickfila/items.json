@@ -1,0 +1,89 @@
+{
+  "brand": {
+    "id": "chickfila",
+    "name": "Chick-fil-A",
+    "category": "CHICKEN",
+    "desc": "Sandwiches, nuggets & fries",
+    "bg": "#fdf0f1",
+    "meta_title": null,
+    "meta_description": null,
+    "seo_content": null,
+    "logo_path": null
+  },
+  "items": [
+    [
+      "🍔",
+      "Chick-fil-A Chicken Sandwich",
+      440,
+      28,
+      41,
+      19,
+      "Entrees",
+      41
+    ],
+    [
+      "🍔",
+      "Spicy Deluxe Sandwich",
+      540,
+      34,
+      43,
+      25,
+      "Entrees",
+      42
+    ],
+    [
+      "🍟",
+      "Waffle Potato Fries",
+      420,
+      5,
+      45,
+      24,
+      "Sides & Salads",
+      43
+    ],
+    [
+      "🥤",
+      "Freshly-Brewed Iced Tea Sweet",
+      120,
+      0,
+      31,
+      0,
+      "Drinks",
+      44
+    ]
+  ],
+  "sizes": [
+    [
+      "Small",
+      -100,
+      15
+    ],
+    [
+      "Medium",
+      0,
+      16
+    ],
+    [
+      "Large",
+      120,
+      17
+    ]
+  ],
+  "options": [
+    [
+      "No Sauce",
+      0,
+      19
+    ],
+    [
+      "Chick-fil-A Sauce",
+      140,
+      20
+    ],
+    [
+      "Polynesian Sauce",
+      110,
+      21
+    ]
+  ]
+}
