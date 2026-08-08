@@ -10,72 +10,131 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;0,800;1,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
   <link rel="stylesheet" href="calculator.css?v=1785535307635">
+  <link rel="canonical" href="https://organizeddesignva.com/brands/innout">
 
   <script type="application/ld+json">
   {
   "@context": "https://schema.org",
-  "@type": "WebApplication",
-  "name": "In-N-Out Burger Calorie Calculator",
-  "url": "https://starbucks-calorie-calculator.com/brands/innout.html",
-  "description": "Calculate exact calories and macros for In-N-Out burgers, cheeseburgers, Animal Style fries, and shakes. Fully interactive nutrition tool.",
-  "applicationCategory": "HealthApplication",
-  "operatingSystem": "All",
-  "browserRequirements": "Requires JavaScript. Requires HTML5."
-}
-  </script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
+  "@graph": [
     {
-      "@type": "ListItem",
-      "position": 1,
-      "name": "Home",
-      "item": "https://starbucks-calorie-calculator.com/index.html"
+      "@type": "Organization",
+      "@id": "https://organizeddesignva.com/#organization",
+      "name": "NutriRoute",
+      "url": "https://organizeddesignva.com",
+      "logo": {
+        "@type": "ImageObject",
+        "@id": "https://organizeddesignva.com/#logo",
+        "url": "https://organizeddesignva.com/logo.png",
+        "width": 512,
+        "height": 512,
+        "caption": "NutriRoute Logo"
+      },
+      "sameAs": [
+        "https://twitter.com/nutriroute",
+        "https://www.linkedin.com/company/nutriroute"
+      ]
     },
     {
-      "@type": "ListItem",
-      "position": 2,
-      "name": "Calculators",
-      "item": "https://starbucks-calorie-calculator.com/index.html#brands"
+      "@type": "WebSite",
+      "@id": "https://organizeddesignva.com/#website",
+      "name": "NutriRoute",
+      "url": "https://organizeddesignva.com",
+      "publisher": {
+        "@id": "https://organizeddesignva.com/#organization"
+      },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {
+          "@type": "EntryPoint",
+          "urlTemplate": "https://organizeddesignva.com/?q={search_term_string}"
+        },
+        "query-input": "required name=search_term_string"
+      }
     },
     {
-      "@type": "ListItem",
-      "position": 3,
+      "@type": "WebPage",
+      "@id": "https://organizeddesignva.com/brands/innout/#webpage",
+      "url": "https://organizeddesignva.com/brands/innout",
+      "name": "In-N-Out Burger Calorie Calculator | NutriRoute",
+      "isPartOf": {
+        "@id": "https://organizeddesignva.com/#website"
+      }
+    },
+    {
+      "@type": "WebApplication",
+      "@id": "https://organizeddesignva.com/brands/innout/#webapp",
+      "url": "https://organizeddesignva.com/brands/innout",
       "name": "In-N-Out Burger Calorie Calculator",
-      "item": "https://starbucks-calorie-calculator.com/brands/innout.html"
-    }
-  ]
-}
-  </script>
-  <script type="application/ld+json">
-  {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "How accurate is this calorie calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "All values are based on official brand nutritional documentation, providing estimates that are highly reliable for daily tracking."
+      "applicationCategory": "HealthApplication",
+      "operatingSystem": "All",
+      "browserRequirements": "Requires JavaScript. Requires HTML5.",
+      "isPartOf": {
+        "@id": "https://organizeddesignva.com/brands/innout/#webpage"
       }
     },
     {
-      "@type": "Question",
-      "name": "Can I customize my meals for keto or vegan diets?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. By picking high-protein/fat choices (no buns) or switching to pure vegan items (vegetables & bean bases), you can tailor your meal to fit any dietary plan."
-      }
+      "@type": "BreadcrumbList",
+      "@id": "https://organizeddesignva.com/brands/innout/#breadcrumb",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://organizeddesignva.com"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Calculators",
+          "item": "https://organizeddesignva.com/index"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "In-N-Out Burger Calorie Calculator",
+          "item": "https://organizeddesignva.com/brands/innout"
+        }
+      ]
     },
     {
-      "@type": "Question",
-      "name": "Is this an official calculator?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "No. NutriRoute is independent and is not affiliated with In-N-Out Burger. This page is for information only."
+      "@type": "FAQPage",
+      "@id": "https://organizeddesignva.com/brands/innout/#faq",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How accurate is this In-N-Out calorie calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Our calculator is built using official In-N-Out nutrition data. Because they use fresh, never-frozen beef and hand-cut potatoes, actual values are highly consistent with the published averages."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What is the lowest calorie option at In-N-Out?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A single Hamburger ordered \"Protein Style\" (lettuce wrapped) with no spread is the lowest calorie option, coming in at approximately 240 calories."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is In-N-Out keto-friendly?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Ordering any burger (like a Double-Double or a 3x3) \"Protein Style\" with no spread (or light spread) is a perfect high-protein, low-carb meal for keto."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this an official calculator?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "No. NutriRoute is independent and is not affiliated with In-N-Out Burger. This page is for information only."
+          }
+        }
+      ],
+      "isPartOf": {
+        "@id": "https://organizeddesignva.com/brands/innout/#webpage"
       }
     }
   ]
@@ -164,23 +223,39 @@
 
     <section class="seo-article wrap">
       <h2>In-N-Out Burger Nutrition & Macro Tracking Guide</h2>
-      <p>In-N-Out Burger is legendary for its fresh ingredients, custom burgers, and secret menu options. Use our calculator to check the nutritional difference between standard burgers and Animal Style upgrades. Try swapping regular buns for Lettuce Wraps (Protein Style) to save on carbs.</p>
+      <p>In-N-Out Burger is a West Coast legend, famous for its simple, fresh menu and customizable "Secret Menu" options. From the classic Double-Double to Animal Style fries, it's a popular spot for both clean eating and cheat meals. Because In-N-Out prepares everything fresh to order, it is incredibly easy to customize your burger. Our interactive In-N-Out calorie calculator helps you track exactly what you are consuming, whether you order standard menu items or custom creations.</p>
       
-      <h3>Healthy Customization Tips</h3>
+      <h3>Healthy Customization Tips at In-N-Out</h3>
+      <p>Keep your health goals on track with these popular menu adjustments:</p>
+
       <div class="seo-callout-box">
-        <h4>Base Smartly</h4>
-        <p>Swap out refined flour buns or heavy sauces for lighter toppings like extra fresh greens, low-calorie salsas, or vinegar dressings to naturally control macros.</p>
+        <h4>1. Order it "Protein Style"</h4>
+        <p>This is In-N-Out's most famous secret menu hack. Swapping the toasted sponge-dough bun for a crisp leaf lettuce wrap saves you about 150 calories and 28g of carbohydrates per burger. It is ideal for keto, low-carb, or gluten-free lifestyles.</p>
+      </div>
+
+      <div class="seo-callout-box">
+        <h4>2. Swap the Spread for Ketchup and Mustard</h4>
+        <p>In-N-Out's signature burger spread is a delicious mayonnaise-based sauce. A single serving adds about 80 calories and 8g of fat. If you want to cut down on fats, ask for ketchup and mustard instead of the spread.</p>
+      </div>
+
+      <div class="seo-callout-box">
+        <h4>3. Limit Animal Style Upgrades</h4>
+        <p>"Animal Style" burgers and fries add extra cheese, grilled onions, and extra spread. While delicious, Animal Style Fries contain 750 calories and 45g of fat. Stick to regular fries or share a portion with a friend to control your macros.</p>
       </div>
 
       <h3>Frequently Asked Questions (FAQs)</h3>
       <div class="seo-faq-accordion">
         <details>
-          <summary>How accurate is this calorie calculator?</summary>
-          <p>All values are based on official brand nutritional documentation, providing estimates that are highly reliable for daily tracking.</p>
+          <summary>How accurate is this In-N-Out calorie calculator?</summary>
+          <p>Our calculator is built using official In-N-Out nutrition data. Because they use fresh, never-frozen beef and hand-cut potatoes, actual values are highly consistent with the published averages.</p>
         </details>
         <details>
-          <summary>Can I customize my meals for keto or vegan diets?</summary>
-          <p>Yes. By picking high-protein/fat choices (no buns) or switching to pure vegan items (vegetables & bean bases), you can tailor your meal to fit any dietary plan.</p>
+          <summary>What is the lowest calorie option at In-N-Out?</summary>
+          <p>A single Hamburger ordered "Protein Style" (lettuce wrapped) with no spread is the lowest calorie option, coming in at approximately 240 calories.</p>
+        </details>
+        <details>
+          <summary>Is In-N-Out keto-friendly?</summary>
+          <p>Yes. Ordering any burger (like a Double-Double or a 3x3) "Protein Style" with no spread (or light spread) is a perfect high-protein, low-carb meal for keto.</p>
         </details>
       </div>
     </section>
@@ -229,6 +304,11 @@
         <a href="../index.html#brands">Calculators</a> › 
         <span class="active-crumb">In-N-Out Burger Calculator</span>
       </nav>
+        <section class="editorial-info" style="margin-top: 20px; font-size: 0.9rem; color: #555;">
+          <p><strong>Author:</strong> NutriRoute Team (<a href="/about.html">Editorial Team</a>)</p>
+          <p><strong>Last Updated:</strong> <span id="last-updated">2026-08-06</span></p>
+          <p><strong>Disclaimer:</strong> This website is an independent educational resource. Not affiliated with restaurant brands. Data may change; always refer to official sources. Not medical advice.</p>
+        </section>
     </div>
     <footer data-site-footer></footer>
   <script src="../footer.js?v=1785571469076"></script>

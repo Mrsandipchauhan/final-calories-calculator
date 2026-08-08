@@ -19,7 +19,7 @@
       57,
       15,
       "Entrees",
-      28
+      577
     ],
     [
       "🌯",
@@ -29,7 +29,7 @@
       102,
       30,
       "Entrees",
-      29
+      578
     ],
     [
       "🧀",
@@ -39,7 +39,7 @@
       75,
       51,
       "Entrees",
-      30
+      579
     ],
     [
       "🥑",
@@ -49,7 +49,117 @@
       73,
       46,
       "Sides & Drinks",
-      31
+      580
+    ],
+    [
+      "🥩",
+      "Barbacoa Burrito/Bowl",
+      170,
+      24,
+      2,
+      7,
+      "Fillings",
+      581
+    ],
+    [
+      "🥩",
+      "Carnitas Burrito/Bowl",
+      210,
+      23,
+      0,
+      12,
+      "Fillings",
+      582
+    ],
+    [
+      "🥩",
+      "Chicken Burrito/Bowl",
+      180,
+      32,
+      0,
+      7,
+      "Fillings",
+      583
+    ],
+    [
+      "🥩",
+      "Steak Burrito/Bowl",
+      150,
+      21,
+      1,
+      6,
+      "Fillings",
+      584
+    ],
+    [
+      "🌱",
+      "Sofritas (Plant-Based)",
+      150,
+      8,
+      9,
+      10,
+      "Fillings",
+      585
+    ],
+    [
+      "🍚",
+      "Cilantro-Lime White Rice",
+      210,
+      4,
+      40,
+      4,
+      "Sides & Drinks",
+      586
+    ],
+    [
+      "🍚",
+      "Cilantro-Lime Brown Rice",
+      210,
+      4,
+      36,
+      6,
+      "Sides & Drinks",
+      587
+    ],
+    [
+      "🥫",
+      "Black Beans",
+      130,
+      8,
+      22,
+      1.5,
+      "Sides & Drinks",
+      588
+    ],
+    [
+      "🥫",
+      "Pinto Beans",
+      130,
+      8,
+      21,
+      1.5,
+      "Sides & Drinks",
+      589
+    ],
+    [
+      "🧅",
+      "Fajita Vegetables",
+      20,
+      1,
+      5,
+      0,
+      "Sides & Drinks",
+      590
+    ],
+    [
+      "🍅",
+      "Fresh Tomato Salsa",
+      25,
+      0,
+      4,
+      0,
+      "Sides & Drinks",
+      591
     ]
   ],
   "sizes": [

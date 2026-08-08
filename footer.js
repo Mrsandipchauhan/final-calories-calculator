@@ -8,15 +8,42 @@
     <div class="footer-glow" aria-hidden="true"></div>
     <div class="footer-wrap">
       <section class="footer-lead">
-        <a class="footer-logo" href="${base}/index.html" aria-label="NutriRoute home"><span>n</span>nutri<em>route</em></a>
+        <a class="footer-logo" href="/" aria-label="NutriRoute home"><span>n</span>nutri<em>route</em></a>
         <h2>Feel good about<br><i>every order.</i></h2>
         <p>A simple way to understand restaurant nutrition before you order.</p>
-        <a class="footer-cta" href="${base}/index.html#brands">Explore calculators <b>-></b></a>
+        <a class="footer-cta" href="/#brands">Explore calculators <b>-></b></a>
       </section>
       <nav class="footer-links" aria-label="Footer navigation">
-        <div><small>CALCULATORS</small><a href="${base}/brands/starbucks.html">Starbucks</a><a href="${base}/brands/subway.html">Subway</a><a href="${base}/brands/mcdonalds.html">McDonald's</a><a href="${base}/brands/chipotle.html">Chipotle</a><a href="${base}/brands/tacobell.html">Taco Bell</a><a href="${base}/brands/dunkin.html">Dunkin'</a><a href="${base}/brands/chickfila.html">Chick-fil-A</a><a href="${base}/brands/panera.html">Panera Bread</a></div>
-        <div><small>EXPLORE</small><a href="${base}/index.html#how">How it works</a><a href="${base}/index.html#faq">Nutrition FAQs</a><a href="${base}/index.html#brands">All brands</a></div>
-        <div><small>GOOD TO KNOW</small><a href="${base}/index.html#faq">About estimates</a><a href="mailto:hello@nutriroute.com">Contact</a><a href="${base}/index.html">Privacy</a></div>
+        <div>
+          <small>TOP BRANDS</small>
+          <a href="/brands/starbucks">Starbucks</a>
+          <a href="/brands/subway">Subway</a>
+          <a href="/brands/mcdonalds">McDonald's</a>
+          <a href="/brands/chipotle">Chipotle</a>
+          <a href="/brands/tacobell">Taco Bell</a>
+          <a href="/brands/dunkin">Dunkin'</a>
+          <a href="/brands/chickfila">Chick-fil-A</a>
+          <a href="/brands/panera">Panera Bread</a>
+        </div>
+        <div>
+          <small>POPULAR CATEGORIES</small>
+          <a href="/index.html?q=coffee">Coffee &amp; Café</a>
+          <a href="/index.html?q=sandwich">Sandwiches &amp; Subs</a>
+          <a href="/index.html?q=burger">Burgers &amp; Fast Food</a>
+          <a href="/index.html?q=mexican">Mexican Grill</a>
+        </div>
+        <div>
+          <small>RESOURCES &amp; LEGAL</small>
+          <a href="/blog">Nutrition Blog</a>
+          <a href="/about.html">About Us</a>
+          <a href="/contact.html">Contact</a>
+          <a href="/editorial-policy.html">Editorial Policy</a>
+          <a href="/methodology.html">Methodology</a>
+          <a href="/privacy.html">Privacy Policy</a>
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/accessibility.html">Accessibility</a>
+        </div>
       </nav>
       <div class="footer-note"><span class="footer-dot"></span><p>Made for mindful meals, not perfect ones.</p></div>
     </div>

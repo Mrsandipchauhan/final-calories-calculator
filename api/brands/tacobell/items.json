@@ -19,7 +19,7 @@
       71,
       21,
       "Specialties",
-      32
+      472
     ],
     [
       "🌮",
@@ -29,7 +29,7 @@
       41,
       28,
       "Tacos & Burritos",
-      33
+      473
     ],
     [
       "🌯",
@@ -39,7 +39,7 @@
       54,
       9,
       "Tacos & Burritos",
-      34
+      474
     ],
     [
       "🥨",
@@ -49,7 +49,217 @@
       27,
       6,
       "Sides & Sweets",
-      35
+      475
+    ],
+    [
+      "🌮",
+      "Soft Taco (Beef)",
+      180,
+      9,
+      18,
+      9,
+      "Tacos & Burritos",
+      476
+    ],
+    [
+      "🌮",
+      "Crunchy Taco (Beef)",
+      170,
+      8,
+      13,
+      10,
+      "Tacos & Burritos",
+      477
+    ],
+    [
+      "🌮",
+      "Soft Taco (Chicken)",
+      160,
+      12,
+      16,
+      6,
+      "Tacos & Burritos",
+      478
+    ],
+    [
+      "🌮",
+      "Doritos Locos Tacos (Nacho Cheese)",
+      170,
+      8,
+      13,
+      10,
+      "Tacos & Burritos",
+      479
+    ],
+    [
+      "🌯",
+      "Beefy 5-Layer Burrito",
+      490,
+      18,
+      63,
+      18,
+      "Tacos & Burritos",
+      480
+    ],
+    [
+      "🌯",
+      "Burrito Supreme (Beef)",
+      400,
+      17,
+      51,
+      15,
+      "Tacos & Burritos",
+      481
+    ],
+    [
+      "🌯",
+      "Chipotle Ranch Grilled Chicken Burrito",
+      510,
+      17,
+      47,
+      29,
+      "Tacos & Burritos",
+      482
+    ],
+    [
+      "🧀",
+      "Cheese Quesadilla",
+      460,
+      19,
+      38,
+      27,
+      "Specialties",
+      483
+    ],
+    [
+      "🧀",
+      "Chicken Quesadilla",
+      510,
+      26,
+      38,
+      28,
+      "Specialties",
+      484
+    ],
+    [
+      "🧀",
+      "Steak Quesadilla",
+      520,
+      26,
+      38,
+      29,
+      "Specialties",
+      485
+    ],
+    [
+      "🌮",
+      "Chalupa Supreme (Beef)",
+      360,
+      12,
+      31,
+      21,
+      "Specialties",
+      486
+    ],
+    [
+      "🥣",
+      "Power Menu Bowl (Chicken)",
+      460,
+      26,
+      51,
+      20,
+      "Specialties",
+      487
+    ],
+    [
+      "🥣",
+      "Power Menu Bowl (Steak)",
+      470,
+      26,
+      51,
+      21,
+      "Specialties",
+      488
+    ],
+    [
+      "🍟",
+      "Nacho Fries",
+      320,
+      4,
+      35,
+      18,
+      "Sides & Sweets",
+      489
+    ],
+    [
+      "🧀",
+      "Chips and Nacho Cheese Sauce",
+      220,
+      3,
+      23,
+      13,
+      "Sides & Sweets",
+      490
+    ],
+    [
+      "🥤",
+      "Baja Blast (Medium)",
+      220,
+      0,
+      59,
+      0,
+      "Drinks",
+      491
+    ],
+    [
+      "🌯",
+      "Cheesy Toasted Breakfast Burrito (Bacon)",
+      350,
+      13,
+      37,
+      16,
+      "Breakfast",
+      492
+    ],
+    [
+      "🌯",
+      "Grande Toasted Breakfast Burrito (Sausage)",
+      570,
+      21,
+      50,
+      32,
+      "Breakfast",
+      493
+    ],
+    [
+      "🥞",
+      "Cinnabon Delights (4pc)",
+      330,
+      3,
+      36,
+      19,
+      "Breakfast",
+      494
+    ],
+    [
+      "🌮",
+      "Double Stacked Taco",
+      320,
+      11,
+      32,
+      17,
+      "Tacos & Burritos",
+      495
+    ],
+    [
+      "🌯",
+      "Cheesy Double Beef Burrito",
+      620,
+      22,
+      65,
+      29,
+      "Tacos & Burritos",
+      496
     ]
   ],
   "sizes": [

@@ -7,7 +7,7 @@
     "bg": "#fffdeb",
     "meta_title": "Carl's Jr. Calorie Calculator — Charbroiled Burgers | NutriRoute",
     "meta_description": "Find calorie counts and nutritional values for Carl's Jr. Charbroiled burgers, tenders, and waffle fries. Dynamic macros tracker.",
-    "seo_content": "<div class='seo-section'><h2>Carl's Jr. Nutrition & Macro Tracking Guide</h2><p>Carl's Jr. is legendary for flame-charbroiled Thickburgers and Western Bacon Cheeseburgers. Check how different bun configurations and extra cheese selections affect your calorie intake using our calculator.</p></div>",
+    "seo_content": "\n    <section class=\"seo-article wrap\">\n      <h2>Carl's Jr. Nutrition & Macro Tracking Guide</h2>\n      <p>Carl's Jr. is famous for its charbroiled Thickburgers, hand-breaded chicken tenders, and crispy sides. Known for indulgence, many items on the menu exceed 800 calories due to large patties, cheese, bacon, and mayonnaise. However, Carl's Jr. was one of the first fast-food chains to embrace low-carb diets. Using our interactive Carl's Jr. calorie calculator helps you build your ideal burger and track fats, proteins, and carbs instantly.</p>\n      \n      <h3>How to Customize Your Carl's Jr. Order</h3>\n      <p>Use these simple menu hacks to cut down on calories while maximizing protein:</p>\n\n      <div class=\"seo-callout-box\">\n        <h4>1. Ask for it \"Low Carb\" Style</h4>\n        <p>Carl's Jr. will gladly wrap any burger (such as the Famous Star or Super Star) in fresh iceberg lettuce instead of a bun. This simple swap eliminates the bun, saving you roughly 150–220 calories and 30g+ of simple carbohydrates.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>2. Choose Hand-Breaded Chicken Tenders</h4>\n        <p>If you want lean protein, their Hand-Breaded Chicken Tenders are excellent. A 3-piece order has 340 calories and packs 25g of protein. Pair them with a side salad or steamed vegetables if available instead of onion rings.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>3. Limit Heavy Sauces and Cheese</h4>\n        <p>Mayo-based sauces and slices of cheese add significant saturated fat. Requesting your burger without mayo or cheese, or choosing spicy mustard instead, keeps the charbroiled flavor while cutting down on fat macros.</p>\n      </div>\n\n      <h3>Frequently Asked Questions (FAQs)</h3>\n      <div class=\"seo-faq-accordion\">\n        <details>\n          <summary>How accurate is this Carl's Jr. calorie calculator?</summary>\n          <p>This calculator is based on the official Carl's Jr. nutritional disclosures. Sizing and prep variations at local franchises may cause actual values to differ slightly.</p>\n        </details>\n        <details>\n          <summary>What is the lowest calorie burger at Carl's Jr.?</summary>\n          <p>The single Hamburger or a Single Famous Star ordered \"Low Carb Style\" (lettuce wrapped) are the lowest-calorie burger options on the menu.</p>\n        </details>\n        <details>\n          <summary>Does Carl's Jr. offer vegetarian options?</summary>\n          <p>Yes. Many Carl's Jr. locations offer a Beyond Meat® patty swap for their charbroiled burgers, allowing you to enjoy a plant-based alternative.</p>\n        </details>\n      </div>\n    </section>\n",
     "logo_path": "brands/images/carlsjr.svg"
   },
   "items": [
@@ -17,19 +17,19 @@
       670,
       28,
       50,
-      38,
-      "Burgers",
-      367
+      39,
+      "Charbroiled Burgers",
+      747
     ],
     [
       "🍔",
       "Super Star with Cheese",
       920,
-      47,
-      50,
-      59,
-      "Burgers",
-      368
+      48,
+      51,
+      58,
+      "Charbroiled Burgers",
+      748
     ],
     [
       "🍔",
@@ -38,28 +38,158 @@
       34,
       75,
       34,
-      "Burgers",
-      369
-    ],
-    [
-      "🥪",
-      "Charbroiled Chicken Club",
-      620,
-      38,
-      48,
-      30,
-      "Sandwiches",
-      370
+      "Charbroiled Burgers",
+      749
     ],
     [
       "🍟",
-      "Waffle Fries",
-      360,
-      4,
-      44,
-      19,
+      "Natural-Cut French Fries (Medium)",
+      430,
+      5,
+      59,
+      20,
       "Sides",
-      371
+      750
+    ],
+    [
+      "🥤",
+      "Chocolate Hand-Scooped Ice Cream Shake",
+      690,
+      14,
+      95,
+      28,
+      "Shakes & Desserts",
+      751
+    ],
+    [
+      "🍔",
+      "Single Western Bacon Cheeseburger",
+      750,
+      34,
+      75,
+      34,
+      "Charbroiled Burgers",
+      752
+    ],
+    [
+      "🍔",
+      "Double Western Bacon Cheeseburger",
+      1020,
+      53,
+      76,
+      56,
+      "Charbroiled Burgers",
+      753
+    ],
+    [
+      "🍔",
+      "Big Carl",
+      920,
+      42,
+      53,
+      60,
+      "Charbroiled Burgers",
+      754
+    ],
+    [
+      "🍔",
+      "The Charbroiled Chicken Club Sandwich",
+      620,
+      36,
+      48,
+      31,
+      "Chicken",
+      755
+    ],
+    [
+      "🍗",
+      "Hand-Breaded Chicken Tenders (3pc)",
+      340,
+      25,
+      15,
+      20,
+      "Chicken",
+      756
+    ],
+    [
+      "🍗",
+      "Hand-Breaded Chicken Sandwich",
+      640,
+      32,
+      52,
+      33,
+      "Chicken",
+      757
+    ],
+    [
+      "🍟",
+      "Crispy Onion Rings",
+      410,
+      5,
+      48,
+      22,
+      "Sides",
+      758
+    ],
+    [
+      "🍟",
+      "Crisscut Fries (Medium)",
+      440,
+      4,
+      49,
+      25,
+      "Sides",
+      759
+    ],
+    [
+      "🥤",
+      "Vanilla Hand-Scooped Ice Cream Shake",
+      670,
+      13,
+      91,
+      28,
+      "Shakes & Desserts",
+      760
+    ],
+    [
+      "🥤",
+      "Strawberry Hand-Scooped Ice Cream Shake",
+      680,
+      13,
+      93,
+      28,
+      "Shakes & Desserts",
+      761
+    ],
+    [
+      "🥚",
+      "Sausage, Egg & Cheese Biscuit",
+      600,
+      20,
+      38,
+      41,
+      "Breakfast",
+      762
+    ],
+    [
+      "🌯",
+      "Breakfast Burrito (Bacon)",
+      580,
+      24,
+      42,
+      35,
+      "Breakfast",
+      763
+    ],
+    [
+      "🍟",
+      "Hash Rounds (Medium)",
+      300,
+      3,
+      33,
+      17,
+      "Breakfast",
+      764
     ]
   ],
   "sizes": [

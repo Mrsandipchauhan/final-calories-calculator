@@ -2,17 +2,23 @@ const express = require('express');
 const session = require('express-session');
 const bodyParser = require('body-parser');
 const bcrypt = require('bcryptjs');
+const siteConfig = require('./site_config.json');
+const { getCanonicalUrl } = require('./canonical_helper');
+const { getHomepageSchemaGraph, getBrandPageSchemaGraph, getBlogPostSchemaGraph } = require('./schema_helper');
+const { getSocialMetaTags } = require('./meta_helper');
 const multer = require('multer');
 const path = require('path');
 const fs = require('fs');
 const { db, initDb } = require('./db');
+
+const baseDir = __dirname.endsWith('api') ? path.join(__dirname, '..') : __dirname;
 
 const app = express();
 const PORT = process.env.PORT || 8089;
 
 // ── Multer config for image uploads ──
 const storage = multer.diskStorage({
-  destination: (req, file, cb) => cb(null, path.join(__dirname, 'uploads')),
+  destination: (req, file, cb) => cb(null, path.join(baseDir, 'uploads')),
   filename: (req, file, cb) => {
     const uniqueSuffix = Date.now() + '-' + Math.round(Math.random() * 1E9);
     const ext = path.extname(file.originalname);
@@ -41,8 +47,42 @@ app.use(session({
   cookie: { maxAge: 24 * 60 * 60 * 1000 }
 }));
 
-// Serve uploaded images
-app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
+// Serve uploaded images and static assets with long-term caching
+const staticCacheOptions = {
+  maxAge: '1y',
+  etag: true,
+  lastModified: true,
+  setHeaders: (res, filePath) => {
+    if (filePath.endsWith('.html')) {
+      res.setHeader('Cache-Control', 'public, max-age=0, must-revalidate');
+    } else if (filePath.match(/\.(css|js|woff2?|png|jpg|jpeg|gif|webp|svg|ico)$/)) {
+      res.setHeader('Cache-Control', 'public, max-age=31536000, immutable');
+    }
+  }
+};
+app.use('/uploads', express.static(path.join(baseDir, 'uploads'), staticCacheOptions));
+app.use('/brands/images', express.static(path.join(baseDir, 'brands', 'images'), staticCacheOptions));
+// Skip index.html in static so dynamic homepage route handles it
+app.use((req, res, next) => {
+  if (req.path === '/index.html') return next();
+  express.static(baseDir, { ...staticCacheOptions, index: false })(req, res, next);
+});
+
+// X-Robots-Tag header middleware for APIs
+app.use('/api', (req, res, next) => {
+  res.setHeader('X-Robots-Tag', 'noindex, nofollow');
+  next();
+});
+
+// Helper to determine Robots Meta tag
+function getRobotsTag(req, isPublicPage = true) {
+  const host = req.get('host') || '';
+  const isProd = host.includes('organizeddesignva.com');
+  if (isProd && isPublicPage) {
+    return '<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">';
+  }
+  return '<meta name="robots" content="noindex, nofollow">';
+}
 
 // Admin Auth Middleware
 function requireAdmin(req, res, next) {
@@ -469,62 +509,69 @@ Sitemap: ${siteUrl}/sitemap.xml
 
 // Blog listing page
 app.get('/blog', (req, res) => {
-  res.sendFile(path.join(__dirname, 'blog.html'));
+  res.sendFile(path.join(baseDir, 'blog.html'));
+});
+
+// Clean URLs for EEAT & Legal Pages
+const cleanUrlPages = [
+  'about',
+  'contact',
+  'editorial-policy',
+  'methodology',
+  'privacy',
+  'terms',
+  'disclaimer',
+  'accessibility',
+  'team'
+];
+
+cleanUrlPages.forEach(page => {
+  app.get(`/${page}`, (req, res) => {
+    res.sendFile(path.join(baseDir, `${page}.html`));
+  });
 });
 
 // Individual blog post — serve blog.html with injected meta
 app.get('/blog/:slug', async (req, res) => {
   try {
     const post = await db.getAsync('SELECT * FROM blogs WHERE slug = ?', [req.params.slug]);
-    if (!post) return res.status(404).sendFile(path.join(__dirname, 'blog.html'));
+    if (!post) return res.status(404).sendFile(path.join(baseDir, 'blog.html'));
 
-    let html = fs.readFileSync(path.join(__dirname, 'blog.html'), 'utf8');
-    const settings = await getSettings();
-    const siteUrl = (settings.site_url || 'https://nutriroute.com').replace(/\/$/, '');
+    let html = fs.readFileSync(path.join(baseDir, 'blog.html'), 'utf8');
+    const siteUrl = siteConfig.SITE_URL;
 
     // Replace meta tags for SEO
-    const metaTitle = post.meta_title || `${post.title} — NutriRoute Blog`;
+    const metaTitle = post.meta_title || `${post.title} — ${siteConfig.SITE_NAME} Blog`;
     const metaDesc = post.meta_description || post.summary;
-    const canonical = post.canonical_url || `${siteUrl}/blog/${post.slug}`;
+    const canonical = getCanonicalUrl(post.canonical_url || ('/blog/' + post.slug));
 
     html = html.replace(/<title>.*?<\/title>/, `<title>${metaTitle}</title>`);
     html = html.replace(/<meta name="description"[^>]*>/, `<meta name="description" content="${metaDesc.replace(/"/g, '&quot;')}">`);
 
-    // Inject OG tags + canonical + schema
-    const ogTags = `
-  <link rel="canonical" href="${canonical}">
-  <meta property="og:title" content="${metaTitle}">
-  <meta property="og:description" content="${metaDesc.replace(/"/g, '&quot;')}">
-  <meta property="og:type" content="article">
-  <meta property="og:url" content="${canonical}">
-  ${post.image_url ? `<meta property="og:image" content="${post.image_url}">` : ''}
-`;
-    const articleSchema = schemaScript({
-      "@context": "https://schema.org",
-      "@type": post.schema_type || "Article",
-      "headline": post.title,
-      "description": post.summary,
-      "author": { "@type": "Person", "name": post.author || "NutriRoute Team" },
-      "datePublished": post.created_at,
-      "dateModified": post.updated_at || post.created_at,
-      "image": post.image_url || "",
-      "publisher": { "@type": "Organization", "name": "NutriRoute" }
+    // Strip existing OG/Twitter tags to prevent duplicates
+    html = html.replace(/<meta property="og:[^>]*>/gi, '');
+    html = html.replace(/<meta name="twitter:[^>]*>/gi, '');
+
+    const socialMeta = getSocialMetaTags({
+      title: metaTitle,
+      description: metaDesc,
+      canonicalUrl: canonical,
+      type: "article",
+      imageUrl: post.image_url || siteConfig.DEFAULT_OG_IMAGE,
+      imageAlt: `${post.title} Featured Image`
     });
 
-    const breadcrumbSchema = schemaScript({
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
-        { "@type": "ListItem", "position": 2, "name": "Blog", "item": `${siteUrl}/blog` },
-        { "@type": "ListItem", "position": 3, "name": post.title, "item": canonical }
-      ]
-    });
+    const ogTags = `
+  ${getRobotsTag(req, true)}
+  <link rel="canonical" href="${canonical}">
+  ${socialMeta}
+`;
+    const blogGraphSchema = schemaScript(getBlogPostSchemaGraph(post, canonical));
 
     // Inject a data attribute so client JS can auto-load the post
     html = html.replace('<body>', `<body data-blog-slug="${post.slug}">`);
 
-    html = html.replace('</head>', ogTags + articleSchema + '\n' + breadcrumbSchema + '\n</head>');
+    html = html.replace('</head>', ogTags + blogGraphSchema + '\n</head>');
 
     // Apply code injection
     html = await injectIntoHtml(html);
@@ -538,25 +585,26 @@ app.get('/blog/:slug', async (req, res) => {
 // SERVER-RENDERED BRAND PAGES WITH SEO
 // ══════════════════════════════════════════
 
-// Serve static files EXCEPT brands/*.html (we want to intercept those)
+// Serve static files EXCEPT brands/* (we want to intercept those)
 app.use((req, res, next) => {
-  // Let brands/*.html be handled by our custom route
-  if (req.path.match(/^\/brands\/[^/]+\.html$/)) return next();
-  express.static(path.join(__dirname))(req, res, next);
+  // Let brands/* be handled by our custom route (both with and without .html)
+  if (req.path.match(/^\/brands\/[^/]+(\.html)?$/)) return next();
+  // Let homepage be handled by the dynamic route
+  if (req.path === '/' || req.path === '/index.html') return next();
+  express.static(path.join(baseDir))(req, res, next);
 });
 
 // Dynamic brand page serving with SEO injection
-app.get('/brands/:brandId.html', async (req, res) => {
+app.get(['/brands/:brandId.html', '/brands/:brandId'], async (req, res) => {
   try {
-    const brandId = req.params.brandId;
+    const brandId = req.params.brandId.replace(/\.html$/, '');
     const brand = await db.getAsync('SELECT * FROM brands WHERE id = ?', [brandId]);
-    const settings = await getSettings();
-    const siteUrl = (settings.site_url || 'https://nutriroute.com').replace(/\/$/, '');
+    const siteUrl = siteConfig.SITE_URL;
 
     // Determine which HTML file to serve
     let htmlFile;
-    const specificFile = path.join(__dirname, 'brands', `${brandId}.html`);
-    const templateFile = path.join(__dirname, 'brands', 'brand_template.html');
+    const specificFile = path.join(baseDir, 'brands', `${brandId}.html`);
+    const templateFile = path.join(baseDir, 'brands', 'brand_template.html');
 
     if (fs.existsSync(specificFile) && brandId !== 'brand_template') {
       htmlFile = specificFile;
@@ -567,9 +615,9 @@ app.get('/brands/:brandId.html', async (req, res) => {
     let html = fs.readFileSync(htmlFile, 'utf8');
 
     if (brand) {
-      const metaTitle = brand.meta_title || `${brand.name} Calorie Calculator — Nutrition Facts & Macros | NutriRoute`;
+      const metaTitle = brand.meta_title || `${brand.name} Calorie Calculator — Nutrition Facts & Macros | ${siteConfig.SITE_NAME}`;
       const metaDesc = brand.meta_description || `Use the free ${brand.name} calorie calculator to check calories, protein, carbs and fat for every menu item. Customize your order and make smarter choices.`;
-      const canonical = `${siteUrl}/brands/${brandId}.html`;
+      const canonical = getCanonicalUrl('/brands/' + brandId);
 
       // Replace/inject title and description
       html = html.replace(/<title>.*?<\/title>/, `<title>${metaTitle}</title>`);
@@ -579,34 +627,69 @@ app.get('/brands/:brandId.html', async (req, res) => {
         html = html.replace('</head>', `<meta name="description" content="${metaDesc.replace(/"/g, '&quot;')}">\n</head>`);
       }
 
+      // Pre-render brand parameters inside HTML body
+      html = html.replace(/<div class="eyebrow">[\s\S]*?Make your (?:order|.*?) work for you\.[\s\S]*?<\/div>/, `<div class="eyebrow"><span></span> Make your ${brand.name} order work for you.</div>`);
+      html = html.replace(/<h1>[\s\S]*?Calories[\s\S]*?<\/h1>/, `<h1>${brand.name} Calories &amp;<br><em>Nutrition Calculator</em></h1>`);
+      html = html.replace(/<p>Use our interactive calorie calculator[\s\S]*?<\/p>/, `<p>Use our interactive ${brand.name} calorie calculator to customize your orders. Select sizes, options, and track calories, protein, carbs, and fat in real-time to plan your healthy runs.</p>`);
+      html = html.replace(/<span class="badge-text">.*?<\/span>/, `<span class="badge-text">${brand.name}</span>`);
+      
+      let logoPath = brand.logo_path || `brands/images/${brand.id}.png`;
+      if (!logoPath.startsWith('/')) {
+        logoPath = '/' + logoPath;
+      }
+      html = html.replace(/<div class="badge-logo-circle">[\s\S]*?<\/div>/, `<div class="badge-logo-circle"><img src="${logoPath}" alt="${brand.name} logo" width="80" height="80" fetchpriority="high" decoding="async"></div>`);
+      html = html.replace(/<span class="active-crumb">.*?<\/span>/, `<span class="active-crumb">${brand.name} Calorie Calculator</span>`);
+      
+      if (brand.seo_content) {
+        html = html.replace(/<section class="brand-content wrap">[\s\S]*?<\/section>/, `<section class="brand-content wrap">${brand.seo_content}</section>`);
+      }
+
+      // Strip existing OG/Twitter tags to prevent duplicates
+      html = html.replace(/<meta property="og:[^>]*>/gi, '');
+      html = html.replace(/<meta name="twitter:[^>]*>/gi, '');
+
+      const socialMeta = getSocialMetaTags({
+        title: metaTitle,
+        description: metaDesc,
+        canonicalUrl: canonical,
+        type: "website",
+        imageUrl: logoPath,
+        imageAlt: `${brand.name} Logo`
+      });
+
       // Inject canonical + OG + schema
       const seoHead = `
+  ${getRobotsTag(req, true)}
   <link rel="canonical" href="${canonical}">
-  <meta property="og:title" content="${metaTitle}">
-  <meta property="og:description" content="${metaDesc.replace(/"/g, '&quot;')}">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="${canonical}">
+  ${socialMeta}
 `;
-      const breadcrumbSchema = schemaScript({
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": siteUrl },
-          { "@type": "ListItem", "position": 2, "name": "Calculators", "item": `${siteUrl}/#brands` },
-          { "@type": "ListItem", "position": 3, "name": `${brand.name} Calculator`, "item": canonical }
-        ]
-      });
+      // Dynamic FAQ Extraction from HTML content
+      const faqList = [];
+      const detailsBlocks = html.match(/<details[^>]*>[\s\S]*?<\/details>/gi) || [];
+      for (const block of detailsBlocks) {
+        const summaryMatch = block.match(/<summary[^>]*>([\s\S]*?)<\/summary>/i);
+        const pMatch = block.match(/<p[^>]*>([\s\S]*?)<\/p>/i);
+        if (summaryMatch && pMatch) {
+          const q = summaryMatch[1].replace(/<[^>]+>/g, '').replace(/\+/g, '').trim();
+          const a = pMatch[1].replace(/<[^>]+>/g, '').replace(/\+/g, '').trim();
+          faqList.push({
+            "@type": "Question",
+            "name": q,
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": a
+            }
+          });
+        }
+      }
 
-      const webPageSchema = schemaScript({
-        "@context": "https://schema.org",
-        "@type": "WebPage",
-        "name": metaTitle,
-        "description": metaDesc,
-        "url": canonical,
-        "isPartOf": { "@type": "WebSite", "name": "NutriRoute", "url": siteUrl }
-      });
+      // Clean all existing schema script blocks from HTML to prevent duplicates
+      html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, '');
 
-      html = html.replace('</head>', seoHead + breadcrumbSchema + '\n' + webPageSchema + '\n</head>');
+      // Generate single consolidated entity graph schema
+      const brandGraphSchema = schemaScript(getBrandPageSchemaGraph(brand, canonical, faqList));
+
+      html = html.replace('</head>', seoHead + brandGraphSchema + '\n</head>');
 
       // Set data-brand attribute
       if (!html.includes('data-brand=')) {
@@ -625,66 +708,311 @@ app.get('/brands/:brandId.html', async (req, res) => {
 // HOMEPAGE WITH SEO INJECTION
 // ══════════════════════════════════════════
 
-app.get('/', async (req, res) => {
+app.get(['/', '/index.html'], async (req, res) => {
   try {
-    let html = fs.readFileSync(path.join(__dirname, 'index.html'), 'utf8');
+    let html = fs.readFileSync(path.join(baseDir, 'index.html'), 'utf8');
     const settings = await getSettings();
-    const siteUrl = (settings.site_url || 'https://nutriroute.com').replace(/\/$/, '');
+    const siteUrl = siteConfig.SITE_URL;
 
-    // Inject homepage schema
-    const websiteSchema = schemaScript({
-      "@context": "https://schema.org",
-      "@type": "WebSite",
-      "name": "NutriRoute",
-      "url": siteUrl,
-      "description": settings.site_description || "",
-      "potentialAction": {
-        "@type": "SearchAction",
-        "target": `${siteUrl}/#brands?q={search_term_string}`,
-        "query-input": "required name=search_term_string"
+    // Pre-render brand list cards
+    const brands = await db.allAsync('SELECT id, name, category, desc, bg, logo_path FROM brands');
+    const brandCardsHtml = brands.map(brand => {
+      let logoSrc = brand.logo_path || `brands/images/${brand.id}.png`;
+      if (!logoSrc.startsWith('/')) {
+        logoSrc = '/' + logoSrc;
       }
+      return `
+      <a class="brand-card" href="brands/${brand.id}.html" style="background: ${brand.bg};">
+        <span class="brand-icon" style="background: none; overflow: visible; display: flex; align-items: center; justify-content: center; border-radius: 50%;">
+          <img src="${logoSrc}" alt="${brand.name} logo" width="50" height="50" loading="lazy" decoding="async" style="width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: block;" onerror="if(this.src.includes('.png')){this.src=this.src.replace('.png','.svg');}else{this.style.display='none';this.parentElement.innerHTML='<span style=\\'font-size:28px;font-weight:800;color:var(--ink)\\'>${brand.name[0]}</span>';}">
+        </span>
+        <div>
+          <small>${brand.category}</small>
+          <h3>${brand.name}</h3>
+          <p>${brand.desc}</p>
+        </div>
+        <b>→</b>
+      </a>`;
+    }).join('');
+
+    // Replace entire brand-grid contents (greedy to capture all nested divs)
+    html = html.replace(/<div class="brand-grid" id="brandGrid">[\s\S]*?<\/div>\s*<\/section>/, `<div class="brand-grid" id="brandGrid">${brandCardsHtml}</div></section>`);
+
+    // Dynamic FAQ list for homepage
+    const faqList = [
+      { "@type": "Question", "name": "How accurate are the calorie estimates?", "acceptedAnswer": { "@type": "Answer", "text": "Our calculator uses published brand nutrition information and applies the selections you make. Recipes and portions can vary by location, so treat every result as a helpful estimate." }},
+      { "@type": "Question", "name": "Is NutriRoute affiliated with these restaurants?", "acceptedAnswer": { "@type": "Answer", "text": "No. NutriRoute is an independent educational tool. Brand names are used only to help you identify the menu you want to explore." }},
+      { "@type": "Question", "name": "Can I calculate customisations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — our brand calculators include common choices such as size, milk, bread and add-ons, with results updated as you build." }},
+      { "@type": "Question", "name": "Why don't I see every menu item?", "acceptedAnswer": { "@type": "Answer", "text": "We are growing the database in carefully reviewed batches. Check back often: new options are added to existing brands regularly." }}
+    ];
+
+    // Clean all existing schema script blocks from HTML to prevent duplicates
+    html = html.replace(/\s*<script type="application\/ld\+json">[\s\S]*?<\/script>/gi, '');
+
+    const homepageGraphSchema = schemaScript(getHomepageSchemaGraph(faqList));
+
+    // Strip existing OG/Twitter tags to prevent duplicates
+    html = html.replace(/<meta property="og:[^>]*>/gi, '');
+    html = html.replace(/<meta name="twitter:[^>]*>/gi, '');
+
+    const socialMeta = getSocialMetaTags({
+      title: siteConfig.SITE_NAME,
+      description: settings.site_description || "Free restaurant calorie and macros calculator.",
+      canonicalUrl: getCanonicalUrl('/'),
+      type: "website",
+      imageUrl: siteConfig.DEFAULT_OG_IMAGE,
+      imageAlt: `${siteConfig.SITE_NAME} Home`
     });
 
-    const orgSchema = schemaScript({
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "NutriRoute",
-      "url": siteUrl,
-      "description": "Free multi-brand restaurant calorie calculator"
-    });
-
-    const faqSchema = schemaScript({
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      "mainEntity": [
-        { "@type": "Question", "name": "How accurate are the calorie estimates?", "acceptedAnswer": { "@type": "Answer", "text": "Our calculator uses published brand nutrition information and applies the selections you make. Recipes and portions can vary by location, so treat every result as a helpful estimate." }},
-        { "@type": "Question", "name": "Is NutriRoute affiliated with these restaurants?", "acceptedAnswer": { "@type": "Answer", "text": "No. NutriRoute is an independent educational tool. Brand names are used only to help you identify the menu you want to explore." }},
-        { "@type": "Question", "name": "Can I calculate customisations?", "acceptedAnswer": { "@type": "Answer", "text": "Yes — our brand calculators include common choices such as size, milk, bread and add-ons, with results updated as you build." }},
-        { "@type": "Question", "name": "Why don't I see every menu item?", "acceptedAnswer": { "@type": "Answer", "text": "We are growing the database in carefully reviewed batches. Check back often: new options are added to existing brands regularly." }}
-      ]
-    });
-
-    const canonicalTag = `<link rel="canonical" href="${siteUrl}/">`;
-    html = html.replace('</head>', canonicalTag + '\n' + websiteSchema + '\n' + orgSchema + '\n' + faqSchema + '\n</head>');
+    const canonicalTag = `${getRobotsTag(req, true)}\n<link rel="canonical" href="${getCanonicalUrl('/')}">\n${socialMeta}`;
+    html = html.replace('</head>', canonicalTag + '\n' + homepageGraphSchema + '\n</head>');
     html = await injectIntoHtml(html);
     res.send(html);
   } catch (err) {
     // Fallback to static file
-    res.sendFile(path.join(__dirname, 'index.html'));
+    res.sendFile(path.join(baseDir, 'index.html'));
   }
+});
+
+// Helper to escape XML special characters
+function xmlEscape(str) {
+  if (!str) return '';
+  return str.replace(/[<>&'"]/g, c => {
+    switch (c) {
+      case '<': return '&lt;';
+      case '>': return '&gt;';
+      case '&': return '&amp;';
+      case '\'': return '&apos;';
+      case '"': return '&quot;';
+    }
+  });
+}
+
+// 1. Root Sitemap Index
+app.get('/sitemap.xml', (req, res) => {
+  const today = new Date().toISOString().split('T')[0];
+  const siteUrl = siteConfig.SITE_URL;
+  
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>${siteUrl}/sitemaps/sitemap-pages.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${siteUrl}/sitemaps/sitemap-brands.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${siteUrl}/sitemaps/sitemap-blog.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+  <sitemap>
+    <loc>${siteUrl}/sitemaps/sitemap-images.xml</loc>
+    <lastmod>${today}</lastmod>
+  </sitemap>
+</sitemapindex>`;
+  
+  res.header('Content-Type', 'application/xml');
+  res.send(xml);
+});
+
+// 2. Sub-Sitemap: Pages (homepage, blog index)
+app.get('/sitemaps/sitemap-pages.xml', (req, res) => {
+  const today = new Date().toISOString().split('T')[0];
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>${getCanonicalUrl('/')}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>${getCanonicalUrl('/blog')}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>`;
+
+  res.header('Content-Type', 'application/xml');
+  res.send(xml);
+});
+
+// 3. Sub-Sitemap: Brands & Calculators
+app.get('/sitemaps/sitemap-brands.xml', async (req, res) => {
+  try {
+    const brands = await db.allAsync('SELECT id FROM brands');
+    const today = new Date().toISOString().split('T')[0];
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+    for (const brand of brands) {
+      xml += `
+  <url>
+    <loc>${getCanonicalUrl('/brands/' + brand.id)}</loc>
+    <lastmod>${today}</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>`;
+    }
+
+    xml += '\n</urlset>';
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  } catch (err) {
+    res.status(500).send('Error generating brands sitemap');
+  }
+});
+
+// 4. Sub-Sitemap: Blog posts
+app.get('/sitemaps/sitemap-blog.xml', async (req, res) => {
+  try {
+    const blogs = await db.allAsync('SELECT slug, updated_at, created_at FROM blogs');
+    const today = new Date().toISOString().split('T')[0];
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">`;
+
+    for (const blog of blogs) {
+      const blogDate = (blog.updated_at || blog.created_at || today).split('T')[0].split(' ')[0];
+      xml += `
+  <url>
+    <loc>${getCanonicalUrl('/blog/' + blog.slug)}</loc>
+    <lastmod>${blogDate}</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>`;
+    }
+
+    xml += '\n</urlset>';
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  } catch (err) {
+    res.status(500).send('Error generating blog sitemap');
+  }
+});
+
+// 5. Sub-Sitemap: Images
+app.get('/sitemaps/sitemap-images.xml', async (req, res) => {
+  try {
+    const brands = await db.allAsync('SELECT id, name, desc, logo_path FROM brands');
+    const blogs = await db.allAsync('SELECT slug, title, summary, image_url FROM blogs');
+    const siteUrl = siteConfig.SITE_URL;
+    
+    let xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">`;
+
+    // Add brand logos
+    for (const brand of brands) {
+      let logoPath = brand.logo_path || `brands/images/${brand.id}.png`;
+      if (!logoPath.startsWith('/')) {
+        logoPath = '/' + logoPath;
+      }
+      xml += `
+  <url>
+    <loc>${getCanonicalUrl('/brands/' + brand.id)}</loc>
+    <image:image>
+      <image:loc>${siteUrl}${logoPath}</image:loc>
+      <image:title>${xmlEscape(brand.name)} Logo</image:title>
+      <image:caption>Calorie calculator and custom order helper for ${xmlEscape(brand.name)}.</image:caption>
+    </image:image>
+  </url>`;
+    }
+
+    // Add blog featured images
+    for (const blog of blogs) {
+      if (blog.image_url) {
+        xml += `
+  <url>
+    <loc>${getCanonicalUrl('/blog/' + blog.slug)}</loc>
+    <image:image>
+      <image:loc>${xmlEscape(blog.image_url)}</image:loc>
+      <image:title>${xmlEscape(blog.title)}</image:title>
+      <image:caption>${xmlEscape(blog.summary)}</image:caption>
+    </image:image>
+  </url>`;
+      }
+    }
+
+    xml += '\n</urlset>';
+    res.header('Content-Type', 'application/xml');
+    res.send(xml);
+  } catch (err) {
+    res.status(500).send('Error generating images sitemap');
+  }
+});
+
+// Dynamic environment-aware robots.txt
+app.get('/robots.txt', (req, res) => {
+  res.type('text/plain');
+  const host = req.get('host') || '';
+  const isProd = host.includes('organizeddesignva.com');
+  
+  if (!isProd) {
+    // Block all crawlers in non-production environments (e.g. localhost, staging, dev)
+    res.send(`User-agent: *
+Disallow: /
+`);
+    return;
+  }
+  
+  // Production robots.txt rules
+  res.send(`User-agent: *
+Allow: /
+Allow: /brands/
+Allow: /blog/
+Allow: /api/brands.json
+Allow: /api/blogs.json
+Allow: /api/brands/*/items.json
+Allow: /api/blogs/*.json
+
+Disallow: /admin
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /uploads/
+Disallow: /scripts/
+Disallow: /node_modules/
+Disallow: /outputs/
+Disallow: /work/
+Disallow: /*?*
+
+# Block duplicate tracking and parameter URLs
+Disallow: /*?utm_*
+Disallow: /*?fbclid
+Disallow: /*?gclid
+Disallow: /*?ref
+Disallow: /*?sort
+Disallow: /*?filter
+Disallow: /*?q=
+
+# Block backup/temporary extensions
+Disallow: /*.bak$
+Disallow: /*.log$
+Disallow: /*.tmp$
+
+Sitemap: ${getCanonicalUrl('/sitemap.xml')}
+`);
 });
 
 // Admin dashboard route
 app.get('/admin', (req, res) => {
-  res.sendFile(path.join(__dirname, 'admin.html'));
+  res.sendFile(path.join(baseDir, 'admin.html'));
 });
 
 // ── Start Server ──
 async function startServer() {
   await initDb();
-  app.listen(PORT, () => {
-    console.log(`Server is running at http://localhost:${PORT}`);
-  });
+  if (!process.env.VERCEL) {
+    app.listen(PORT, () => {
+      console.log(`Server is running at http://localhost:${PORT}`);
+    });
+  }
 }
 
 startServer();
+
+module.exports = app;

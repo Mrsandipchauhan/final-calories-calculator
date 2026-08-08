@@ -7,7 +7,7 @@
     "bg": "#fbebe8",
     "meta_title": "Arby's Calorie Calculator — Roast Beef & Curly Fries | NutriRoute",
     "meta_description": "Track exact calories and macros for Arby's classic roast beef sandwiches, curly fries, and cheddar cheese. Free interactive nutrition calculator.",
-    "seo_content": "<div class='seo-section'><h2>Arby's Nutrition & Macro Tracking Guide</h2><p>Arby's boasts 'We Have The Meats', offering a massive range of protein-packed sandwiches. From the Classic Roast Beef to their seasoned Curly Fries, check our interactive calculator to see how adding extra cheese sauce alters your daily macro budget.</p></div>",
+    "seo_content": "\n    <section class=\"seo-article wrap\">\n      <h2>Arby's Nutrition & Macro Tracking Guide</h2>\n      <p>Arby's is famous for its bold slogan, \"We Have The Meats,\" offering a massive menu of slow-roasted roast beef, turkey, chicken, and brisket sandwiches. While it is a paradise for meat lovers seeking high-protein options, the signature cheddar sauces, mayonnaise-based dressings, and seasoned sides can quickly elevate the calorie count. Using our interactive Arby's calorie calculator allows you to plan your order, customize your ingredients, and control your macros perfectly.</p>\n      \n      <h3>How to Build a Healthy Order at Arby's</h3>\n      <p>Whether you want to keep your meal low-carb, high-protein, or calorie-controlled, use these strategies:</p>\n\n      <div class=\"seo-callout-box\">\n        <h4>1. Stick to the Classic Roast Beef</h4>\n        <p>The Classic Roast Beef sandwich is surprisingly macro-friendly, offering 23g of protein for only 360 calories. If you are very hungry, upgrading to the Double Roast Beef gives you 38g of protein for 510 calories. Avoid the Half Pound version unless you have a large calorie budget.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>2. Be Smart with Sauces and Dressings</h4>\n        <p>Signature sauces like Arby's Sauce and Horsey Sauce add flavor, but honey mustard, gyro sauce, and cheese sauce add extra calories and fat. Request dressings on the side or stick to light mustard to keep your macros clean.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>3. Swap the Sides</h4>\n        <p>A medium serving of Arby's legendary Curly Fries contains 410 calories and 21g of fat. If you want to keep your calories low, consider swapping fries for a side salad with light dressing, or simply skip the side and enjoy the protein-dense sandwich.</p>\n      </div>\n\n      <h3>Frequently Asked Questions (FAQs)</h3>\n      <div class=\"seo-faq-accordion\">\n        <details>\n          <summary>How accurate is this Arby's calorie calculator?</summary>\n          <p>This calculator uses official nutritional data from Arby's. However, because sandwiches are assembled by hand at individual restaurant locations, actual values may vary slightly depending on portioning.</p>\n        </details>\n        <details>\n          <summary>What are the lowest calorie options at Arby's?</summary>\n          <p>The Classic Roast Beef sandwich (360 calories), Roast Beef Slider (210 calories), and a side salad (70 calories) are among the lowest-calorie options on the menu.</p>\n        </details>\n        <details>\n          <summary>Is Arby's suitable for a keto diet?</summary>\n          <p>Yes. You can order any roast beef, brisket, or turkey sandwich \"no bun\" and skip sweet sauces like BBQ. This provides a high-protein, high-fat, low-carb meal perfect for keto.</p>\n        </details>\n      </div>\n    </section>\n",
     "logo_path": "brands/images/arbys.svg"
   },
   "items": [
@@ -19,7 +19,7 @@
       37,
       14,
       "Sandwiches",
-      352
+      592
     ],
     [
       "🥪",
@@ -29,7 +29,7 @@
       38,
       24,
       "Sandwiches",
-      353
+      593
     ],
     [
       "🥪",
@@ -39,7 +39,7 @@
       45,
       20,
       "Sandwiches",
-      354
+      594
     ],
     [
       "🍟",
@@ -49,7 +49,7 @@
       49,
       21,
       "Sides",
-      355
+      595
     ],
     [
       "🧀",
@@ -59,7 +59,157 @@
       37,
       25,
       "Sides",
-      356
+      596
+    ],
+    [
+      "🥪",
+      "Half Pound Roast Beef",
+      610,
+      48,
+      38,
+      30,
+      "Sandwiches",
+      597
+    ],
+    [
+      "🥪",
+      "Classic Beef n Cheddar Double",
+      560,
+      33,
+      45,
+      27,
+      "Sandwiches",
+      598
+    ],
+    [
+      "🥪",
+      "Classic French Dip & Swiss",
+      540,
+      34,
+      51,
+      22,
+      "Sandwiches",
+      599
+    ],
+    [
+      "🥪",
+      "Greek Gyro",
+      710,
+      23,
+      55,
+      44,
+      "Sandwiches",
+      600
+    ],
+    [
+      "🥪",
+      "Smokehouse Brisket",
+      600,
+      35,
+      42,
+      29,
+      "Sandwiches",
+      601
+    ],
+    [
+      "🍗",
+      "Classic Crispy Chicken Sandwich",
+      510,
+      24,
+      49,
+      25,
+      "Chicken",
+      602
+    ],
+    [
+      "🍗",
+      "Chicken Bacon Swiss Sandwich",
+      610,
+      32,
+      50,
+      31,
+      "Chicken",
+      603
+    ],
+    [
+      "🍗",
+      "Crispy Chicken Tenders (3pc)",
+      370,
+      23,
+      28,
+      18,
+      "Chicken",
+      604
+    ],
+    [
+      "🍟",
+      "Crinkle Fries (Medium)",
+      410,
+      5,
+      49,
+      21,
+      "Sides",
+      605
+    ],
+    [
+      "🥗",
+      "Side Salad",
+      70,
+      5,
+      4,
+      5,
+      "Sides",
+      606
+    ],
+    [
+      "🥤",
+      "Jamocha Shake (Medium)",
+      830,
+      15,
+      137,
+      24,
+      "Beverages",
+      607
+    ],
+    [
+      "🥪",
+      "Roast Beef Slider",
+      210,
+      12,
+      21,
+      9,
+      "Sliders & Snacks",
+      608
+    ],
+    [
+      "🥪",
+      "Buffalo Chicken Slider",
+      290,
+      12,
+      31,
+      13,
+      "Sliders & Snacks",
+      609
+    ],
+    [
+      "🥪",
+      "Jalapeño Roast Beef Slider",
+      220,
+      12,
+      21,
+      9,
+      "Sliders & Snacks",
+      610
+    ],
+    [
+      "🥤",
+      "Market Fresh Peach Lemonade",
+      190,
+      0,
+      49,
+      0,
+      "Beverages",
+      611
     ]
   ],
   "sizes": [

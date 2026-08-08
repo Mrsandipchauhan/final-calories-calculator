@@ -19,7 +19,7 @@
       92,
       26,
       "Hoagies",
-      437
+      707
     ],
     [
       "🥪",
@@ -29,7 +29,7 @@
       94,
       35,
       "Hoagies",
-      438
+      708
     ],
     [
       "🍳",
@@ -39,7 +39,7 @@
       40,
       30,
       "Breakfast",
-      439
+      709
     ],
     [
       "🥤",
@@ -49,7 +49,7 @@
       54,
       20,
       "Sides",
-      440
+      710
     ],
     [
       "☕",
@@ -59,7 +59,157 @@
       48,
       9,
       "Beverages",
-      441
+      711
+    ],
+    [
+      "🥪",
+      "Shorti Turkey Hoagie (6\")",
+      520,
+      30,
+      61,
+      17,
+      "Hoagies",
+      712
+    ],
+    [
+      "🥪",
+      "Shorti Italian Hoagie (6\")",
+      590,
+      32,
+      63,
+      23,
+      "Hoagies",
+      713
+    ],
+    [
+      "🥪",
+      "Classic Ham & Cheese Hoagie (10\")",
+      750,
+      42,
+      90,
+      24,
+      "Hoagies",
+      714
+    ],
+    [
+      "🥪",
+      "Classic Roast Beef Hoagie (10\")",
+      790,
+      46,
+      92,
+      27,
+      "Hoagies",
+      715
+    ],
+    [
+      "🥣",
+      "Turkey Hoagie Bowl",
+      390,
+      35,
+      12,
+      22,
+      "Hoagies",
+      716
+    ],
+    [
+      "🍳",
+      "Sizzli Bacon Egg Cheese Biscuit",
+      450,
+      16,
+      36,
+      27,
+      "Breakfast",
+      717
+    ],
+    [
+      "🍳",
+      "Sizzli Sausage Egg Cheese Croissant",
+      490,
+      17,
+      29,
+      34,
+      "Breakfast",
+      718
+    ],
+    [
+      "🥚",
+      "Egg White Breakfast Bowl with Salsa",
+      150,
+      16,
+      5,
+      7,
+      "Breakfast",
+      719
+    ],
+    [
+      "🥣",
+      "Chicken Noodle Soup (Medium)",
+      180,
+      11,
+      23,
+      4.5,
+      "Sides",
+      720
+    ],
+    [
+      "🥣",
+      "Chicken Salad (Medium Cup)",
+      330,
+      22,
+      6,
+      24,
+      "Sides",
+      721
+    ],
+    [
+      "🥨",
+      "Soft Pretzel (1pc)",
+      290,
+      7,
+      61,
+      1.5,
+      "Sides",
+      722
+    ],
+    [
+      "☕",
+      "Cold Brew Coffee (Sweet Cream, 16oz)",
+      140,
+      1,
+      18,
+      7,
+      "Beverages",
+      723
+    ],
+    [
+      "🥤",
+      "Cookies & Cream Smoothie (16oz)",
+      670,
+      11,
+      98,
+      25,
+      "Beverages",
+      724
+    ],
+    [
+      "🥤",
+      "Mango Orange Smoothie (16oz)",
+      380,
+      2,
+      92,
+      0,
+      "Beverages",
+      725
+    ],
+    [
+      "🥤",
+      "Mashed Potatoes (Medium)",
+      250,
+      4,
+      38,
+      9,
+      "Sides",
+      726
     ]
   ],
   "sizes": [

@@ -7,16 +7,48 @@
 
   if (!grid || !searchInput || !suggestions) return;
 
-  // Load brands dynamically
-  fetch('/api/brands')
+  // Load brands dynamically for search suggestions and filtering
+  fetch('/api/brands.json')
     .then(res => res.json())
     .then(data => {
       brands = data.map(b => ({
         ...b,
         url: `brands/${b.id}.html`
       }));
+      
+      // Render all brands dynamically on load
       renderGrid(brands);
+      
+      // Auto-filter based on URL query parameter e.g. ?q=coffee
+      try {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('q');
+        if (query) {
+          searchInput.value = query;
+          filterGrid(query.toLowerCase());
+        }
+      } catch(e) {
+        console.error('Error checking query parameters:', e);
+      }
     });
+
+  // Dynamically set user local time on receipt based on their exact timezone/locale
+  const receiptTime = document.getElementById('receipt-time');
+  if (receiptTime) {
+    try {
+      const now = new Date();
+      // Using undefined fallback lets the browser auto-detect the user's current country/locale settings
+      const userLocale = navigator.language || undefined;
+      const formattedTime = now.toLocaleTimeString(userLocale, { 
+        hour: '2-digit', 
+        minute: '2-digit', 
+        hour12: true 
+      });
+      receiptTime.textContent = formattedTime;
+    } catch (e) {
+      console.error('Error formatting receipt local time:', e);
+    }
+  }
 
   // Render brand cards
   function renderGrid(items) {

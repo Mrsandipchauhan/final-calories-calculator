@@ -2,7 +2,8 @@ const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const bcrypt = require('bcryptjs');
 
-const dbPath = path.join(__dirname, 'nutriroute.db');
+const baseDir = __dirname.endsWith('api') ? path.join(__dirname, '..') : __dirname;
+const dbPath = path.join(baseDir, 'nutriroute.db');
 const db = new sqlite3.Database(dbPath);
 
 // Enable foreign keys
@@ -157,7 +158,7 @@ async function initDb() {
   const defaultSettings = [
     ['site_title', 'NutriRoute — Restaurant Calorie Calculator'],
     ['site_description', 'Free multi-brand calorie calculator for coffee, sandwiches and fast-casual restaurant orders.'],
-    ['site_url', 'https://nutriroute.com'],
+    ['site_url', 'https://organizeddesignva.com'],
     ['head_code', ''],
     ['body_code', ''],
     ['analytics_id', ''],

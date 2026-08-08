@@ -19,7 +19,7 @@
       39,
       15,
       "Donuts & Bakery",
-      36
+      497
     ],
     [
       "🍩",
@@ -29,7 +29,7 @@
       33,
       11,
       "Donuts & Bakery",
-      37
+      498
     ],
     [
       "🥐",
@@ -39,7 +39,7 @@
       43,
       52,
       "Breakfast Sandwiches",
-      38
+      499
     ],
     [
       "☕",
@@ -49,7 +49,7 @@
       0,
       0,
       "Drinks",
-      39
+      500
     ],
     [
       "☕",
@@ -59,7 +59,157 @@
       54,
       11,
       "Drinks",
-      40
+      501
+    ],
+    [
+      "🍩",
+      "Chocolate Frosted Donut",
+      280,
+      3,
+      34,
+      15,
+      "Donuts & Bakery",
+      502
+    ],
+    [
+      "🍩",
+      "Strawberry Frosted with Sprinkles Donut",
+      290,
+      3,
+      37,
+      15,
+      "Donuts & Bakery",
+      503
+    ],
+    [
+      "🍩",
+      "Jelly Donut",
+      250,
+      4,
+      35,
+      11,
+      "Donuts & Bakery",
+      504
+    ],
+    [
+      "🧁",
+      "Munchkins Donut Holes (3 count)",
+      210,
+      3,
+      24,
+      11,
+      "Donuts & Bakery",
+      505
+    ],
+    [
+      "🥐",
+      "Bacon Egg & Cheese Croissant",
+      570,
+      19,
+      41,
+      37,
+      "Breakfast Sandwiches",
+      506
+    ],
+    [
+      "🥪",
+      "Egg & Cheese Wake-Up Wrap",
+      180,
+      9,
+      15,
+      10,
+      "Breakfast Sandwiches",
+      507
+    ],
+    [
+      "🥪",
+      "Bacon Egg & Cheese Wake-Up Wrap",
+      210,
+      10,
+      15,
+      13,
+      "Breakfast Sandwiches",
+      508
+    ],
+    [
+      "🥪",
+      "Sausage Egg & Cheese Wake-Up Wrap",
+      290,
+      11,
+      16,
+      20,
+      "Breakfast Sandwiches",
+      509
+    ],
+    [
+      "🥯",
+      "Plain Bagel with Cream Cheese",
+      440,
+      12,
+      67,
+      14,
+      "Donuts & Bakery",
+      510
+    ],
+    [
+      "🥓",
+      "Sweet Black Pepper Bacon Sandwich",
+      620,
+      22,
+      53,
+      35,
+      "Breakfast Sandwiches",
+      511
+    ],
+    [
+      "🥤",
+      "Cold Brew with Sweet Cold Foam",
+      110,
+      1,
+      14,
+      6,
+      "Drinks",
+      512
+    ],
+    [
+      "🥤",
+      "Frozen Coffee (Original, Medium)",
+      610,
+      7,
+      122,
+      11,
+      "Drinks",
+      513
+    ],
+    [
+      "🥤",
+      "Dunkin Energy Punch",
+      180,
+      0,
+      46,
+      0,
+      "Drinks",
+      514
+    ],
+    [
+      "🥨",
+      "Hash Browns (6 count)",
+      130,
+      2,
+      16,
+      6,
+      "Breakfast Sandwiches",
+      515
+    ],
+    [
+      "🥐",
+      "Plain Croissant",
+      340,
+      6,
+      38,
+      18,
+      "Donuts & Bakery",
+      516
     ]
   ],
   "sizes": [

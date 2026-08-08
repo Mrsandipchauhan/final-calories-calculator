@@ -7,7 +7,7 @@
     "bg": "#eef6f0",
     "meta_title": "Sweetgreen Calorie Calculator — Warm Bowls & Salads | NutriRoute",
     "meta_description": "Calculate custom macros and calories for Sweetgreen harvest bowls, salads, and vinaigrettes. Perfect for healthy meal prep tracking.",
-    "seo_content": "<div class='seo-section'><h2>Sweetgreen Nutrition & Macro Tracking Guide</h2><p>Sweetgreen is a premium destination for healthy, custom-made salad and warm bowls. Packed with whole grains, seeds, and fresh proteins, our calorie calculator tracks your exact vitamins, macros, and diet lifestyles in real-time.</p></div>",
+    "seo_content": "\n    <section class=\"seo-article wrap\">\n      <h2>Sweetgreen Nutrition & Macro Tracking Guide</h2>\n      <p>Sweetgreen has revolutionized the fast-casual space by offering organic, locally sourced warm grain bowls and fresh salads. It is a favorite destination for clean eating, muscle building, and weight loss. However, healthy ingredients like nuts, seeds, avocado, quinoa, and oil-based vinaigrettes can secretly add up to over 700 calories. Using our Sweetgreen calorie calculator helps you track exactly what goes into your bowl so you can customize your meal for your specific diet.</p>\n      \n      <h3>How to Optimize Your Sweetgreen Bowl</h3>\n      <p>Maximize your volume and protein while keeping calories low with these strategies:</p>\n\n      <div class=\"seo-callout-box\">\n        <h4>1. Order Dressing on the Side</h4>\n        <p>Sweetgreen's signature dressings, like Pesto Vinaigrette or Green Goddess Ranch, contain healthy oils but add 80–140 calories per serving. Ordering dressing on the side and using it sparingly is the easiest way to cut calories.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>2. Swap Grains for Leafy Greens</h4>\n        <p>Warm grain bowls use wild rice or quinoa as a base, which are excellent for energy but higher in carbs. Swapping half or all of the grains for organic spinach, kale, or wild arugula reduces the carbohydrate count while adding volume and fiber.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>3. Choose Lean Proteins</h4>\n        <p>Grilled chicken breast, roasted tofu, and warm portobello mushrooms are excellent high-protein, low-fat toppings. If you want healthy fats, opt for avocado or a sprinkle of sunflower seeds rather than heavy cheeses.</p>\n      </div>\n\n      <h3>Frequently Asked Questions (FAQs)</h3>\n      <div class=\"seo-faq-accordion\">\n        <details>\n          <summary>How accurate is this Sweetgreen calorie calculator?</summary>\n          <p>This calculator is based on Sweetgreen's official nutritional disclosures. Because bowls are built by hand using scoops, actual ingredient quantities may vary slightly.</p>\n        </details>\n        <details>\n          <summary>What is the lowest calorie dressing at Sweetgreen?</summary>\n          <p>Fresh lime squeeze, lemon squeeze, or red wine vinegar have virtually zero calories. For prepared dressings, the Sweetgreen Hot Sauce (5 calories) is a great low-calorie choice.</p>\n        </details>\n        <details>\n          <summary>Are Sweetgreen bowls suitable for a keto diet?</summary>\n          <p>Yes. You can build a keto-friendly bowl by choosing a salad base (spinach/kale), adding chicken or salmon, and topping it with avocado, bacon, or hard-boiled eggs with a low-carb vinaigrette.</p>\n        </details>\n      </div>\n    </section>\n",
     "logo_path": "brands/images/sweetgreen.svg"
   },
   "items": [
@@ -19,7 +19,7 @@
       48,
       41,
       "Warm Bowls",
-      357
+      612
     ],
     [
       "🥣",
@@ -29,7 +29,7 @@
       66,
       23,
       "Warm Bowls",
-      358
+      613
     ],
     [
       "🥗",
@@ -39,7 +39,7 @@
       26,
       38,
       "Salads",
-      359
+      614
     ],
     [
       "🥣",
@@ -49,7 +49,7 @@
       42,
       34,
       "Warm Bowls",
-      360
+      615
     ],
     [
       "🥗",
@@ -59,7 +59,107 @@
       12,
       30,
       "Salads",
-      361
+      616
+    ],
+    [
+      "🥗",
+      "Hummus Crunch Salad",
+      380,
+      12,
+      31,
+      24,
+      "Salads",
+      617
+    ],
+    [
+      "🥗",
+      "Garden Cobb",
+      490,
+      22,
+      17,
+      39,
+      "Salads",
+      618
+    ],
+    [
+      "🥣",
+      "Hot Honey Chicken Plate",
+      690,
+      48,
+      64,
+      22,
+      "Warm Bowls",
+      619
+    ],
+    [
+      "🥣",
+      "Chicken Pesto Parm",
+      525,
+      34,
+      38,
+      22,
+      "Warm Bowls",
+      620
+    ],
+    [
+      "🥗",
+      "Super Green Goddess",
+      380,
+      18,
+      19,
+      28,
+      "Salads",
+      621
+    ],
+    [
+      "🍲",
+      "Chicken & Brussels Bowl",
+      610,
+      36,
+      38,
+      33,
+      "Warm Bowls",
+      622
+    ],
+    [
+      "🌱",
+      "Sweet Potato & Tofu Plate",
+      580,
+      22,
+      59,
+      26,
+      "Warm Bowls",
+      623
+    ],
+    [
+      "🧴",
+      "Sweetgreen Hot Sauce",
+      5,
+      0,
+      1,
+      0,
+      "Dressings",
+      624
+    ],
+    [
+      "🧴",
+      "Pesto Vinaigrette",
+      140,
+      1,
+      2,
+      15,
+      "Dressings",
+      625
+    ],
+    [
+      "🧴",
+      "Green Goddess Ranch",
+      80,
+      1,
+      2,
+      8,
+      "Dressings",
+      626
     ]
   ],
   "sizes": [

@@ -7,7 +7,7 @@
     "bg": "#fff4e6",
     "meta_title": "In-N-Out Burger Calorie Calculator — Macros | NutriRoute",
     "meta_description": "Calculate exact calories and macros for In-N-Out burgers, cheeseburgers, Animal Style fries, and shakes. Fully interactive nutrition tool.",
-    "seo_content": "<div class='seo-section'><h2>In-N-Out Burger Nutrition & Macro Tracking Guide</h2><p>In-N-Out Burger is legendary for its fresh ingredients, custom burgers, and secret menu options. Use our calculator to check the nutritional difference between standard burgers and Animal Style upgrades. Try swapping regular buns for Lettuce Wraps (Protein Style) to save on carbs.</p></div>",
+    "seo_content": "\n    <section class=\"seo-article wrap\">\n      <h2>In-N-Out Burger Nutrition & Macro Tracking Guide</h2>\n      <p>In-N-Out Burger is a West Coast legend, famous for its simple, fresh menu and customizable \"Secret Menu\" options. From the classic Double-Double to Animal Style fries, it's a popular spot for both clean eating and cheat meals. Because In-N-Out prepares everything fresh to order, it is incredibly easy to customize your burger. Our interactive In-N-Out calorie calculator helps you track exactly what you are consuming, whether you order standard menu items or custom creations.</p>\n      \n      <h3>Healthy Customization Tips at In-N-Out</h3>\n      <p>Keep your health goals on track with these popular menu adjustments:</p>\n\n      <div class=\"seo-callout-box\">\n        <h4>1. Order it \"Protein Style\"</h4>\n        <p>This is In-N-Out's most famous secret menu hack. Swapping the toasted sponge-dough bun for a crisp leaf lettuce wrap saves you about 150 calories and 28g of carbohydrates per burger. It is ideal for keto, low-carb, or gluten-free lifestyles.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>2. Swap the Spread for Ketchup and Mustard</h4>\n        <p>In-N-Out's signature burger spread is a delicious mayonnaise-based sauce. A single serving adds about 80 calories and 8g of fat. If you want to cut down on fats, ask for ketchup and mustard instead of the spread.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>3. Limit Animal Style Upgrades</h4>\n        <p>\"Animal Style\" burgers and fries add extra cheese, grilled onions, and extra spread. While delicious, Animal Style Fries contain 750 calories and 45g of fat. Stick to regular fries or share a portion with a friend to control your macros.</p>\n      </div>\n\n      <h3>Frequently Asked Questions (FAQs)</h3>\n      <div class=\"seo-faq-accordion\">\n        <details>\n          <summary>How accurate is this In-N-Out calorie calculator?</summary>\n          <p>Our calculator is built using official In-N-Out nutrition data. Because they use fresh, never-frozen beef and hand-cut potatoes, actual values are highly consistent with the published averages.</p>\n        </details>\n        <details>\n          <summary>What is the lowest calorie option at In-N-Out?</summary>\n          <p>A single Hamburger ordered \"Protein Style\" (lettuce wrapped) with no spread is the lowest calorie option, coming in at approximately 240 calories.</p>\n        </details>\n        <details>\n          <summary>Is In-N-Out keto-friendly?</summary>\n          <p>Yes. Ordering any burger (like a Double-Double or a 3x3) \"Protein Style\" with no spread (or light spread) is a perfect high-protein, low-carb meal for keto.</p>\n        </details>\n      </div>\n    </section>\n",
     "logo_path": "brands/images/innout.svg"
   },
   "items": [
@@ -19,7 +19,7 @@
       41,
       41,
       "Burgers",
-      347
+      777
     ],
     [
       "🍔",
@@ -29,7 +29,7 @@
       41,
       27,
       "Burgers",
-      348
+      778
     ],
     [
       "🍔",
@@ -39,7 +39,7 @@
       41,
       19,
       "Burgers",
-      349
+      779
     ],
     [
       "🍟",
@@ -49,7 +49,7 @@
       54,
       18,
       "Sides",
-      350
+      780
     ],
     [
       "🥤",
@@ -59,7 +59,77 @@
       92,
       18,
       "Drinks",
-      351
+      781
+    ],
+    [
+      "🍔",
+      "Double-Double (Protein Style)",
+      520,
+      33,
+      11,
+      39,
+      "Burgers",
+      782
+    ],
+    [
+      "🍔",
+      "3x3 Burger",
+      860,
+      52,
+      42,
+      58,
+      "Burgers",
+      783
+    ],
+    [
+      "🍔",
+      "4x4 Burger",
+      1050,
+      67,
+      43,
+      75,
+      "Burgers",
+      784
+    ],
+    [
+      "🍟",
+      "Animal Style Fries",
+      750,
+      18,
+      68,
+      45,
+      "Sides",
+      785
+    ],
+    [
+      "🥤",
+      "Vanilla Shake",
+      570,
+      10,
+      88,
+      18,
+      "Drinks",
+      786
+    ],
+    [
+      "🥤",
+      "Strawberry Shake",
+      590,
+      10,
+      92,
+      18,
+      "Drinks",
+      787
+    ],
+    [
+      "🥤",
+      "Neapolitan Shake",
+      590,
+      10,
+      91,
+      18,
+      "Drinks",
+      788
     ]
   ],
   "sizes": [

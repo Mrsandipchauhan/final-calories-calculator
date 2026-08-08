@@ -19,7 +19,7 @@
       48,
       17,
       "Coffee",
-      427
+      667
     ],
     [
       "☕",
@@ -29,7 +29,7 @@
       58,
       24,
       "Coffee",
-      428
+      668
     ],
     [
       "⚡",
@@ -39,7 +39,7 @@
       40,
       0,
       "Rebel",
-      429
+      669
     ],
     [
       "🥤",
@@ -49,7 +49,7 @@
       102,
       24,
       "Freeze",
-      430
+      670
     ],
     [
       "🍵",
@@ -59,7 +59,157 @@
       36,
       0,
       "Tea",
-      431
+      671
+    ],
+    [
+      "☕",
+      "Kicker (Iced)",
+      430,
+      9,
+      51,
+      20,
+      "Coffee",
+      672
+    ],
+    [
+      "☕",
+      "Caramelizer (Iced)",
+      440,
+      10,
+      56,
+      19,
+      "Coffee",
+      673
+    ],
+    [
+      "☕",
+      "Annihilator (Iced)",
+      440,
+      9,
+      53,
+      20,
+      "Coffee",
+      674
+    ],
+    [
+      "☕",
+      "911 (Iced)",
+      410,
+      14,
+      46,
+      18,
+      "Coffee",
+      675
+    ],
+    [
+      "☕",
+      "Cocomo (Iced)",
+      420,
+      9,
+      53,
+      19,
+      "Coffee",
+      676
+    ],
+    [
+      "🥤",
+      "Golden Eagle Freeze",
+      620,
+      9,
+      90,
+      24,
+      "Freeze",
+      677
+    ],
+    [
+      "🥤",
+      "Kicker Freeze",
+      600,
+      9,
+      88,
+      22,
+      "Freeze",
+      678
+    ],
+    [
+      "🥤",
+      "Caramelizer Freeze",
+      610,
+      10,
+      90,
+      23,
+      "Freeze",
+      679
+    ],
+    [
+      "⚡",
+      "Aftershock Rebel (Iced)",
+      170,
+      0,
+      42,
+      0,
+      "Rebel",
+      680
+    ],
+    [
+      "⚡",
+      "Electric Berry Rebel (Iced)",
+      160,
+      0,
+      41,
+      0,
+      "Rebel",
+      681
+    ],
+    [
+      "🍵",
+      "Passion Fruit Black Tea",
+      130,
+      0,
+      33,
+      0,
+      "Tea",
+      682
+    ],
+    [
+      "🥤",
+      "Vanilla Shake",
+      580,
+      11,
+      84,
+      21,
+      "Shakes & Cocoa",
+      683
+    ],
+    [
+      "🍫",
+      "Hot Cocoa",
+      420,
+      12,
+      59,
+      14,
+      "Shakes & Cocoa",
+      684
+    ],
+    [
+      "🧁",
+      "Chocolate Chip Muffin Top",
+      280,
+      4,
+      39,
+      12,
+      "Snacks",
+      685
+    ],
+    [
+      "🧁",
+      "Lemon Poppyseed Muffin Top",
+      290,
+      4,
+      41,
+      13,
+      "Snacks",
+      686
     ]
   ],
   "sizes": [

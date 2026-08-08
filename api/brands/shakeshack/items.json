@@ -7,7 +7,7 @@
     "bg": "#f5faf3",
     "meta_title": "Shake Shack Calorie Calculator — ShackBurger & Fries | NutriRoute",
     "meta_description": "Find calories and macros for Shake Shack single & double burgers, cheese fries, and shakes. Interactive custom order calculator.",
-    "seo_content": "<div class='seo-section'><h2>Shake Shack Nutrition & Macro Tracking Guide</h2><p>Shake Shack serves elevated versions of American fast-food classics. Made with premium Angus beef, tracking their calorie and macronutrient counts helps you fit ShackBurgers into your flexible dieting schedule.</p></div>",
+    "seo_content": "\n    <section class=\"seo-article wrap\">\n      <h2>Shake Shack Nutrition & Macro Tracking Guide</h2>\n      <p>Shake Shack started as a humble hot dog cart in Madison Square Park and has grown into a global brand famous for its 100% all-natural Angus beef burgers, crinkle-cut fries, and hand-spun shakes. While Shake Shack focuses on premium quality ingredients, their custom potato buns, signature ShackSauce, and cheese sauces are calorie-dense. Our interactive Shake Shack calorie calculator helps you budget your macros and make healthier choices.</p>\n      \n      <h3>Navigating the Shake Shack Menu</h3>\n      <p>Enjoy Shake Shack while keeping your fitness goals aligned using these tips:</p>\n\n      <div class=\"seo-callout-box\">\n        <h4>1. Choose a Single instead of a Double</h4>\n        <p>A single ShackBurger contains 500 calories and 30g of fat, which is very manageable for a main meal. Upgrading to a double adds another patty and slice of cheese, pushing the total to 770 calories and 52g of fat. Stick to a single to save 270 calories.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>2. Request a Lettuce Wrap (Protein Style)</h4>\n        <p>If you want to reduce carbs, you can ask for your burger wrapped in lettuce instead of the classic potato bun. This swap eliminates the sweet bun, saving you about 140 calories and 24g of carbohydrates.</p>\n      </div>\n\n      <div class=\"seo-callout-box\">\n        <h4>3. Limit Shakes and Cheese Fries</h4>\n        <p>A standard order of Crinkle Cut Fries has 420 calories. Adding cheese sauce brings it to 560 calories. A classic chocolate shake adds another 750 calories. To stay within your macro budget, skip the shake or share the fries with a friend.</p>\n      </div>\n\n      <h3>Frequently Asked Questions (FAQs)</h3>\n      <div class=\"seo-faq-accordion\">\n        <details>\n          <summary>How accurate is this Shake Shack calorie calculator?</summary>\n          <p>This calculator uses official nutritional guidelines from Shake Shack. Actual values may vary slightly depending on how sauces and cheeses are portioned at each location.</p>\n        </details>\n        <details>\n          <summary>What is the lowest calorie meal at Shake Shack?</summary>\n          <p>A Single Hamburger ordered in a lettuce wrap with lettuce, tomato, and no cheese or sauce is the lowest calorie entree, totaling around 220 calories.</p>\n        </details>\n        <details>\n          <summary>Does Shake Shack offer vegetarian options?</summary>\n          <p>Yes. The 'Shroom Burger features a crisp-fried portobello mushroom filled with melted cheese, offering a hearty vegetarian alternative. They also offer Veggie Shack burgers at many locations.</p>\n        </details>\n      </div>\n    </section>\n",
     "logo_path": "brands/images/shakeshack.svg"
   },
   "items": [
@@ -19,7 +19,7 @@
       26,
       30,
       "Burgers",
-      362
+      627
     ],
     [
       "🍔",
@@ -29,7 +29,7 @@
       27,
       52,
       "Burgers",
-      363
+      628
     ],
     [
       "🍔",
@@ -39,7 +39,7 @@
       28,
       35,
       "Burgers",
-      364
+      629
     ],
     [
       "🍟",
@@ -49,7 +49,7 @@
       56,
       19,
       "Sides",
-      365
+      630
     ],
     [
       "🥤",
@@ -59,7 +59,107 @@
       88,
       38,
       "Shakes",
-      366
+      631
+    ],
+    [
+      "🍔",
+      "ShackBurger Triple",
+      1040,
+      71,
+      28,
+      74,
+      "Burgers",
+      632
+    ],
+    [
+      "🍔",
+      "Hamburger Single",
+      370,
+      22,
+      25,
+      19,
+      "Burgers",
+      633
+    ],
+    [
+      "🍔",
+      "Cheeseburger Single",
+      450,
+      26,
+      26,
+      26,
+      "Burgers",
+      634
+    ],
+    [
+      "🍔",
+      "Shroom Burger (Vegetarian)",
+      550,
+      18,
+      49,
+      31,
+      "Burgers",
+      635
+    ],
+    [
+      "🍔",
+      "Shack Stack",
+      800,
+      41,
+      53,
+      49,
+      "Burgers",
+      636
+    ],
+    [
+      "🍗",
+      "Chicken Shack",
+      550,
+      33,
+      39,
+      31,
+      "Chicken",
+      637
+    ],
+    [
+      "🍗",
+      "Chicken Bites (6pc)",
+      300,
+      24,
+      15,
+      15,
+      "Chicken",
+      638
+    ],
+    [
+      "🍟",
+      "Cheese Fries",
+      560,
+      9,
+      60,
+      31,
+      "Sides",
+      639
+    ],
+    [
+      "🥤",
+      "Classic Shake Vanilla",
+      680,
+      13,
+      79,
+      34,
+      "Shakes",
+      640
+    ],
+    [
+      "🥤",
+      "Classic Shake Strawberry",
+      710,
+      13,
+      83,
+      35,
+      "Shakes",
+      641
     ]
   ],
   "sizes": [

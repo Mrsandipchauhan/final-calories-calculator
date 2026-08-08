@@ -15,27 +15,31 @@ function loadConfig() {
   }
   if (!brandId) return;
 
-  fetch(`/api/brands/${brandId}/items`)
+  fetch(`/api/brands/${brandId}/items.json`)
     .then(res => res.json())
     .then(data => {
       config = data;
 
       // Dynamically populate brand details in DOM
       if (config.brand) {
-        document.title = `${config.brand.name} Calorie Calculator | NutriRoute`;
         const h1 = document.querySelector('h1');
-        if (h1) h1.innerHTML = `${config.brand.name} Calories &<br><em>Nutrition Calculator</em>`;
+        if (h1 && (h1.textContent.includes('Restaurant Calories') || h1.textContent.trim() === '')) {
+          h1.innerHTML = `${config.brand.name} Calories &<br><em>Nutrition Calculator</em>`;
+        }
         const desc = document.querySelector('.calc-hero p');
-        if (desc) desc.textContent = config.brand.desc || `Use our interactive calorie calculator for ${config.brand.name} to track calories, protein, carbs and fat in real-time.`;
+        if (desc && (desc.textContent.includes('customize your orders') || desc.textContent.trim() === '')) {
+          desc.textContent = config.brand.desc || `Use our interactive calorie calculator for ${config.brand.name} to track calories, protein, carbs and fat in real-time.`;
+        }
         const eyebrow = document.querySelector('.calc-hero .eyebrow');
-        if (eyebrow) eyebrow.innerHTML = `<span></span> Make your ${config.brand.name} order work for you.`;
-        
+        if (eyebrow && (eyebrow.textContent.includes('order work for you') || eyebrow.textContent.trim() === '')) {
+          eyebrow.innerHTML = `<span></span> Make your ${config.brand.name} order work for you.`;
+        }
         const badgeText = document.querySelector('.badge-text');
-        if (badgeText) {
+        if (badgeText && (badgeText.textContent === 'Brand' || badgeText.textContent.trim() === '')) {
           badgeText.textContent = config.brand.name;
         }
         const logoCircle = document.querySelector('.badge-logo-circle');
-        if (logoCircle) {
+        if (logoCircle && !logoCircle.querySelector('img')) {
           let logoPath = config.brand.logo_path || `brands/images/${config.brand.id}.png`;
           if (!logoPath.startsWith('/')) {
             logoPath = '/' + logoPath;
@@ -43,11 +47,11 @@ function loadConfig() {
           logoCircle.innerHTML = `<img src="${logoPath}" alt="${config.brand.name} logo" onerror="if(this.src.includes('.png')){this.src=this.src.replace('.png','.svg');}else{this.src='data:image/svg+xml;utf8,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 24 24%22><circle cx=%2212%22 cy=%2212%22 r=%2210%22 fill=%22%23eee%22/><text x=%2212%22 y=%2216%22 font-size=%2212%22 font-weight=%22bold%22 text-anchor=%22middle%22 fill=%22%23666%22>${config.brand.name[0]}</text></svg>';}">`;
         }
         const activeCrumb = document.querySelector('.active-crumb');
-        if (activeCrumb) {
+        if (activeCrumb && (activeCrumb.textContent.includes('Restaurant Calorie Calculator') || activeCrumb.textContent.trim() === '')) {
           activeCrumb.textContent = `${config.brand.name} Calorie Calculator`;
         }
         const seoContainer = document.querySelector('.brand-content');
-        if (seoContainer && config.brand.seo_content) {
+        if (seoContainer && config.brand.seo_content && (seoContainer.textContent.includes('Plan the treat') || seoContainer.textContent.trim() === '')) {
           seoContainer.innerHTML = config.brand.seo_content;
         }
       }

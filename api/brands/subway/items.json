@@ -19,7 +19,7 @@
       50,
       24,
       "Classic Subs",
-      12
+      557
     ],
     [
       "🥪",
@@ -29,7 +29,7 @@
       44,
       3,
       "Classic Subs",
-      13
+      558
     ],
     [
       "🥪",
@@ -39,7 +39,7 @@
       45,
       18,
       "Classic Subs",
-      14
+      559
     ],
     [
       "🥪",
@@ -49,7 +49,7 @@
       44,
       25,
       "Classic Subs",
-      15
+      560
     ],
     [
       "🥪",
@@ -59,7 +59,7 @@
       59,
       18,
       "Classic Subs",
-      16
+      561
     ],
     [
       "🍪",
@@ -69,7 +69,7 @@
       30,
       10,
       "Sides & Sweets",
-      17
+      562
     ],
     [
       "🍟",
@@ -79,7 +79,137 @@
       23,
       15,
       "Sides & Sweets",
-      18
+      563
+    ],
+    [
+      "🥪",
+      "The Monster (Signature Series #3)",
+      540,
+      38,
+      45,
+      25,
+      "Signature Series",
+      564
+    ],
+    [
+      "🥪",
+      "The Outlaw (Signature Series #2)",
+      460,
+      33,
+      44,
+      18,
+      "Signature Series",
+      565
+    ],
+    [
+      "🥪",
+      "The Boss (Signature Series #6)",
+      560,
+      32,
+      59,
+      23,
+      "Signature Series",
+      566
+    ],
+    [
+      "🥪",
+      "All-Pro Sweet Onion Teriyaki",
+      410,
+      33,
+      56,
+      7,
+      "Signature Series",
+      567
+    ],
+    [
+      "🥪",
+      "Spicy Italian",
+      480,
+      20,
+      46,
+      25,
+      "Classic Subs",
+      568
+    ],
+    [
+      "🥪",
+      "Subway Club",
+      310,
+      26,
+      45,
+      4.5,
+      "Classic Subs",
+      569
+    ],
+    [
+      "🥪",
+      "Steak & Cheese",
+      320,
+      26,
+      45,
+      5,
+      "Classic Subs",
+      570
+    ],
+    [
+      "🥪",
+      "Oven Roasted Turkey",
+      270,
+      23,
+      44,
+      4,
+      "Classic Subs",
+      571
+    ],
+    [
+      "🥗",
+      "Chicken & Bacon Ranch Salad",
+      460,
+      36,
+      12,
+      32,
+      "Salads & Bowls",
+      572
+    ],
+    [
+      "🥗",
+      "Turkey Breast Protein Bowl",
+      310,
+      31,
+      10,
+      15,
+      "Salads & Bowls",
+      573
+    ],
+    [
+      "🍪",
+      "Raspberry Cheesecake Cookie",
+      210,
+      2,
+      29,
+      9,
+      "Sides & Sweets",
+      574
+    ],
+    [
+      "🍪",
+      "White Chip Macadamia Nut Cookie",
+      220,
+      2,
+      29,
+      11,
+      "Sides & Sweets",
+      575
+    ],
+    [
+      "🥨",
+      "Subway Footlong Soft Pretzel",
+      330,
+      8,
+      70,
+      2,
+      "Sides & Sweets",
+      576
     ]
   ],
   "sizes": [

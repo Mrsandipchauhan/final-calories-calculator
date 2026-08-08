@@ -1,0 +1,13 @@
+{
+  "SITE_URL": "https://organizeddesignva.com",
+  "SITE_NAME": "NutriRoute",
+  "ORGANIZATION_NAME": "NutriRoute",
+  "LOGO_URL": "https://organizeddesignva.com/logo.png",
+  "DEFAULT_LANGUAGE": "en",
+  "SOCIAL_PROFILES": [
+    "https://twitter.com/nutriroute",
+    "https://www.linkedin.com/company/nutriroute"
+  ],
+  "DEFAULT_OG_IMAGE": "https://organizeddesignva.com/brands/images/og-share.jpg",
+  "DEFAULT_AUTHOR": "NutriRoute Editorial Team"
+}

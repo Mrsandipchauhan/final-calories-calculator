@@ -19,7 +19,7 @@
       46,
       34,
       "Burgers & Chicken",
-      19
+      642
     ],
     [
       "🍔",
@@ -29,7 +29,7 @@
       42,
       26,
       "Burgers & Chicken",
-      20
+      643
     ],
     [
       "🍔",
@@ -39,7 +39,7 @@
       34,
       24,
       "Burgers & Chicken",
-      21
+      644
     ],
     [
       "🍗",
@@ -49,7 +49,7 @@
       25,
       25,
       "Burgers & Chicken",
-      22
+      645
     ],
     [
       "🍔",
@@ -59,7 +59,7 @@
       39,
       21,
       "Burgers & Chicken",
-      23
+      646
     ],
     [
       "🥚",
@@ -69,7 +69,7 @@
       30,
       13,
       "Breakfast",
-      24
+      647
     ],
     [
       "🍟",
@@ -79,7 +79,7 @@
       43,
       15,
       "Sides & Snacks",
-      25
+      648
     ],
     [
       "🥧",
@@ -89,7 +89,7 @@
       32,
       11,
       "Sides & Snacks",
-      26
+      649
     ],
     [
       "🥤",
@@ -99,7 +99,167 @@
       59,
       0,
       "Drinks & Shakes",
-      27
+      650
+    ],
+    [
+      "🍔",
+      "Hamburger",
+      250,
+      12,
+      31,
+      9,
+      "Burgers & Chicken",
+      651
+    ],
+    [
+      "🍔",
+      "Cheeseburger",
+      300,
+      15,
+      32,
+      13,
+      "Burgers & Chicken",
+      652
+    ],
+    [
+      "🍔",
+      "McDouble",
+      400,
+      22,
+      33,
+      20,
+      "Burgers & Chicken",
+      653
+    ],
+    [
+      "🍔",
+      "Quarter Pounder with Cheese Double",
+      740,
+      48,
+      43,
+      48,
+      "Burgers & Chicken",
+      654
+    ],
+    [
+      "🍔",
+      "Spicy McChicken",
+      400,
+      14,
+      39,
+      21,
+      "Burgers & Chicken",
+      655
+    ],
+    [
+      "🐟",
+      "Filet-O-Fish",
+      390,
+      16,
+      39,
+      19,
+      "Burgers & Chicken",
+      656
+    ],
+    [
+      "🍗",
+      "4 pc. Chicken McNuggets",
+      170,
+      9,
+      10,
+      10,
+      "Burgers & Chicken",
+      657
+    ],
+    [
+      "🥚",
+      "Sausage McMuffin with Egg",
+      480,
+      20,
+      30,
+      30,
+      "Breakfast",
+      658
+    ],
+    [
+      "🥚",
+      "Sausage Biscuit with Egg",
+      530,
+      17,
+      38,
+      34,
+      "Breakfast",
+      659
+    ],
+    [
+      "🥚",
+      "Bacon, Egg & Cheese Biscuit",
+      460,
+      17,
+      39,
+      26,
+      "Breakfast",
+      660
+    ],
+    [
+      "🥞",
+      "Sausage McGriddles",
+      430,
+      11,
+      42,
+      24,
+      "Breakfast",
+      661
+    ],
+    [
+      "🥞",
+      "Hotcakes (3 count with Butter & Syrup)",
+      580,
+      9,
+      101,
+      15,
+      "Breakfast",
+      662
+    ],
+    [
+      "🍟",
+      "Hash Browns",
+      140,
+      1,
+      15,
+      8,
+      "Breakfast",
+      663
+    ],
+    [
+      "🍟",
+      "Large Fries",
+      480,
+      5,
+      65,
+      23,
+      "Sides & Snacks",
+      664
+    ],
+    [
+      "🥤",
+      "Chocolate Shake (Medium)",
+      520,
+      12,
+      85,
+      14,
+      "Drinks & Shakes",
+      665
+    ],
+    [
+      "🥤",
+      "McFlurry with Oreo Cookies",
+      510,
+      12,
+      80,
+      16,
+      "Drinks & Shakes",
+      666
     ]
   ],
   "sizes": [

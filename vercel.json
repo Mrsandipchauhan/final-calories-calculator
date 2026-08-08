@@ -1,31 +1,39 @@
 {
-  "rewrites": [
-    { "source": "/brands/:path*", "destination": "/brands/:path*" },
-    { "source": "/api/:path*", "destination": "/api/:path*" }
-  ],
-  "headers": [
+  "version": 2,
+  "builds": [
     {
-      "source": "/(.*)",
-      "headers": [
-        { "key": "X-Content-Type-Options", "value": "nosniff" },
-        { "key": "X-Frame-Options", "value": "DENY" },
-        { "key": "X-XSS-Protection", "value": "1; mode=block" }
-      ]
-    },
-    {
-      "source": "/api/(.*).json",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=3600, s-maxage=86400" },
-        { "key": "Content-Type", "value": "application/json" }
-      ]
-    },
-    {
-      "source": "/(.*).html",
-      "headers": [
-        { "key": "Cache-Control", "value": "public, max-age=0, s-maxage=86400, stale-while-revalidate=3600" }
-      ]
+      "src": "api/index.js",
+      "use": "@vercel/node",
+      "config": {
+        "includeFiles": [
+          "styles.css",
+          "footer.js",
+          "script.js",
+          "admin.html",
+          "blog.html",
+          "index.html",
+          "about.html",
+          "accessibility.html",
+          "contact.html",
+          "disclaimer.html",
+          "editorial-policy.html",
+          "methodology.html",
+          "privacy.html",
+          "team.html",
+          "terms.html",
+          "brands/**",
+          "uploads/**",
+          "api/**",
+          "nutriroute.db",
+          "site_config.json"
+        ]
+      }
     }
   ],
-  "cleanUrls": true,
-  "trailingSlash": false
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "api/index.js"
+    }
+  ]
 }

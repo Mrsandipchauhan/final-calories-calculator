@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 
-const brandsDir = path.join('c:\\Users\\Hp\\Documents\\Codex - Copy\\2026-07-31\\https-starbucks-calorie-calculator-com', 'brands');
+const brandsDir = path.join(__dirname, 'brands');
 const files = ['starbucks.html', 'subway.html', 'mcdonalds.html', 'chipotle.html', 'tacobell.html', 'dunkin.html', 'chickfila.html', 'panera.html'];
 
 for (const file of files) {

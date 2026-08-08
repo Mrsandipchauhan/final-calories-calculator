@@ -19,7 +19,7 @@
       30,
       21,
       "Soups & Salads",
-      45
+      537
     ],
     [
       "🥪",
@@ -29,7 +29,7 @@
       63,
       33,
       "Sandwiches & Bowls",
-      46
+      538
     ],
     [
       "🥯",
@@ -39,7 +39,177 @@
       82,
       7,
       "Bakery",
-      47
+      539
+    ],
+    [
+      "🥣",
+      "Homestyle Chicken Noodle Soup",
+      180,
+      13,
+      21,
+      5,
+      "Soups & Salads",
+      540
+    ],
+    [
+      "🥣",
+      "Bistro French Onion Soup",
+      310,
+      11,
+      33,
+      15,
+      "Soups & Salads",
+      541
+    ],
+    [
+      "🥗",
+      "Fuji Apple Salad with Chicken",
+      560,
+      34,
+      36,
+      34,
+      "Soups & Salads",
+      542
+    ],
+    [
+      "🥗",
+      "Green Goddess Cobb Salad with Chicken",
+      500,
+      43,
+      16,
+      32,
+      "Soups & Salads",
+      543
+    ],
+    [
+      "🥗",
+      "Caesar Salad with Chicken",
+      440,
+      32,
+      18,
+      27,
+      "Soups & Salads",
+      544
+    ],
+    [
+      "🥪",
+      "Toasted Frontega Chicken Sandwich",
+      820,
+      47,
+      79,
+      35,
+      "Sandwiches & Bowls",
+      545
+    ],
+    [
+      "🥪",
+      "Green Goddess Caprese Melt",
+      860,
+      34,
+      82,
+      44,
+      "Sandwiches & Bowls",
+      546
+    ],
+    [
+      "🥪",
+      "Roasted Turkey & Avocado BLT",
+      860,
+      41,
+      79,
+      42,
+      "Sandwiches & Bowls",
+      547
+    ],
+    [
+      "🥣",
+      "Mac & Cheese (Bowl)",
+      950,
+      33,
+      80,
+      56,
+      "Sandwiches & Bowls",
+      548
+    ],
+    [
+      "🥣",
+      "Mediterranean Warm Grain Bowl",
+      680,
+      21,
+      79,
+      31,
+      "Sandwiches & Bowls",
+      549
+    ],
+    [
+      "🥯",
+      "Asiago Cheese Bagel",
+      330,
+      12,
+      57,
+      5,
+      "Bakery",
+      550
+    ],
+    [
+      "🥯",
+      "Everything Bagel",
+      300,
+      10,
+      58,
+      2.5,
+      "Bakery",
+      551
+    ],
+    [
+      "🥐",
+      "Butter Croissant",
+      270,
+      5,
+      29,
+      15,
+      "Bakery",
+      552
+    ],
+    [
+      "🍪",
+      "Kitchen Sink Cookie",
+      800,
+      9,
+      98,
+      43,
+      "Bakery",
+      553
+    ],
+    [
+      "🥤",
+      "Charged Lemonade (Strawberry Lemon Mint, Medium)",
+      260,
+      0,
+      65,
+      0,
+      "Drinks",
+      554
+    ],
+    [
+      "🥤",
+      "Passion Papaya Green Tea (Medium)",
+      130,
+      0,
+      32,
+      0,
+      "Drinks",
+      555
+    ],
+    [
+      "☕",
+      "Caffè Latte (Medium)",
+      140,
+      9,
+      15,
+      5,
+      "Drinks",
+      556
     ]
   ],
   "sizes": [

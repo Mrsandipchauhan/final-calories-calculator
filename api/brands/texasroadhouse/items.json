@@ -19,7 +19,7 @@
       3,
       6,
       "Steaks",
-      432
+      687
     ],
     [
       "🥩",
@@ -29,7 +29,7 @@
       8,
       64,
       "Steaks",
-      433
+      688
     ],
     [
       "🥖",
@@ -39,7 +39,7 @@
       20,
       3,
       "Sides",
-      434
+      689
     ],
     [
       "🍟",
@@ -49,7 +49,7 @@
       48,
       16,
       "Sides",
-      435
+      690
     ],
     [
       "🥗",
@@ -59,7 +59,157 @@
       8,
       28,
       "Salads",
-      436
+      691
+    ],
+    [
+      "🥩",
+      "8 oz USDA Choice Sirloin",
+      340,
+      61,
+      4,
+      8,
+      "Steaks",
+      692
+    ],
+    [
+      "🥩",
+      "11 oz USDA Choice Sirloin",
+      460,
+      84,
+      6,
+      11,
+      "Steaks",
+      693
+    ],
+    [
+      "🥩",
+      "Dallas Filet 6 oz",
+      270,
+      45,
+      2,
+      9,
+      "Steaks",
+      694
+    ],
+    [
+      "🥩",
+      "Dallas Filet 8 oz",
+      360,
+      60,
+      3,
+      12,
+      "Steaks",
+      695
+    ],
+    [
+      "🥩",
+      "Ft. Worth Ribeye 16 oz",
+      1280,
+      112,
+      10,
+      85,
+      "Steaks",
+      696
+    ],
+    [
+      "🍖",
+      "Half Slab Ribs",
+      900,
+      55,
+      35,
+      60,
+      "Ribs & Combos",
+      697
+    ],
+    [
+      "🍖",
+      "Full Slab Ribs",
+      1450,
+      90,
+      55,
+      95,
+      "Ribs & Combos",
+      698
+    ],
+    [
+      "🍗",
+      "Herb Crusted Chicken",
+      300,
+      47,
+      5,
+      10,
+      "Chicken & Fish",
+      699
+    ],
+    [
+      "🐟",
+      "Grilled Salmon (8 oz)",
+      470,
+      45,
+      2,
+      32,
+      "Chicken & Fish",
+      700
+    ],
+    [
+      "🥔",
+      "Baked Potato (Plain)",
+      260,
+      6,
+      60,
+      1,
+      "Sides",
+      701
+    ],
+    [
+      "🥔",
+      "Sweet Potato with Cinnamon Butter",
+      380,
+      5,
+      75,
+      7,
+      "Sides",
+      702
+    ],
+    [
+      "🥦",
+      "Fresh Vegetables (Steamed)",
+      90,
+      3,
+      10,
+      4,
+      "Sides",
+      703
+    ],
+    [
+      "🥗",
+      "Caesar Salad",
+      240,
+      4,
+      9,
+      21,
+      "Salads",
+      704
+    ],
+    [
+      "🍗",
+      "Chicken Critters (Entree)",
+      480,
+      38,
+      24,
+      26,
+      "Chicken & Fish",
+      705
+    ],
+    [
+      "🥩",
+      "Roadhouse Roadkill (10 oz Chop)",
+      720,
+      58,
+      8,
+      50,
+      "Steaks",
+      706
     ]
   ],
   "sizes": [
