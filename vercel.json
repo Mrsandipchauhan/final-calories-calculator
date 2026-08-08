@@ -1,6 +1,44 @@
 {
   "version": 2,
   "cleanUrls": true,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "brands/*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "api/**/*.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "brands/*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "brands/*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.css",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "brands/images/**/*",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "uploads/**/*",
+      "use": "@vercel/static"
+    }
+  ],
   "rewrites": [
     {
       "source": "/blog/:slug",
