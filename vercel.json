@@ -1,39 +1,10 @@
 {
   "version": 2,
-  "builds": [
+  "cleanUrls": true,
+  "rewrites": [
     {
-      "src": "api/index.js",
-      "use": "@vercel/node",
-      "config": {
-        "includeFiles": [
-          "styles.css",
-          "footer.js",
-          "script.js",
-          "admin.html",
-          "blog.html",
-          "index.html",
-          "about.html",
-          "accessibility.html",
-          "contact.html",
-          "disclaimer.html",
-          "editorial-policy.html",
-          "methodology.html",
-          "privacy.html",
-          "team.html",
-          "terms.html",
-          "brands/**",
-          "uploads/**",
-          "api/**",
-          "nutriroute.db",
-          "site_config.json"
-        ]
-      }
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "api/index.js"
+      "source": "/blog/:slug",
+      "destination": "/blog.html"
     }
   ]
 }
