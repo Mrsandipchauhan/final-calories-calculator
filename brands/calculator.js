@@ -10,7 +10,7 @@ const $ = s => document.querySelector(s);
 function loadConfig() {
   let brandId = document.body.dataset.brand;
   if (!brandId) {
-    const match = window.location.pathname.match(/\/brands\/([^/.]+)\.html/);
+    const match = window.location.pathname.match(/\/brands\/([^/.]+)(?:\.html)?/);
     if (match) brandId = match[1];
   }
   if (!brandId) return;
